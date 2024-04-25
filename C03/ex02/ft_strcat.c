@@ -32,13 +32,13 @@ char *ft_strcat(char *dest, char *src)
 	return (dest);
 }
 
-// int main(void)
-// {
-// 	char str1[20] = "foad";
-// 	char *str2 = "fredy";
-// 	char *s = ft_strcat(str1, str2);
-// 	while(*s != '\0'){
-// 		printf("%c",*s);
-// 		s++;
-// 	}
-// }
+int main(void)
+{
+	char str1[20] = "foad";
+	char *str2 = "fredy";
+	char *s = ft_strcat(str1, str2);
+	while(*s != '\0'){
+		printf("%c",*s);
+		s++;
+	}
+}

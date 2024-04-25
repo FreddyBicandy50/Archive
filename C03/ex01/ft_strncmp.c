@@ -11,28 +11,29 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-//#include <stdio.h>
+#include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int i;
 
 	i = 0;
-	while (*s1 != '\0' && *s2 != '\0' && i < n)
-	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
-		s1++;
-		s2++;
+	if (n == 0)
+		return (0);
+	while (s1[i] == s2[i] && s1[i] != '\0' && i < n - 1)
 		i++;
-	}
-	return (*s1 - *s2);
+
+	if (s1[i] == s2[i])
+		return (0);
+
+	else
+		return (s1[i] - s2[i]);
 }
 
-// int main(void)
-// {
-// 	char	str1[20] =	"Hello World";
-// 	char	*str2 = "Helxo";
+int main(void)
+{
+	char str1[20] = "Hello World";
+	char *str2 = "Helxo";
 
-// 	printf("%d", ft_strncmp(str2,str1,3));
-// }
+	printf("%d", ft_strncmp(str2, str1, 3));
+}

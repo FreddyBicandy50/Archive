@@ -46,15 +46,15 @@ char *ft_strstr(char *str, char *to_find)
 	return position;
 }
 
-// void main(void)
-// {
-// 	char *str1 = "test";
-// 	char *str2 = "Hello Wolrd i am fredy";
+void main(void)
+{
+	char *str1 = "test";
+	char *str2 = "Hello Wolrd i am fredy";
 
-// 	char *res = ft_strstr(str2, str1);
-// 	while (*res != '\0')
-// 	{
-// 		printf("%c", *res);
-// 		res++;
-// 	}
-// }
+	char *res = ft_strstr(str2, str1);
+	while (*res != '\0')
+	{
+		printf("%c", *res);
+		res++;
+	}
+}

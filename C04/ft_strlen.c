@@ -13,7 +13,7 @@ int ft_strlen(char *str){
     return i;
 }
 
-// void main (void){
-//     char *str="h@ello my name is freddy";
-//     printf("%d",ft_strlen(str));
-// }
+void main (void){
+    char *str="h@ello my name is freddy";
+    printf("%d",ft_strlen(str));
+}
