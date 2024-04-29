@@ -1,45 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 19:10:23 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/25 13:10:50 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/04/24 22:22:14 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/04/25 22:06:47 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 //#include <stdio.h>
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_atoi(char *str)
 {
-	unsigned int	i;
+	int	result;
+	int	sign;
 
-	if (n == 0)
+	result = 0;
+	sign = 1;
+	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
+		str++;
+	while (*str == '-' || *str == '+')
 	{
-		return (0);
+		if (*str == '-')
+		{
+			sign *= -1;
+		}
+		str++;
 	}
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && i < n - 1)
+	while (*str >= '0' && *str <= '9')
 	{
-		i++;
+		result = result * 10 + *str - '0';
+		str++;
 	}
-	if (s1[i] == s2[i])
-	{
-		return (0);
-	}
-	else
-	{
-		return (s1[i] - s2[i]);
-	}
+	return (result * sign);
 }
 
 // int main(void)
 // {
-// 	char	str1[20] =	"Hello World";
-// 	char	*str2 = "Helxo";
+// 	char *str = "-+--123";
 
-// 	printf("%d",ft_strncmp(str2,str1,3));
+// 	printf("%d", ft_atoi(str));
+
+// 	return (0);
 // }

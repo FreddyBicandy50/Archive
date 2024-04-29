@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 17:25:38 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/23 20:04:05 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/04/24 19:57:04 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/04/25 19:52:18 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_strlen(char *str)
 {
-	unsigned int 	i;
-	char 			*temp;
+	int	i;
 
 	i = 0;
-	temp = dest;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
+	while (str[i] != '\0')
 		i++;
-	}
-	dest=temp;
-	return (dest);
+	return (i);
 }
 
-int main(void)
-{
-	char src[] = "Hakuna matata!";
-	char dest[20];
-	unsigned int n = 14;
-	ft_strncpy(dest, src, n);
-	printf("Copied string: %s\n", dest);
-	return (0);
-}
+// int main(void)
+// {
+// 	char *str = "h@ello my name is freddy";
+// 	printf("%d", ft_strlen(str));
+// 	return 0;
+// }

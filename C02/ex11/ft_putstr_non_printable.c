@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:38:36 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/22 19:39:10 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/04/27 15:22:47 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putstr_non_printable(char *str)
 	hexa = "0123456789abcdef";
 	while (*p != '\0')
 	{
-		if (*p >= ' ' && *p <= '~')
+		if (*p < 32 && *p > 126)
 		{
 			ft_putchar(*p);
 		}

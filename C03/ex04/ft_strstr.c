@@ -6,55 +6,53 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 19:21:18 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/23 23:03:43 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/04/24 19:02:15 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-
-char *ft_strstr(char *str, char *to_find)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int i 
-	= 0;
-	int j = 0;
-	char *position = NULL; // Use NULL for null pointer
+	int		i;
+	int		j;
+	char	*position;
 
-	while (to_find[j] != '\0')
+	position = str;
+	i = 0;
+	if (*to_find == '\0')
+		return (str);
+	while (str[i] != '\0')
 	{
-		if (str[i] == '\0')
-			return NULL;
-		
-
-		if (str[i] == to_find[j])
+		j = 0;
+		while (str[i + j] == to_find[j])
 		{
-			if (j == 0)
-			{
-				position = &str[i];
-			}
+			if (to_find[j + 1] == '\0')
+				return (&str[i]);
 			j++;
-		}
-		else
-		{
-			// Reset position and j if characters don't match
-			position = NULL;
-			j = 0;
 		}
 		i++;
 	}
-
-	return position;
+	return (0);
 }
 
-void main(void)
-{
-	char *str1 = "test";
-	char *str2 = "Hello Wolrd i am fredy";
+// int main()
+// {
+// 	char str[] = "hello alimy ntestame is fredy !";
+// 	char to_find[] = "test";
 
-	char *res = ft_strstr(str2, str1);
-	while (*res != '\0')
-	{
-		printf("%c", *res);
-		res++;
-	}
-}
+// 	// Call ft_strstr function
+// 	char *result = ft_strstr(str, to_find);
+
+// 	// Check if result is NULL or not
+// 	if (result != NULL)
+// 	{
+// 		printf("'%s' found at position: %ld\n", to_find, result - str);
+// 	}
+// 	else
+// 	{
+// 		printf("'%s' not found in '%s'\n", to_find, str);
+// 	}
+
+// 	return 0;
+// }

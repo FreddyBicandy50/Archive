@@ -6,18 +6,18 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 22:19:02 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/23 23:03:26 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/04/24 21:58:30 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+//#include <stdio.h>
 
-char *ft_strncat(char *dest, char *src, unsigned int nb)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
-	int j;
-	unsigned int n;
+	int				i;
+	int				j;
+	unsigned int	n;
 
 	i = 0;
 	j = 0;

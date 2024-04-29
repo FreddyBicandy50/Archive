@@ -1,0 +1,31 @@
+ft_ft.c: Error!
+Error: EMPTY_LINE_EOF       (line:  25, col:   1):	Empty line at end of file
+ft_ultimate_ft.c: OK!
+ft_swap.c: OK!
+ft_div_mod.c: Error!
+Error: CONSECUTIVE_SPC      (line:  15, col:   5):	Two or more consecutives spaces
+Error: SPACE_REPLACE_TAB    (line:  15, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  17, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  17, col:   5):	Found space when expecting tab
+ft_ft.c: Error!
+Error: EMPTY_LINE_EOF       (line:  25, col:   1):	Empty line at end of file
+ft_ultimate_ft.c: OK!
+ft_swap.c: OK!
+ft_div_mod.c: Error!
+Error: CONSECUTIVE_SPC      (line:  15, col:   5):	Two or more consecutives spaces
+Error: SPACE_REPLACE_TAB    (line:  15, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  17, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  17, col:   5):	Found space when expecting tab
+ft_ft.c: Error!
+Error: EMPTY_LINE_EOF       (line:  25, col:   1):	Empty line at end of file
+ft_ultimate_ft.c: OK!
+ft_swap.c: OK!
+ft_div_mod.c: Error!
+Error: CONSECUTIVE_SPC      (line:  15, col:   5):	Two or more consecutives spaces
+Error: SPACE_REPLACE_TAB    (line:  15, col:   5):	Found space when expecting tab
+Error: TOO_FEW_TAB          (line:  17, col:   1):	Missing tabs for indent level
+Error: SPACE_REPLACE_TAB    (line:  17, col:   5):	Found space when expecting tab
+ft_ft.c: Error!
+Error: EMPTY_LINE_EOF       (line:  25, col:   1):	Empty line at end of file
+ft_ultimate_ft.c: OK!
+ft_swap.c: OK!

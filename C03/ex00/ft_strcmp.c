@@ -6,12 +6,11 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:48:18 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/23 22:26:49 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/04/24 21:59:35 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_strcmp(char *s1, char *s2)
 {

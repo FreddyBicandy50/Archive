@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 17:25:38 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/23 20:04:05 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/04/24 20:06:41 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/04/26 21:24:09 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_putnbr(int nb)
 {
-	unsigned int 	i;
-	char 			*temp;
+	char	c;
 
-	i = 0;
-	temp = dest;
-	while (src[i] != '\0' && i < n)
+	if (nb == -2147483648)
 	{
-		dest[i] = src[i];
-		i++;
+		write (1, "-2147483648", 11);
 	}
-	dest=temp;
-	return (dest);
+	if (nb < 0)
+	{
+		nb = -nb;
+		write(1, "-", 1);
+	}
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+	}
+	c = nb % 10 + 48;
+	write (1, &c, 1);
 }
 
-int main(void)
-{
-	char src[] = "Hakuna matata!";
-	char dest[20];
-	unsigned int n = 14;
-	ft_strncpy(dest, src, n);
-	printf("Copied string: %s\n", dest);
-	return (0);
-}
+// int	main(void)
+// {
+// 	int	number;
+
+// 	number = -5;
+// 	ft_putnbr(number);
+// 	return (0);
+// }

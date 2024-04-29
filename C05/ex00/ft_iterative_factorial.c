@@ -1,40 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 17:25:38 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/23 20:04:05 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/04/25 20:40:31 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/04/25 22:02:50 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+int	ft_iterative_factorial(int nb)
 {
-	unsigned int 	i;
-	char 			*temp;
+	int	i;
+	int	result;
 
-	i = 0;
-	temp = dest;
-	while (src[i] != '\0' && i < n)
+	i = 1;
+	result = 1;
+	if (nb == 0 || nb == 1)
 	{
-		dest[i] = src[i];
-		i++;
+		return (1);
 	}
-	dest=temp;
-	return (dest);
+	else if (nb > 0)
+	{
+		while (i <= nb)
+		{
+			result = result * i;
+			i++;
+		}
+	}
+	else
+		return (0);
+	return (result);
 }
 
-int main(void)
+int	main(void)
 {
-	char src[] = "Hakuna matata!";
-	char dest[20];
-	unsigned int n = 14;
-	ft_strncpy(dest, src, n);
-	printf("Copied string: %s\n", dest);
+	printf("%d",ft_iterative_factorial(3));
 	return (0);
 }
