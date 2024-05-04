@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/03 15:05:42 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/05/04 22:52:24 by fbicandy         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,7 +20,7 @@ int ft_seperator_count(char *seperator)
 	sep_size = 0;
 	while (seperator[sep_size] != '\0')
 		sep_size++;
-	return sep_size;
+	return (sep_size);
 }
 
 int ft_seperator(char *seperator, char *character)
@@ -16,10 +28,10 @@ int ft_seperator(char *seperator, char *character)
 	while (*seperator != '\0')
 	{
 		if (*character == *seperator)
-			return 1;
+			return (1);
 		seperator++;
 	}
-	return 0;
+	return (0);
 }
 
 int ft_word_count(char *str, char *charset)
@@ -39,7 +51,7 @@ int ft_word_count(char *str, char *charset)
 		i++;
 	}
 
-	return word_count + 1;
+	return (word_count + 1);
 }
 
 int ft_strlen(char *str, char *seperator)
@@ -50,16 +62,17 @@ int ft_strlen(char *str, char *seperator)
 	while (str[length] != '\0')
 	{
 		if (ft_seperator(seperator, &str[length]))
-			return length;
+			return (length);
 		length++;
 	}
-	return length;
+	return (length);
 }
-char **ft_strdup(char **split,char *str, char *charset,int word_count)
+
+char **ft_strdup(char **split, char *str, char *charset, int word_count)
 {
-	int j;
-	int i;
-	int k;
+	int	j;
+	int	i;
+	int	k;
 
 	i = 0;
 	j = 0;
@@ -85,17 +98,17 @@ char **ft_strdup(char **split,char *str, char *charset,int word_count)
 		j++;
 	}
 	split[word_count] = NULL;
-	return split;
+	return (split);
 }
 
 char **ft_split(char *str, char *charset)
 {
 	int word_count;
-	char **split; 
+	char **split;
 
 	word_count = ft_word_count(str, charset);
 	split = malloc(sizeof(char *) * word_count + 1);
-	ft_strdup(split,str, charset,word_count);
+	ft_strdup(split, str, charset, word_count);
 	return (split);
 }
 
@@ -103,8 +116,9 @@ int main(void)
 {
 	char *message = "Hello/, World/, my/, name/, is/, freddy/, Bicandy";
 	char *seperator = "/, ";
-	int i;
 	char **res = ft_split(message, seperator);
+	int i;
+
 	i = 0;
 	while (res[i] != NULL)
 	{
@@ -112,5 +126,5 @@ int main(void)
 		i++;
 	}
 
-	return 0;
+	return (0);
 }

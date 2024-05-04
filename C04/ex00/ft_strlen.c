@@ -6,12 +6,12 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:57:04 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/25 19:52:18 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:44:17 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-//#include <stdio.h>
+// #include <unistd.h>
+// #include <stdio.h>
 
 int	ft_strlen(char *str)
 {

@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:02:17 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/04 16:25:22 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/05/04 17:04:16 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/05/04 17:07:20 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_H
+# define FT_H
 
-void	ft_putstr(char *str)
-{
-	while (*str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
-}
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 
-// int main()
-// {
-// 	char *str = "hello wdasdasdsadasd@Qe1e2!@ !E!E !~olrd";
-
-// 	ft_putstr(str);
-// }
+#endif

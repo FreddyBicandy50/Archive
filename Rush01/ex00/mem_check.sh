@@ -1,0 +1,1 @@
+valgrind --leak-check=full ./a.out "2 2 1 3 2 1 3 2 3 1 4 2 2 2 1 2" | cat -e && rm a.out 

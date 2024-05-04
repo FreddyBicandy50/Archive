@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:12:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/01 16:23:04 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/05/04 17:43:17 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int	check_base(char *base)
 
 void	base_system(int nbr, char *base, int size)
 {
-	char			a;
 	unsigned int	n;
+	char			a;
 
 	if (nbr < 0)
 	{

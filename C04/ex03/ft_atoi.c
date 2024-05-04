@@ -6,12 +6,12 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 22:22:14 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/25 22:06:47 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/05/04 16:32:19 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-//#include <stdio.h>
+// #include <unistd.h>
+// #include <stdio.h>
 
 int	ft_atoi(char *str)
 {
@@ -40,7 +40,7 @@ int	ft_atoi(char *str)
 
 // int main(void)
 // {
-// 	char *str = "-+--123";
+// 	char *str = "-+--54546464";
 
 // 	printf("%d", ft_atoi(str));
 

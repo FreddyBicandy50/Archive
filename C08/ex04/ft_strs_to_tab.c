@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strs_to_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:02:17 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/04 16:25:22 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/05/04 18:06:07 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/05/04 22:47:39 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft_stock_str.h"
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 {
-	while (*str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
+	t_stock_str *arr = (t_stock_str *) malloc((ac + 1) * sizeof(t_stock_str));
+	
 }
 
-// int main()
-// {
-// 	char *str = "hello wdasdasdsadasd@Qe1e2!@ !E!E !~olrd";
+int main(void)
+{
 
-// 	ft_putstr(str);
-// }
+	return (0);
+}

@@ -6,14 +6,14 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 21:02:33 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/01 21:45:58 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/05/04 22:24:16 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_ultimate_range(int **range, int min, int max)
+int ft_ultimate_range(int **range, int min, int max)
 {
 	int	size;
 	int	i;
@@ -36,15 +36,15 @@ int	ft_ultimate_range(int **range, int min, int max)
 	return (size);
 }
 
-// int	main(void)
-// {
-// 	int min = 2;
-// 	int max = 7;
-// 	int *range;
-// 	int size = ft_ultimate_range(&range, min, max);
+int main(void)
+{
+	int	min = 2;
+	int	max = 7;
+	int	*range;
+	int	size = ft_ultimate_range(&range, min, max);
 
-// 	printf("%d ", size);
+	printf("%d ", size);
 
-// 	free(range);
-// 	return (0);
-// }
+	free(range);
+	return (0);
+}

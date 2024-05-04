@@ -6,16 +6,16 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 21:46:49 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/02 11:22:12 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/05/04 22:24:14 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (*str != '\0')
@@ -26,15 +26,13 @@ int ft_strlen(char *str)
 	return (len);
 }
 
-char ft_strcat(char *dest, char *src)
+char	ft_strcat(char *dest, char *src)
 {
-	char *temp;
+	char	*temp;
 
 	temp = dest;
 	while (*dest != '\0')
-	{
 		dest++;
-	}
 	while (*src != '\0')
 	{
 		*dest = *src;
@@ -45,11 +43,41 @@ char ft_strcat(char *dest, char *src)
 	return (*temp);
 }
 
-char *ft_strjoin(int size, char **strs, char *sep)
+int	get_len(int size, char **strs, char *sep)
 {
-	char *result;
-	int i;
-	int length;
+	int	i;
+	int	length;
+
+	i = 0;
+	length = 0;
+	while (i < size)
+	{
+		length += ft_strlen(strs[i]);
+		i++;
+	}
+	length += (size - 1) * ft_strlen(sep);
+	return (length);
+}
+
+char	*get_str(int size, char *result, char **strs, char *sep)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		*result = ft_strcat(result, strs[i]);
+		if (i != 5)
+			*result = ft_strcat(result, sep);
+		i++;
+	}
+	return (result);
+}
+
+char	*ft_strjoin(int size, char **strs, char *sep)
+{
+	char	*result;
+	int		length;
 
 	if (size <= 0)
 	{
@@ -60,50 +88,34 @@ char *ft_strjoin(int size, char **strs, char *sep)
 		return (result);
 	}
 	length = 0;
-	i = 0;
-	while (i < size)
-	{
-		length += ft_strlen(strs[i]);
-		i++;
-	}
-	length += (size - 1) * ft_strlen(sep);
+	length = get_len(size, strs, sep);
 	result = malloc(length + 1);
 	*result = '\0';
 	if (result == NULL)
-	{
 		return (NULL);
-	}
-	i = 0;
-	while (i < size)
-	{
-		*result = ft_strcat(result, strs[i]);
-		if (i != 5)
-		{
-			*result = ft_strcat(result, sep);
-		}
-		i++;
-	}
+	result = get_str(size, result, strs, sep);
 	return (result);
 }
 
-int	main(void)
-{
-	char	*strs[] = {"Hello", "World", "my", "name", "is", "freddy"};
-	char	*sep;
-	int		size;
+// int main(void)
+// {
+// 	char *strs[] = {"Hello", "World", "my", "name", "is", "freddy"};
+// 	char *sep;
+// 	int size;
 
-	size = 6;
-	sep = ", ";
+// 	size = 6;
+// 	sep = ", ";
 
-	char	*result = ft_strjoin(size, strs, sep);
-	if (result == NULL)
-	{
-		printf("Malloc Failed!");
-	}
-	else
-	{
-		printf("%s", result);
-	}
-	free(result);
-	return (0);
-}
+// 	char *result = ft_strjoin(size, strs, sep);
+// 	if (result == NULL)
+// 	{
+// 		printf("Malloc Failed!");
+// 	}
+// 	else
+// 	{
+// 		printf("%s\n", result);
+// 	}
+// 	char *e="";
+// 	free(result);
+// 	return (0);
+// }
