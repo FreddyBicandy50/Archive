@@ -11,30 +11,31 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int 	i;
-	char 			*temp;
+	unsigned int	i;
 
 	i = 0;
-	temp = dest;
 	while (src[i] != '\0' && i < n)
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	dest=temp;
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 	return (dest);
 }
 
-int main(void)
-{
-	char src[] = "Hakuna matata!";
-	char dest[20];
-	unsigned int n = 14;
-	ft_strncpy(dest, src, n);
-	printf("Copied string: %s\n", dest);
-	return (0);
-}
+// int	main(void)
+// {
+// 	char	src[] = "Hakuna matata!"; 
+//     char dest[20]; 
+//     unsigned int n = 5; 
+// 	ft_strncpy (dest, src, n);
+// 	printf("Copied string: %s\n", dest);
+// 	return (0);
+// }

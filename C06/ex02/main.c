@@ -1,47 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:06:41 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/30 14:25:14 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/05/01 18:42:59 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/05/01 18:46:27 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
+	while (*str != '\0')
+	{
+		write(1, str, 1);
+		str++;
+	}
+	write(1, "\n", 1);
 }
 
-void	ft_putnbr(int nb)
+int	main(int argc, char *argv[])
 {
-	if (nb == -2147483648)
+	int	i;
+
+	if (argc > 1)
 	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
+		i = argc - 1;
+		while (i > 0)
+		{
+			ft_putstr(argv[i]);
+			i--;
+		}
 	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(nb + '0');
+	return (0);
 }
-
-// int	main(void)
-// {
-// 	int	number;
-
-// 	number = -5;
-// 	ft_putnbr(number);
-// 	return (0);
-// }

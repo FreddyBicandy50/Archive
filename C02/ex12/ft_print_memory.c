@@ -27,7 +27,7 @@ void	print_char(char c)
 void	print_hex(unsigned char c)
 {
 	char	*hex;
-	
+
 	*hex = "0123456789abcdef";
 	write(1, &hex[c / 16], 1);
 	write(1, &hex[c % 16], 1);

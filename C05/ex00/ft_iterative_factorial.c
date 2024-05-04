@@ -6,12 +6,12 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 20:40:31 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/25 22:02:50 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:01:07 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+// #include <unistd.h>
+// #include <stdio.h>
 
 int	ft_iterative_factorial(int nb)
 {
@@ -37,8 +37,8 @@ int	ft_iterative_factorial(int nb)
 	return (result);
 }
 
-int	main(void)
-{
-	printf("%d",ft_iterative_factorial(3));
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("%d",ft_iterative_factorial(3));
+// 	return (0);
+// }

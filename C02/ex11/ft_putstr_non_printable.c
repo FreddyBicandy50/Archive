@@ -26,7 +26,7 @@ void	ft_putstr_non_printable(char *str)
 	hexa = "0123456789abcdef";
 	while (*p != '\0')
 	{
-		if (*p < 32 && *p > 126)
+		if (*p >= ' ' && *p <= '~')
 		{
 			ft_putchar(*p);
 		}

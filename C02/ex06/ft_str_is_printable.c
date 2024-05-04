@@ -11,28 +11,16 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 int	ft_str_is_printable(char *str)
 {
 	while (*str != '\0')
 	{
-		if (*str >= 32 || *str <= 126)
+		if (*str < 32 || *str > 126)
 		{
-			str++;
-			continue;
-		}else{
-			return 0;
+			return (0);
 		}
+		str++;
 	}
 	return (1);
-}
-
-int main(){
-	char *message="hello world";
-	if(ft_str_is_printable(message)){
-		printf("printable chars");
-	}else{
-		printf("unprintable chars");
-	}
 }

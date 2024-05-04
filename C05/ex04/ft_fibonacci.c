@@ -1,47 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 20:06:41 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/04/30 14:25:14 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/05/01 16:53:56 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/05/01 18:00:09 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+//#include <stdio.h>
 
-void	ft_putnbr(int nb)
+int	ft_fibonacci(int index)
 {
-	if (nb == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		nb = 147483648;
-	}
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		nb *= -1;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
+	if (index < 0)
+		return (-1);
+	if (index <= 1)
+		return (index);
 	else
-		ft_putchar(nb + '0');
+		index = ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
+	return (index);
 }
 
 // int	main(void)
 // {
-// 	int	number;
-
-// 	number = -5;
-// 	ft_putnbr(number);
+// 	printf("%d", ft_fibonacci(5));
 // 	return (0);
 // }
