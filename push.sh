@@ -1,1 +1,1 @@
-git add . && git status && git commit -m "upload" && git push
+git add . && git status && git commit -m git"upload" && git push && git status
