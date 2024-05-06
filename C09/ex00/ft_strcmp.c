@@ -1,22 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stock_str.h                                     :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/04 21:31:37 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/04 22:31:03 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/04/22 19:48:18 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/04/24 21:59:35 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_H
-#define FT_STOCK_H
-typedef struct s_stock_str
-{
-	int size;
-	char *str;
-	char *copy;
-} t_stock_str;
+#include <unistd.h>
 
-#endif
+int	ft_strcmp(char *s1, char *s2)
+{
+	while (*s1 != '\0' && *s2 != '\0')
+	{
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
+	}
+	return (*s1 - *s2);
+}
+
+// int main(void)
+// {
+// 	char str1[20] =	"Hello World";
+// 	char *str2 = "Hello World";
+
+// 	printf("%d", ft_strcmp(str1,str2));
+// }

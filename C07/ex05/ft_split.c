@@ -70,9 +70,9 @@ int ft_strlen(char *str, char *seperator)
 
 char **ft_strdup(char **split, char *str, char *charset, int word_count)
 {
-	int	j;
-	int	i;
-	int	k;
+	int j;
+	int i;
+	int k;
 
 	i = 0;
 	j = 0;

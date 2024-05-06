@@ -1,26 +1,28 @@
 #include "ft_stock_str.h"
-#include "stdio.h"
 #include "stdlib.h"
+#include "unistd.h"
 
 int ft_strlen(char *str)
 {
 	int len;
-
 	len = 0;
 	while (str[len] != '\0')
 		len++;
 	return len;
 }
 
-char *ft_strdup(char *src)
+char *ft_strdup(char *str)
 {
+	char *dest;
 	int i;
 
+	dest = malloc(sizeof(char *) * ft_strlen(str) + 1);
+	if (dest == NULL)
+		return NULL;
 	i = 0;
-	char *dest = malloc(sizeof(char *) * ft_strlen(src + 1));
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		dest[i] = str[i];
 		i++;
 	}
 	dest[i] = '\0';
@@ -29,42 +31,80 @@ char *ft_strdup(char *src)
 
 struct s_stock_str **ft_strs_to_tab(int ac, char **av)
 {
-	int i;
 	t_stock_str **tab = malloc(sizeof(t_stock_str *) * ac + 1);
+	int i;
 
-	if (tab == NULL)
-		return (NULL);
 	i = 0;
 	while (i < ac)
 	{
 		tab[i] = malloc(sizeof(t_stock_str *));
-		tab[i]->size = ft_strlen(av[i] + 1);
 		tab[i]->str = av[i];
+		tab[i]->size = ft_strlen(av[i]);
 		tab[i]->copy = ft_strdup(tab[i]->str);
 		i++;
 	}
-	tab[ac] = NULL;
+	tab[i] = NULL;
+	return tab;
+}
 
-	return (tab);
+void ft_putchar(char digit)
+{
+	write(1, &digit, 1);
+	write(1, "\n", 1);
+}
+
+void ft_putstr(char *str)
+{
+	while (*str != '\0')
+	{
+		write(1, str, 1);
+		str++;
+	}
+	write(1, "\n", 1);
+	return;
+}
+
+void ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return;
+	}
+	else if (nb < 0)
+	{
+		ft_putchar('-');
+		nb *= -1;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
+}
+
+void ft_show_tab(struct s_stock_str **par)
+{
+	int i;
+
+	i = 0;
+	while (par[i] != NULL)
+	{
+		ft_putstr(par[i]->str);
+		ft_putnbr(par[i]->size);
+		ft_putstr(par[i]->copy);
+		i++;
+	}
 }
 
 int main(void)
 {
-	char *message[] = {"Hello", "World", "We", "are", "Christians"};
-	int size = 5;
-	t_stock_str **result = ft_strs_to_tab(size, message);
-	if (result == NULL)
-	{
-		printf("Memorie allocation Failed!");
-		return (1);
-	}
-	int i = 0;
-	while (result[i] != NULL)
-	{
-		printf("str=%s | ", result[i]->str);
-		printf("size=%d | ", result[i]->size);
-		printf("copy=%s\n", result[i]->copy);
-		i++;
-	}
-	return 0;
+	char *message[] = {"Hello", "World", "jesus", "has", "been", "risen"};
+	int size;
+
+	size = 6;
+	ft_show_tab(ft_strs_to_tab(size, message));
+	return (0);
 }
