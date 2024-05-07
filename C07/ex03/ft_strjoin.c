@@ -10,112 +10,92 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_strlen(char *str)
+int ft_strlen(char **strs, int size)
 {
-	int	len;
+	int i;
+	int j;
+	int len;
 
+	i = 0;
+	j = 0;
 	len = 0;
-	while (*str != '\0')
-	{
-		str++;
-		len++;
-	}
-	return (len);
-}
-
-char	ft_strcat(char *dest, char *src)
-{
-	char	*temp;
-
-	temp = dest;
-	while (*dest != '\0')
-		dest++;
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	dest = '\0';
-	return (*temp);
-}
-
-int	get_len(int size, char **strs, char *sep)
-{
-	int	i;
-	int	length;
-
-	i = 0;
-	length = 0;
 	while (i < size)
 	{
-		length += ft_strlen(strs[i]);
+		j = 0;
+		while (strs[i][j] != '\0')
+		{
+			len++;
+			j++;
+		}
 		i++;
 	}
-	length += (size - 1) * ft_strlen(sep);
-	return (length);
+	return len;
 }
 
-char	*get_str(int size, char *result, char **strs, char *sep)
+int ft_seplen(char *sep)
 {
-	int	i;
+	int i;
 
 	i = 0;
-	while (i < size)
-	{
-		*result = ft_strcat(result, strs[i]);
-		if (i != 5)
-			*result = ft_strcat(result, sep);
+	while (sep[i] != '\0')
 		i++;
-	}
-	return (result);
+	return (i);
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char *ft_strjoin(int size, char **strs, char *sep)
 {
-	char	*result;
-	int		length;
+	char *tab;
+	int i;
+	int j;
+	(void)**strs;
+	(void)*sep;
 
 	if (size <= 0)
 	{
-		result = malloc(1);
-		if (result == NULL)
+		tab = malloc(1);
+		if (tab == NULL)
 			return (NULL);
-		*result = '\0';
-		return (result);
+		return (tab);
+		tab = '\0';
 	}
-	length = 0;
-	length = get_len(size, strs, sep);
-	result = malloc(length + 1);
-	*result = '\0';
-	if (result == NULL)
-		return (NULL);
-	result = get_str(size, result, strs, sep);
-	return (result);
+	tab = malloc(sizeof(char *) * (ft_strlen(strs, size) + (ft_seplen(sep) * size - 2) + 1));
+	while (strs[i])
+	{
+		int j = 0;
+		while (strs[i][j] != '\0')
+		{
+			printf("%c", strs[i][j]);
+		}
+		i++;
+	}
+	return (tab);
 }
 
-// int main(void)
-// {
-// 	char *strs[] = {"Hello", "World", "my", "name", "is", "freddy"};
-// 	char *sep;
-// 	int size;
+int main(void)
+{
+	char *strs[] = {"Hello", "World", "How", "are", "you"};
+	char *st = {"Hello, World, How, are, you"};
+	(void)st;
+	char *sep;
+	int size;
 
-// 	size = 6;
-// 	sep = ", ";
+	size = 5;
+	sep = ", ";
 
-// 	char *result = ft_strjoin(size, strs, sep);
-// 	if (result == NULL)
-// 	{
-// 		printf("Malloc Failed!");
-// 	}
-// 	else
-// 	{
-// 		printf("%s\n", result);
-// 	}
-// 	char *e="";
-// 	free(result);
-// 	return (0);
-// }
+	char *result = ft_strjoin(size, strs, sep);
+	if (result == NULL)
+		printf("Memorie allocation failed!");
+	else
+	{
+		if (result[0] == '\0')
+			printf("empty string\n");
+		else
+			printf("%s", result);
+	}
+	free(result);
+	return (0);
+}

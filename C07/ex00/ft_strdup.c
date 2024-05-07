@@ -10,51 +10,47 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int	ft_strlen(char *src)
+int ft_strlen(char *src)
 {
-	int	lenght;
+	int length;
 
-	lenght = 0;
-	while (*src != '\0')
+	length = 0;
+	while (src[length] != '\0')
 	{
-		lenght++;
-		src++;
+		length++;
 	}
-	return (lenght);
+	return (length);
 }
 
-char	*ft_strdup(char *src)
+char *ft_strdup(char *src)
 {
-	int		len;
-	char	*dup;
-	char	*temp;
+	char *dup;
+	int i;
 
-	len = ft_strlen(src);
-	dup = malloc(len + 1);
-	temp = dup;
-	while (*src != '\0')
+	dup = malloc(sizeof(char *) * ft_strlen(src) + 1);
+	i = 0;
+	while (src[i] != '\0')
 	{
-		*dup = *src;
-		dup++;
-		src++;
+		dup[i] = src[i];
+		i++;
 	}
-	dup++;
-	return (temp);
+	dup[i] = '\0';
+	return (dup);
 }
 
-// int main(void)
-// {
-// 	char *message;
+int main(void)
+{
+	char *message;
 
-// 	message = "message";
-// 	char *res = ft_strdup(message);
-// 	while (*res != '\0')
-// 	{
-// 		printf("%c", *res);
-// 		res++;
-// 	}
-// 	return (0);
-// }
+	message = "message";
+	char *res = ft_strdup(message);
+	while (*res != '\0')
+	{
+		printf("%c", *res);
+		res++;
+	}
+	return (0);
+}

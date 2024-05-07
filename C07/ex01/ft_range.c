@@ -13,17 +13,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	*ft_range(int min, int max)
+int *ft_range(int min, int max)
 {
-	int	i;
-	int	j;
-	int	range;
-	int	*tab;
+	int i;
+	int j;
+	int range;
+	int *tab;
 
 	j = 0;
 	i = min;
 	range = max - 1;
-	tab = malloc(max - 1);
+	tab = malloc(sizeof(int *) * range);
 	while (i <= range)
 	{
 		tab[j] = i;
@@ -33,10 +33,10 @@ int	*ft_range(int min, int max)
 	return (tab);
 }
 
-int	main(void)
+int main(void)
 {
-	int min = 2;
-	int max = 7;
+	int min = 50;
+	int max = 100;
 	int *tab = ft_range(min, max);
 
 	if (tab == NULL)
