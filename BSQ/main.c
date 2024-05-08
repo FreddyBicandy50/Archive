@@ -77,11 +77,11 @@ int main(int argc, char *argv[])
 	fillable[1]=table[0][ft_strlen(&table[0][0])-2];
 	fillable[0]=table[0][ft_strlen(&table[0][0])-3];
 	mapfillables_validation(&fillable[0]);
+	map_validation(table,lines,width,&fillable[0]);
 	pt_str("****Fillables***");
 	printf("empty=%c |",fillable[0]);
 	printf("Obstical= %c |",fillable[1]);
 	printf("fillable= %c \n",fillable[2]);
-	
 	//TODO convert the numbers
 	pt_str("****MAP***");
 	print_map(table, lines);

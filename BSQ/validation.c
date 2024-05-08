@@ -81,7 +81,7 @@ void mapfillables_validation(char *str)
 
 	while (*str != '\0')
 	{
-		
+
 		if (*str < 32 || *str > 126)
 		{
 			pt_str("Error Non Printable Fillable");
@@ -90,4 +90,26 @@ void mapfillables_validation(char *str)
 		str++;
 	}
 	return;
+}
+
+void map_validation(char **map, int lines, int width, char *fillable)
+{
+	int i;
+	int j;
+
+	i = 1;
+	while (i <= lines - 1)
+	{
+		j = 0;
+		while (map[i][j] != '\0')
+		{
+			if (!(map[i][j] == fillable[0] || map[i][j] == fillable[1] || map[i][j] == fillable[2]))
+			{
+				pt_str("MAP HAVE A NON FILLABLE ITEM");
+				exit(-1);
+			}
+			j++;
+		}
+		i++;
+	}
 }
