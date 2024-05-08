@@ -22,7 +22,7 @@ void print_map(char **map, int lines)
 {
 	int i;
 
-	i = 0;
+	i = 1;
 	while (i < lines)
 	{
 		pt_str(map[i]);
@@ -37,8 +37,9 @@ int main(int argc, char *argv[])
 	char *file_char;
 	int *row_len;
 	int file_size;
-	int lines;
+	long lines;
 	int width;
+	char fillable[3];
 	int i;
 
 	file_size = ft_filebytes(1, argv[1]);
@@ -69,18 +70,22 @@ int main(int argc, char *argv[])
 	}
 	ft_fillrows(table, file_char, lines);
 	width = line_width(table, lines);
-	//TODO:
-	map_validation(table, lines, width);
-
+	//TODO:																																															````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````																																																																(table, lines, width);
+	mapWidth_validation(table, lines, width);
+	mapHeight_validation(&table[0][0], lines);
+	fillable[2]=table[0][ft_strlen(&table[0][0])-1];
+	fillable[1]=table[0][ft_strlen(&table[0][0])-2];
+	fillable[0]=table[0][ft_strlen(&table[0][0])-3];
+	mapfillables_validation(&fillable[0]);
+	pt_str("****Fillables***");
+	printf("empty=%c |",fillable[0]);
+	printf("Obstical= %c |",fillable[1]);
+	printf("fillable= %c \n",fillable[2]);
+	
 	//TODO convert the numbers
-
+	pt_str("****MAP***");
 	print_map(table, lines);
-
 	//SOLVE
-
-	printf("file_size=%d\n", file_size);
-	printf("height=%d\n", lines);
-	printf("width=%d\n", width);
-
+	
 	return (0);
 }
