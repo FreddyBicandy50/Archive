@@ -79,7 +79,5 @@ int main(int argc, char *argv[])
 	mapfillables_validation(&fillable[0]);
 	map_validation(table,lines,width,&fillable[0]);
 	print_map(table, lines);
-	//SOLVE
-	
 	return (0);
 }
