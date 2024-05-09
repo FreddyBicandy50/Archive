@@ -19,9 +19,7 @@ int ft_strlen(char *src)
 
 	length = 0;
 	while (src[length] != '\0')
-	{
 		length++;
-	}
 	return (length);
 }
 

@@ -11,65 +11,72 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
-int ft_strlen(char **strs, int size)
+int ft_strlen(char *str)
+{
+	int len;
+
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return len;
+}
+int total_len(int size, char **strs, char *sep)
+{
+	int len;
+	int sep_len;
+	int i = 0;
+
+	i = 0;
+	len = 0;
+	sep_len = ft_strlen(sep);
+	while (i < size)
+	{
+		len += ft_strlen(strs[i]);
+		i++;
+	}
+	sep_len *= (size - 1);
+	return (sep_len + len);
+}
+char *ft_strcat(char *dest, char *src)
 {
 	int i;
 	int j;
-	int len;
 
 	i = 0;
 	j = 0;
-	len = 0;
-	while (i < size)
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
 	{
-		j = 0;
-		while (strs[i][j] != '\0')
-		{
-			len++;
-			j++;
-		}
+		dest[i] = src[j];
+		j++;
 		i++;
 	}
-	return len;
+	return (dest);
 }
-
-int ft_seplen(char *sep)
-{
-	int i;
-
-	i = 0;
-	while (sep[i] != '\0')
-		i++;
-	return (i);
-}
-
 char *ft_strjoin(int size, char **strs, char *sep)
 {
-	char *tab;
 	int i;
-	int j;
-	(void)**strs;
-	(void)*sep;
+	char *tab;
 
+	tab = malloc(sizeof(char *) * total_len(size, strs, sep) + 1);
+	if (tab == NULL)
+		return (NULL);
 	if (size <= 0)
 	{
-		tab = malloc(1);
-		if (tab == NULL)
-			return (NULL);
+		tab[0] = '\0';
 		return (tab);
-		tab = '\0';
 	}
-	tab = malloc(sizeof(char *) * (ft_strlen(strs, size) + (ft_seplen(sep) * size - 2) + 1));
-	while (strs[i])
+	i = 0;
+	tab[0] = '\0';
+	while (i < size)
 	{
-		int j = 0;
-		while (strs[i][j] != '\0')
-		{
-			printf("%c", strs[i][j]);
-		}
+		tab = ft_strcat(tab, strs[i]);
+		if(i != size -1)
+			tab = ft_strcat(tab, sep);
 		i++;
 	}
 	return (tab);
@@ -78,8 +85,6 @@ char *ft_strjoin(int size, char **strs, char *sep)
 int main(void)
 {
 	char *strs[] = {"Hello", "World", "How", "are", "you"};
-	char *st = {"Hello, World, How, are, you"};
-	(void)st;
 	char *sep;
 	int size;
 
