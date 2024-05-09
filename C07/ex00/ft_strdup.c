@@ -31,6 +31,8 @@ char *ft_strdup(char *src)
 	int i;
 
 	dup = malloc(sizeof(char *) * ft_strlen(src) + 1);
+	if (dup == NULL)
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{
@@ -45,7 +47,7 @@ int main(void)
 {
 	char *message;
 
-	message = "message";
+	message = "message\n";
 	char *res = ft_strdup(message);
 	while (*res != '\0')
 	{
