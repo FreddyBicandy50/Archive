@@ -16,6 +16,7 @@
 #include "ft_isalpha.c"
 #include "ft_strchr.c"
 #include "ft_tolower.c"
+#include "ft_toupper.c"
 #include "ft_strlen.c"
 
 #endif

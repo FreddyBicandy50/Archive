@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 char	ft_toupper(unsigned char get_chars)
 {
 	if (get_chars >= 'a' && get_chars <= 'z')

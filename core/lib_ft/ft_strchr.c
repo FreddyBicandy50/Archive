@@ -12,15 +12,19 @@
 
 #include <stdlib.h>
 
-char	*ft_strchr(char *str, char c)
+char *ft_strchr(char *str, int c)
 {
-	while (*str != '\0')
+	int i;
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str == c)
-			return (str);
-		str++;
+		if (str[i] == (char)c)
+			return (&str[i]);
+		i++;
 	}
-	if (*str == c)
-		return (str);
+	if (c == '\0')
+	{
+		return (&str[i]);
+	}
 	return (NULL);
 }
