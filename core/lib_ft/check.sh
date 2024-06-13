@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run check 
-clear  && cd /home/fbicandy/42Beirut/core/libft-war-machine && bash grademe.sh > res 
+clear  && cd /home/fbicandy/42Beirut/libft-war-machine && bash grademe.sh > res 
 
 # FT
 ft="ft_"
