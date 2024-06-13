@@ -27,8 +27,8 @@ Header file[15GNorme
 [4m[35mPart1 functions
 
 [1m[34mFUNCTION[23GNORME[50GFORBIDDEN FUNC.[38GCOMPIL.[67GTESTS[87GRESULT
-[0m[36mft_memset[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
-[0m[36mft_bzero[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_memset[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_bzero[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[87G[32mOK
 [0m[36mft_calloc[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
 [0m[36mft_memcpy[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
 [0m[36mft_memmove[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
@@ -51,7 +51,7 @@ Header file[15GNorme
 [0m[36mft_toupper[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
 [0m[36mft_tolower[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
 [0m
-[1m[33mTotal : 9/23[0m
+[1m[33mTotal : 11/23[0m
 
 [4m[35mPart2 functions
 

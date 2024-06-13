@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bezero.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 15:03:40 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/13 22:48:07 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/13 22:58:18 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/13 23:01:34 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char	*ft_strchr(char *str, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	unsigned char	*ptr;
+	int				i;
 
+	ptr = s;
 	i = 0;
-	while (str[i] != '\0')
+	while (i < (int)n)
 	{
-		if (str[i] == (char)c)
-			return (&str[i]);
+		ptr[i] = 0;
 		i++;
 	}
-	if (c == '\0')
-		return (&str[i]);
-	return (NULL);
 }

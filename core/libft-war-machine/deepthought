@@ -3,7 +3,7 @@ $> hostname; uname -msr
 c1r2s1.42beirut.com
 Linux 6.5.0-35-generic x86_64
 $> date
-Thu Jun 13 09:55:48 PM EEST 2024
+Thu Jun 13 11:02:39 PM EEST 2024
 $> gcc --version
 gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
 Copyright (C) 2021 Free Software Foundation, Inc.
@@ -46,7 +46,7 @@ gcc -c -Wall -Wextra -Werror ft_toupper.c
 make: *** No rule to make target '$', needed by 'bonus'.  Stop.
 
 $> ls -la libft.a
--rw-r--r-- 1 fbicandy 2024_42campus 8176 Jun 13 21:55 /home/fbicandy/42Beirut/core/libft-war-machine/dirlibft/libft.a
+-rw-r--r-- 1 fbicandy 2024_42campus 8176 Jun 13 23:02 /home/fbicandy/42Beirut/core/libft-war-machine/dirlibft/libft.a
 
 = Part1_functions ==============================================================
 
@@ -54,13 +54,41 @@ $> ls -la libft.a
 $> norminette ft_memset.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memset.c main.c libft.a -o user_exe
 
-clang: error: no such file or directory: '/home/fbicandy/42Beirut/core/libft-war-machine/dirlibft//ft_memset.c'
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
 
 = ft_bzero.c ===================================================================
 $> norminette ft_bzero.c | grep -E '(Error|Warning)'
 $> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_bzero.c main.c libft.a -o user_exe
 
-clang: error: no such file or directory: '/home/fbicandy/42Beirut/core/libft-war-machine/dirlibft//ft_bzero.c'
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
 
 = ft_calloc.c ==================================================================
 $> norminette ft_calloc.c | grep -E '(Error|Warning)'
