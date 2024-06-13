@@ -1,0 +1,91 @@
+Checking for updates...
+No updates available.
+
+Copying files...
+Please wait a moment.
+[H[2J[3J[1m[34m--------------------------------------------------------------------------------------------
+|[39GCHECKING FILES[92G|
+--------------------------------------------------------------------------------------------
+
+[0mMakefile[15G-Wall[25G-Wextra[35G-Werror
+[32mfound[0m[15G[32mok[0m[25G[32mok[0m[35G[32mok
+[0m
+Author file[31m
+not found[0m
+
+Header file[15GNorme
+[32mfound[0m[31m[15Gcheck failed[0m
+
+[1m[34m--------------------------------------------------------------------------------------------
+|[38GCOMPILING LIBFT[92G|
+--------------------------------------------------------------------------------------------
+
+[0mrule all[17Grule $(NAME)[34Grule clean[51Grule fclean[34Grule bonus[67Gmake re[83Glibft.a
+[32mfound[0m[17G[32mfound[0m[34G[32mfound[0m[51G[32mfound[0m[67G[32mok[0m[83G[32mfound
+
+[0m
+[4m[35mPart1 functions
+
+[1m[34mFUNCTION[23GNORME[50GFORBIDDEN FUNC.[38GCOMPIL.[67GTESTS[87GRESULT
+[0m[36mft_memset[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_bzero[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_calloc[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_memcpy[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_memmove[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_memchr[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_memcmp[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strlen[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_strdup[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strlcat[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strlcpy[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strchr[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_strrchr[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strnstr[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strncmp[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_atoi[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_isalpha[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_isdigit[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_isalnum[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_isascii[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_isprint[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_toupper[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m[36mft_tolower[23G[32mok[0m[38G[32msuccess[0m[50G[32mclean[0m[67G[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[32m✓[0m[87G[32mOK
+[0m
+[1m[33mTotal : 9/23[0m
+
+[4m[35mPart2 functions
+
+[1m[34mFUNCTION[23GNORME[50GFORBIDDEN FUNC.[38GCOMPIL.[67GTESTS[87GRESULT
+[0m[36mft_strmapi[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_substr[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strjoin[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_strtrim[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_split[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_itoa[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_striteri[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_putchar_fd[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_putstr_fd[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_putendl_fd[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_putnbr_fd[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m
+[1m[33mTotal : 0/11[0m
+
+[4m[35mBonus functions
+
+[1m[34mFUNCTION[23GNORME[50GFORBIDDEN FUNC.[38GCOMPIL.[67GTESTS[87GRESULT
+[0m[36mft_lstnew[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstdelone[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstclear[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstadd_front[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstadd_back[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstsize[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstiter[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstmap[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m[36mft_lstlast[23G[32mok[0m[38G[31mfailure[0m[50G[31mcompil. failed[0m[67G[31mcompil. failed[0m[87G[31mKO
+[0m
+[1m[33mTotal : 0/9[0m
+Abort : [31mA[0m Bus error : [31mB[0m Segmentation fault : [31mS[0m Timeout : [31mT[0m Nothing turned in : [31mNTI[0m
+
+A deepthought file has been generated in [1m[35m"/home/fbicandy/42Beirut/core/libft-war-machine"
+
+[0m

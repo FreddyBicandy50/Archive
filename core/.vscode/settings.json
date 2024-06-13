@@ -3,6 +3,8 @@
         "ctype.h": "c",
         "stdio.h": "c",
         "isalpha.c": "cpp",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "libft.h": "c",
+        "unistd.h": "c"
     }
 }

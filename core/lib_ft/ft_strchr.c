@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strchr.c                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 15:03:40 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/10 15:33:43 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/13 20:35:30 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-char *ft_strchr(char *str, int c)
+char	*ft_strchr(char *str, int c)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -23,8 +24,6 @@ char *ft_strchr(char *str, int c)
 		i++;
 	}
 	if (c == '\0')
-	{
 		return (&str[i]);
-	}
 	return (NULL);
 }
