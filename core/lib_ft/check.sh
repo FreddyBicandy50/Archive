@@ -19,6 +19,12 @@ isascii="${ft}isascii"
 isprint="${ft}isprint"
 memset="${ft}memset"
 bzero="${ft}bzero"
+memcpy="${ft}memcpy"
+memmove="${ft}memmove"
+strlcpy="${ft}strlcpy"
+strlcat="${ft}strlcat"
+strrchr="${ft}strrchr"
+strncmp="${ft}strncmp"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -33,4 +39,10 @@ grep "$isascii" res
 grep "$isprint" res
 grep "$memset" res
 grep "$bzero" res
+grep "$memcpy" res
+grep "$memmove" res
+grep "$strlcpy" res
+grep "$strlcat" res
+grep "$strrchr" res
+grep "$strncmp" res
 echo "********************************************NEW**********************************************"

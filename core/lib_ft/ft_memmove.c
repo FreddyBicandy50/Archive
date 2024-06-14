@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 22:58:18 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/14 20:52:08 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/14 20:06:19 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/14 21:02:04 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ptr;
-	int				i;
+	int			i;
+	char		*d;
+	const char	*s;
 
-	ptr = s;
+	d = (char *)dest;
+	s = (const char *)src;
 	i = 0;
-	while (i < (int)n)
+	if (d < s)
 	{
-		ptr[i] = 0;
-		i++;
+		while (i < (int)n)
+		{
+			d[i] = s[i];
+			i++;
+		}
 	}
+	else
+	{
+		i = (int)n;
+		while (i > 0)
+		{
+			i--;
+			d[i] = s[i];
+		}
+	}
+	return (dest);
 }

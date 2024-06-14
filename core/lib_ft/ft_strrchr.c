@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   strrchar.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/13 22:58:18 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/14 20:52:08 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/14 23:26:02 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/14 23:46:06 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strrchr(const char *str, int c)
 {
-	unsigned char	*ptr;
-	int				i;
+	char	*last_occurrence;
+	char	*s;
 
-	ptr = s;
-	i = 0;
-	while (i < (int)n)
+	last_occurrence = NULL;
+	s = (char *)str;
+	while (*s != '\0')
 	{
-		ptr[i] = 0;
-		i++;
+		if (*s == (char)c)
+			last_occurrence = s;
+		s++;
 	}
+	if ((char)c == '\0')
+		return (s);
+	return (last_occurrence);
 }
