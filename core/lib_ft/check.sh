@@ -24,6 +24,11 @@ strlcpy="${ft}strlcpy"
 strlcat="${ft}strlcat"
 strrchr="${ft}strrchr"
 strncmp="${ft}strncmp"
+memchr="${ft}memchr"
+memcmp="${ft}memcmp"
+strnstr="${ft}strnstr"
+atoi="${ft}atoi"
+# "********************************************NEW**********************************************"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -32,7 +37,6 @@ grep "$isalpha" res
 grep "$isdigit" res
 grep "$strlen" res
 grep "$tolower" res
-grep "$toupper" res
 grep "$toupper" res
 grep "$isascii" res
 grep "$isprint" res
@@ -44,4 +48,8 @@ grep "$strlcpy" res
 grep "$strlcat" res
 grep "$strrchr" res
 grep "$strncmp" res
+grep "$memchr" res
+grep "$memcmp" res
+grep "$strnstr" res
+grep "$atoi" res
 echo "********************************************NEW**********************************************"

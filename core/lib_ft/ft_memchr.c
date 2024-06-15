@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/14 21:51:00 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/15 19:26:31 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/15 19:38:17 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/15 20:16:31 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	i;
+	unsigned char	*ptr;
+	size_t			i;
 
-	dest_len = 0;
-	src_len = 0;
-	while (dest_len < size && dest[dest_len] != '\0')
-		dest_len++;
-	while (src[src_len] != '\0')
-		src_len++;
-	if (size <= dest_len)
-		return (size + src_len);
+	ptr = (unsigned char *)s;
 	i = 0;
-	while (dest_len + i < size - 1 && src[i] != '\0')
+	while (i < n)
 	{
-		dest[dest_len + i] = src[i];
+		if (ptr[i] == (unsigned char) c)
+			return ((void *) &ptr[i]);
 		i++;
 	}
-	dest[dest_len + i] = '\0';
-	return (dest_len + src_len);
+	return (NULL);
 }
