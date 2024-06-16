@@ -54,6 +54,6 @@ grep "$memchr" res
 grep "$memcmp" res
 grep "$strnstr" res
 grep "$atoi" res
-grep "$calloc" res
-echo "********************************************NEW**********************************************"
 grep "$strdup" res
+echo "********************************************NEW**********************************************"
+grep "$calloc" res

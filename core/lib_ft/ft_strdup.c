@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 20:14:28 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/16 20:26:10 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:37:42 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,18 @@ char	*ft_strdup(const char *s)
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
-	len = ft_strlen(s);
-	dup = malloc(len) + 1;
+	len = 0;
+	while (s[len] != '\0')
+		len++;
+	dup = (char *)malloc(len + 1);
 	if (dup == NULL)
 		return (NULL);
+	i = 0;
 	while (i < len)
 	{
 		dup[i] = s[i];
 		i++;
 	}
-	dup[i + 1] = '\0';
+	dup[i] = '\0';
 	return (dup);
 }
