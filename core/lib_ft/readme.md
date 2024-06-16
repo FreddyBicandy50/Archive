@@ -1,4 +1,4 @@
-#how to run the tester
+# how to run the tester
 
 clone this repo https://github.com/0x050f/libft-war-machine.git
 
