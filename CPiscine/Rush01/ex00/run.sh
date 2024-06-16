@@ -1,0 +1,1 @@
+clear && gcc -Wall -Wextra -Werror main.c functions.c display.c check.c check_position.c && ./a.out "3 3 1 2 1 2 3 3 2 2 2 1 2 1 3 4"  | cat -e
