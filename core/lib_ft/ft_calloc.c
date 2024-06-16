@@ -6,13 +6,12 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 19:08:00 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/16 20:39:43 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/16 20:43:02 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <limits.h>
 
 void	*ft_calloc(size_t num, size_t size)
 {
