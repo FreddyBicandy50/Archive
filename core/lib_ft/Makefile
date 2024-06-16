@@ -20,6 +20,8 @@ ft_memchr.c  \
 ft_memcmp.c \
 ft_atoi.c \
 ft_strnstr.c \
+ft_calloc.c \
+ft_strdup.c \
 ft_bzero.c 
 BSOURCES = \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
@@ -39,7 +41,7 @@ bonus: $(OBJECTS) $
 	$(AR) -r $(NAME) $?
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) $?
+	$(CC) -c $(CFLAGS) -I. $?
 
 clean:
 	rm -f $(OBJECTS) $

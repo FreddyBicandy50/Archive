@@ -28,7 +28,9 @@ memchr="${ft}memchr"
 memcmp="${ft}memcmp"
 strnstr="${ft}strnstr"
 atoi="${ft}atoi"
+calloc="${ft}calloc"
 # "********************************************NEW**********************************************"
+strdup="${ft}strdup"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -52,4 +54,6 @@ grep "$memchr" res
 grep "$memcmp" res
 grep "$strnstr" res
 grep "$atoi" res
+grep "$calloc" res
 echo "********************************************NEW**********************************************"
+grep "$strdup" res
