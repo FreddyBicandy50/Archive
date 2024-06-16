@@ -6,13 +6,13 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:37:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/16 20:14:11 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/16 22:41:46 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
-#include <stdlib.h>
+# define LIBFT_H
+# include <stdlib.h>
 
 int		ft_isalnum(int c);
 char	*ft_strchr(char *str, int c);
@@ -37,5 +37,6 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t len);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t num, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif

@@ -22,6 +22,7 @@ ft_atoi.c \
 ft_strnstr.c \
 ft_calloc.c \
 ft_strdup.c \
+ft_substr.c \
 ft_bzero.c 
 BSOURCES = \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
