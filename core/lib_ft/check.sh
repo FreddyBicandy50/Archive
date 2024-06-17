@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run check 
-clear  && cd /home/fbicandy/42Beirut/core/lib_ft/libft-war-machine && bash grademe.sh > res 
+clear  && cd /home/fbicandy/42Beirut/libft-war-machine && bash grademe.sh > res 
 
 # FT
 ft="ft_"
@@ -63,5 +63,5 @@ grep "$calloc" res
 grep "$substr" res
 grep "$strjoin" res
 grep "$strtrim" res
-echo "********************************************NEW**********************************************"
 grep "$split" res
+echo "********************************************NEW**********************************************"
