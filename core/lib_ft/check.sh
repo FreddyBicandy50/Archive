@@ -33,8 +33,9 @@ strdup="${ft}strdup"
 substr="${ft}substr"
 strjoin="${ft}strjoin"
 strtrim="${ft}strtrim"
-# "********************************************NEW**********************************************"
 split="${ft}split"
+# "********************************************NEW**********************************************"
+itoa="${ft}itoa"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res

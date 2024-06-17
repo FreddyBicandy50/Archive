@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:42:14 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/17 23:21:55 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/17 23:35:34 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,25 +80,3 @@ char	**ft_split(char const *s, char c)
 	tab[i] = NULL;
 	return (tab);
 }
-
-// int main(void)
-// {
-// 	char *message;
-// 	char **result;
-// 	(void)result;
-// 	(void)message;
-
-// 	message = "  Hello World my name is freddy and i love jesus";
-// 	result = ft_split(message, ' ');
-// 	if (!result)
-// 		printf("ptential error handled!");
-// 	else
-// 	{
-// 		while (*result)
-// 		{
-// 			printf("%s\n", *result);
-// 			result++;
-// 		}
-// 	}
-// 	return (0);
-// }
