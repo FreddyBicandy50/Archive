@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Run check 
-clear  && cd /home/fbicandy/42Beirut/libft-war-machine && bash grademe.sh > res 
+clear  && cd /home/fbicandy/42Beirut/core/lib_ft/libft-war-machine && bash grademe.sh > res 
 
 # FT
 ft="ft_"
@@ -30,8 +30,11 @@ strnstr="${ft}strnstr"
 atoi="${ft}atoi"
 calloc="${ft}calloc"
 strdup="${ft}strdup"
-# "********************************************NEW**********************************************"
 substr="${ft}substr"
+strjoin="${ft}strjoin"
+strtrim="${ft}strtrim"
+# "********************************************NEW**********************************************"
+split="${ft}split"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -57,5 +60,8 @@ grep "$strnstr" res
 grep "$atoi" res
 grep "$strdup" res
 grep "$calloc" res
-echo "********************************************NEW**********************************************"
 grep "$substr" res
+grep "$strjoin" res
+grep "$strtrim" res
+echo "********************************************NEW**********************************************"
+grep "$split" res

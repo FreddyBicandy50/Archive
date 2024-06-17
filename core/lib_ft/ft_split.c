@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 15:03:40 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/17 12:25:55 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/17 16:42:14 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/17 16:42:50 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	len;
+#include <stdlib.h>
+#include "libft.h"
 
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
+int	main(void)
+{
+	return (0);
 }
