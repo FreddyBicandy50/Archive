@@ -7,36 +7,39 @@ clear  && cd /home/fbicandy/42Beirut/libft-war-machine && bash grademe.sh > res
 ft="ft_"
 
 # FUNCTIONS
+putchar_fd="${ft}putchar_fd"
+striteri="${ft}striteri"
 isalnum="${ft}isalnum"
-strchr="${ft}strchr"
 isalpha="${ft}isalpha"
 isdigit="${ft}isdigit"
-strlen="${ft}strlen"
 tolower="${ft}tolower"
 toupper="${ft}toupper"
 isascii="${ft}isascii"
 isprint="${ft}isprint"
-memset="${ft}memset"
-bzero="${ft}bzero"
-memcpy="${ft}memcpy"
 memmove="${ft}memmove"
 strlcpy="${ft}strlcpy"
 strlcat="${ft}strlcat"
 strrchr="${ft}strrchr"
 strncmp="${ft}strncmp"
+strnstr="${ft}strnstr"
+strjoin="${ft}strjoin"
+strtrim="${ft}strtrim"
+strmapi="${ft}strmapi"
+memcpy="${ft}memcpy"
 memchr="${ft}memchr"
 memcmp="${ft}memcmp"
-strnstr="${ft}strnstr"
-atoi="${ft}atoi"
+strchr="${ft}strchr"
+strlen="${ft}strlen"
+memset="${ft}memset"
 calloc="${ft}calloc"
 strdup="${ft}strdup"
 substr="${ft}substr"
-strjoin="${ft}strjoin"
-strtrim="${ft}strtrim"
 split="${ft}split"
+bzero="${ft}bzero"
 itoa="${ft}itoa"
+atoi="${ft}atoi"
 # "********************************************NEW**********************************************"
-strmapi="${ft}strmapi"
+putstr_fd="${ft}putstr_fd"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -68,4 +71,7 @@ grep "$strtrim" res
 grep "$split" res
 grep "$strmapi" res
 grep "$itoa" res
+grep "$striteri" res
+grep "$putchar_fd" res
+grep "$putstr_fd" res
 echo "********************************************NEW**********************************************"

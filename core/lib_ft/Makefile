@@ -29,6 +29,8 @@ ft_split.c \
 ft_striteri.c \
 ft_strmapi.c \
 ft_itoa.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c \
 ft_bzero.c 
 BSOURCES = \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \

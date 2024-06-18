@@ -6,22 +6,25 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 23:24:19 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/18 20:30:04 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/18 21:12:23 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <limits.h>
 
 int	ft_len(int num)
 {
-	int	len;
-	int	n;
+	int				len;
+	unsigned int	n;
 
 	len = 0;
-	n = num;
-	if (n <= 0)
+	if (num <= 0)
 		len = 1;
-	while (n != '\0')
+	n = num;
+	if (num < 0)
+		n = -num;
+	while (n != 0)
 	{
 		n /= 10;
 		len++;
@@ -36,7 +39,7 @@ char	*ft_itoa(int n)
 	unsigned int	n_abs;
 
 	len = ft_len(n);
-	num = (char *)malloc((len + 1) * (sizeof(char *)));
+	num = (char *)malloc((len + 1) * sizeof(char));
 	if (!num)
 		return (NULL);
 	num[len] = '\0';
@@ -44,15 +47,16 @@ char	*ft_itoa(int n)
 		num[0] = '0';
 	if (n < 0)
 	{
-		num[0] = '-';
-		n_abs = (unsigned int)(-n);
+		n_abs = -n;
 	}
 	else
-		n_abs = (unsigned int)n;
+		n_abs = n;
 	while (n_abs > 0)
 	{
 		num[--len] = (n_abs % 10) + '0';
 		n_abs /= 10;
 	}
+	if (n < 0)
+		num[0] = '-';
 	return (num);
 }

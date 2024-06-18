@@ -1,2 +1,0 @@
-
-grep "$strmapi" re
