@@ -34,8 +34,9 @@ substr="${ft}substr"
 strjoin="${ft}strjoin"
 strtrim="${ft}strtrim"
 split="${ft}split"
-# "********************************************NEW**********************************************"
 itoa="${ft}itoa"
+# "********************************************NEW**********************************************"
+strmapi="${ft}strmapi"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -65,4 +66,6 @@ grep "$substr" res
 grep "$strjoin" res
 grep "$strtrim" res
 grep "$split" res
+grep "$strmapi" res
+grep "$itoa" res
 echo "********************************************NEW**********************************************"
