@@ -8,6 +8,7 @@ ft="ft_"
 
 # FUNCTIONS
 putchar_fd="${ft}putchar_fd"
+putstr_fd="${ft}putstr_fd"
 striteri="${ft}striteri"
 isalnum="${ft}isalnum"
 isalpha="${ft}isalpha"
@@ -38,8 +39,9 @@ split="${ft}split"
 bzero="${ft}bzero"
 itoa="${ft}itoa"
 atoi="${ft}atoi"
+putendl_fd="${ft}putendl_fd"
 # "********************************************NEW**********************************************"
-putstr_fd="${ft}putstr_fd"
+putnbr_fd="${ft}putnbr_fd"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -74,4 +76,6 @@ grep "$itoa" res
 grep "$striteri" res
 grep "$putchar_fd" res
 grep "$putstr_fd" res
+grep "$putendl_fd" res
 echo "********************************************NEW**********************************************"
+grep "$putnbr_fd" res

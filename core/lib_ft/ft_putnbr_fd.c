@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 20:52:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/18 22:38:01 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/18 22:41:10 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/18 23:09:26 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putnbr_fd(int nbr, int fd)
 {
-	if (!s)
-		return ;
-	while (*s != '\0')
+	char	n;
+
+	if (nbr == -2147483648)
 	{
-		write(fd, s, 1);
-		s++;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
+	if (nbr < 0)
+	{
+		ft_putstr_fd("-", fd);
+		nbr = -nbr;
+	}
+	if (nbr >= 10)
+		ft_putnbr_fd(nbr / 10, fd);
+	n = nbr % 10 + '0';
+	ft_putchar_fd(n, fd);
 }
