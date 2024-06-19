@@ -40,8 +40,9 @@ bzero="${ft}bzero"
 itoa="${ft}itoa"
 atoi="${ft}atoi"
 putendl_fd="${ft}putendl_fd"
-# "********************************************NEW**********************************************"
 putnbr_fd="${ft}putnbr_fd"
+# "********************************************NEW**********************************************"
+lstnew="${ft}lstnew"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -77,5 +78,7 @@ grep "$striteri" res
 grep "$putchar_fd" res
 grep "$putstr_fd" res
 grep "$putendl_fd" res
-echo "********************************************NEW**********************************************"
 grep "$putnbr_fd" res
+echo "********************************************BONUS**********************************************"
+grep "$lstnew" res
+echo "********************************************NEW**********************************************"
