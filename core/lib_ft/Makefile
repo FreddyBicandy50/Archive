@@ -35,7 +35,7 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_bzero.c 
 BSOURCES = \
-	ft_lstnew.c 
+	ft_lstnew.c ft_lstadd_front.c 
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
 
