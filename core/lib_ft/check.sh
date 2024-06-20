@@ -44,7 +44,11 @@ putnbr_fd="${ft}putnbr_fd"
 # "********************************************BONUS**********************************************"
 lstnew="${ft}lstnew"
 lstadd_front="${ft}lstadd_front"
+lstsize="${ft}lstsize"
+lstlast="${ft}lstlast"
+lstadd_back="${ft}lstadd_back"
 # "********************************************NEW**********************************************"
+lstdelone="${ft}lstdelone"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -83,5 +87,9 @@ grep "$putendl_fd" res
 grep "$putnbr_fd" res
 echo "********************************************BONUS**********************************************"
 grep "$lstnew" res
-echo "********************************************NEW**********************************************"
 grep "$lstadd_front" res
+grep "$lstsize" res
+grep "$lstlast" res
+grep "$lstadd_back" res
+grep "$lstdelone" res
+echo "********************************************NEW**********************************************"
