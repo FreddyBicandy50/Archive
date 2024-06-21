@@ -47,8 +47,9 @@ lstadd_front="${ft}lstadd_front"
 lstsize="${ft}lstsize"
 lstlast="${ft}lstlast"
 lstadd_back="${ft}lstadd_back"
-# "********************************************NEW**********************************************"
 lstdelone="${ft}lstdelone"
+# "********************************************NEW**********************************************"
+lstclear="${ft}lstclear"
 
 # Use grep to find occurrences of the function name in the output
 grep "$isalnum" res
@@ -93,3 +94,4 @@ grep "$lstlast" res
 grep "$lstadd_back" res
 grep "$lstdelone" res
 echo "********************************************NEW**********************************************"
+grep "$lstclear" res

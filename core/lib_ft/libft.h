@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:37:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/20 23:50:56 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/21 11:51:40 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstadd_front(t_list **lst, t_list *new);
