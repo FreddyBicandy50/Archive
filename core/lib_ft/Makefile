@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/21 12:28:36 by fbicandy          #+#    #+#              #
+#    Updated: 2024/06/21 12:28:46 by fbicandy         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 SOURCES = \
 ft_isalnum.c \
@@ -35,8 +47,15 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c \
 ft_bzero.c 
 BSOURCES = \
-	ft_lstnew.c ft_lstadd_front.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
-	ft_lsclear.c 
+		ft_lstadd_front.c	\
+		ft_lstsize.c		\
+		ft_lstlast.c		\
+		ft_lstadd_back.c	\
+		ft_lstmap.c			\
+		ft_lstnew.c			\
+		ft_lstclear.c		\
+		ft_lstdelone.c		\
+		ft_lstiter.c		
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
 
@@ -48,14 +67,14 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	$(AR) -r $@ $?
 
-bonus: $(BOBJECTS) $
+bonus: $(OBJECTS) $(BOBJECTS)
 	$(AR) -r $(NAME) $?
 
 %.o: %.c
-	$(CC) -c $(CFLAGS) -I. $?
+	$(CC) -c $(CFLAGS) $?
 
 clean:
-	rm -f $(OBJECTS) $
+	rm -f $(OBJECTS) $(BOBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
