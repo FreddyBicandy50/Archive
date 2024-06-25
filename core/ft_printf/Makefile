@@ -19,11 +19,9 @@ all : $(NAME)
 
 clean :
 	$(MAKE) clean -C ./libft
-	rm -rf $(SURPL_O) 
 	rm -rf $(OBJS)
 
 fclean : clean
-	$(MAKE) fclean -C ./libft
 	rm -rf $(NAME)
 
 re : fclean all
