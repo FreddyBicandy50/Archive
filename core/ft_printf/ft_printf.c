@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 17:49:53 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/25 14:13:20 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/25 14:32:16 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,16 +49,5 @@ int ft_printf(const char *input, ...)
 		input++;
 	}
 	va_end(args);
-	return (0);
-}
-
-int main(void)
-{
-	unsigned int hex = 0xABC123;
-
-	hex = 0xABC123;
-	ft_printf("%X\n", hex);
-	hex = 0xabc111;
-	ft_printf("%x\n", hex);
 	return (0);
 }
