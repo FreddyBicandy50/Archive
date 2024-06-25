@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 17:49:53 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/24 22:14:39 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/25 14:13:20 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,34 @@
 #include <unistd.h>
 #include "libft/libft.h"
 
-int	ft_printf(const char *input, ...)
-{
-	va_list	args;
 
+
+int ft_printf(const char *input, ...)
+{
+	va_list args;
+
+	va_start(args, input);
 	while (*input != '\0')
 	{
-		va_start(args, input);
 		if (*input == '%')
 		{
 			input++;
-			if (*input == 'i')
+			if (*input == 'X')
+				ft_putnbr_hex_fd(va_arg(args, unsigned int), 1);
+			if (*input == 'x')
+				ft_putnbr_hex_fd(va_arg(args, unsigned int), 0);
+			if (*input == 'u')
+				ft_putnbr_fd(va_arg(args, unsigned int), 1);
+			else if (*input == 'i')
 				ft_putnbr_fd(va_arg(args, int), 1);
-			if (*input == 'd')
+			else if (*input == 'd')
 				ft_putnbr_fd(va_arg(args, int), 1);
-			if (*input == 'c')
+			else if (*input == 'c')
 				ft_putchar_fd((char)va_arg(args, int), 1);
-			if (*input == 's')
+			else if (*input == 's')
 				ft_putstr_fd(va_arg(args, char *), 1);
+			else if (*input == '%')
+				ft_putchar_fd('%', 1);
 		}
 		else
 			ft_putchar_fd(*input, 1);
@@ -42,16 +52,13 @@ int	ft_printf(const char *input, ...)
 	return (0);
 }
 
-// int main(void)
-// {
-// 	char first_name = 'f';
-// 	char *lastname = "bicandy";
-// 	char *option1 = "FBI";
-// 	char *option2 = "CANDY";
-// 	int foutry_two = 42;
-// 	int age = 23;
-// 	ft_printf("Hello %i my name is=%c%s and i
-// have=%d (yrs old)\n\t\t\"IT NOT %s,OR %s\"\n",
-// foutry_two, first_name, lastname,age, option1, option2);
-// 	return (0);
-// }
+int main(void)
+{
+	unsigned int hex = 0xABC123;
+
+	hex = 0xABC123;
+	ft_printf("%X\n", hex);
+	hex = 0xabc111;
+	ft_printf("%x\n", hex);
+	return (0);
+}

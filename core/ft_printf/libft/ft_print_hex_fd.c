@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_hex_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/15 20:35:25 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/15 22:21:57 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/25 12:28:48 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/25 14:14:37 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_putnbr_hex_fd(unsigned int num, int upper)
 {
-	const unsigned char	*p1 = (const unsigned char *)s1;
-	const unsigned char	*p2 = (const unsigned char *)s2;
-	size_t				i;
+	char	*hex_digits;
+	char	hex[9];
+	int		i;
 
-	i = 0;
-	while (i < n)
+	hex_digits = "0123456789abcdef";
+	i = 8;
+	hex[i] = '\0';
+	if (num == 0)
 	{
-		if (p1[i] != p2[i])
-			return (p1[i] - p2[i]);
-		i++;
+		ft_putchar_fd('0', 1);
+		return ;
 	}
-	return (0);
+	while (num > 0)
+	{
+		if (upper)
+			hex[--i] = ft_toupper(hex_digits[num % 16]);
+		else
+			hex[--i] = hex_digits[num % 16];
+		num /= 16;
+	}
+	ft_putstr_fd(&hex[i], 1);
 }
