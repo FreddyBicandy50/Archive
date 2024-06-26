@@ -5,17 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/18 20:52:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/18 22:38:01 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/25 20:35:37 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/25 20:41:34 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "unistd.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
-		return ;
 	while (*s != '\0')
 	{
 		write(fd, s, 1);

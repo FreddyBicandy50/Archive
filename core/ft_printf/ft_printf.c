@@ -5,14 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 17:49:53 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/25 20:07:46 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/25 20:14:11 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/25 22:12:11 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdarg.h>
-#include <unistd.h>
 #include "libft/libft.h"
 
 void	formatter(va_list args, char input)
@@ -41,39 +40,27 @@ void	formatter(va_list args, char input)
 		ft_putchar_fd('%', 1);
 }
 
-int	ft_printf(const char *input, ...)
+int	ft_printf(const char *PARAM, ...)
 {
 	va_list	args;
-	size_t	count;
+	int		count;
+	int		i;
 
-	va_start(args, input);
+	va_start(args, PARAM);
 	count = 0;
-	while (*input != '\0')
+	i = 0;
+	while (PARAM[i] != '\0')
 	{
-		if (*input == '%')
+		if (PARAM[i] == '%')
 		{
-			input++;
-			formatter(args, *input);
+			i++;
+			formatter(args, PARAM[i]);
 		}
 		else
-			ft_putchar_fd(*input, 1);
-		input++;
+			ft_putchar_fd(PARAM[i], 1);
+		i++;
 	}
 	va_end(args);
 	return (count);
 }
 
-// int main(void)
-// {
-// 	char first_name = 'f';
-// 	char *lastname = "bicandy";
-// 	unsigned int num = 255;
-// 	unsigned int num2 = 123456;
-
-// 	ft_printf("Character: %c\n", first_name);
-// 	ft_printf("String: %s\n", lastname);
-// 	ft_printf("Hex (lower): %x\n", num);
-// 	ft_printf("Hex (upper): %X\n", num2);
-
-// 	return 0;
-// }

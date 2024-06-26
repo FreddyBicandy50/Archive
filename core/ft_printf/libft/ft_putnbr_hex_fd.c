@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_hex_fd.c                                  :+:      :+:    :+:   */
+/*   ft_putnbr_hex_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 12:28:48 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/25 20:07:33 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/25 21:21:12 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/25 21:59:19 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_hex_fd(unsigned int num, int upper)
+void	ft_putnbr_hex_fd(unsigned int num, const int upper)
 {
 	char	*hex_digits;
 	char	hex[9];
 	int		i;
 
 	hex_digits = "0123456789abcdef";
-	i = 8;
-	hex[i] = '\0';
+	i = 7;
+	hex[8] = '\0';
 	if (num == 0)
 	{
 		ft_putchar_fd('0', 1);
@@ -29,9 +29,10 @@ void	ft_putnbr_hex_fd(unsigned int num, int upper)
 	while (num > 0)
 	{
 		if (upper)
-			hex[--i] = ft_toupper(hex_digits[num % 16]);
+			hex[i] = ft_toupper(hex_digits[num % 16]);
 		else
-			hex[--i] = hex_digits[num % 16];
+			hex[i] = hex_digits[num % 16];
+		i--;
 		num /= 16;
 	}
 	ft_putstr_fd(&hex[i], 1);

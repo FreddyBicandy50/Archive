@@ -5,10 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 13:46:17 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/25 12:23:18 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/25 21:43:19 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/25 21:51:56 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+#include <stdio.h>
 
 char	ft_toupper(unsigned char get_chars)
 {

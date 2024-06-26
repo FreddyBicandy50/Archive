@@ -6,19 +6,17 @@
 #    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/21 12:28:36 by fbicandy          #+#    #+#              #
-#    Updated: 2024/06/25 14:31:55 by fbicandy         ###   ########.fr        #
+#    Updated: 2024/06/25 21:52:13 by fbicandy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 SOURCES = \
-ft_print_hex_fd.c 	\
-ft_toupper.c 		\
-ft_putnbr_fd.c 		\
-ft_putstr_fd.c 		\
-ft_putchar_fd.c		\
-ft_toupper.c 	
-
+ft_putchar_fd.c \
+ft_putstr_fd.c	\
+ft_putnbr_fd.c 	\
+ft_toupper.c 	\
+ft_putnbr_hex_fd.c 
 
 
 OBJECTS = $(SOURCES:.c=.o)
