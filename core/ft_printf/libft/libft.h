@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:37:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/25 21:52:04 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/26 17:17:10 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 # define LIBFT_H
 # include <stdlib.h>
 
-void	ft_putnbr_hex_fd(unsigned int num, int upper);
+int		ft_strlen(const char *str);
+
+void	ft_putnbr_hex(unsigned int num, int isupper);
 void	ft_putchar_fd(char c, int fd);
+void	ft_putnbr_fd(int nbr, int fd);
 void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-int		ft_strlcpy(char *dest, const char *src, size_t size);
+
 char	ft_toupper(unsigned char get_chars);
+char	*ft_itoa(int n);
+char	*ft_utoa(int n);
 
 #endif

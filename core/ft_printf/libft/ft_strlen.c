@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_hex_fd.c                                 :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 21:21:12 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/25 21:59:19 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/10 15:03:40 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/17 12:25:55 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr_hex_fd(unsigned int num, const int upper)
+int	ft_strlen(const char *str)
 {
-	char	*hex_digits;
-	char	hex[9];
-	int		i;
+	int	len;
 
-	hex_digits = "0123456789abcdef";
-	i = 7;
-	hex[8] = '\0';
-	if (num == 0)
-	{
-		ft_putchar_fd('0', 1);
-		return ;
-	}
-	while (num > 0)
-	{
-		if (upper)
-			hex[i] = ft_toupper(hex_digits[num % 16]);
-		else
-			hex[i] = hex_digits[num % 16];
-		i--;
-		num /= 16;
-	}
-	ft_putstr_fd(&hex[i], 1);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
