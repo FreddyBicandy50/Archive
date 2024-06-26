@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 22:41:10 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/26 15:42:28 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:35:49 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ void	ft_putnbr_fd(int nbr, int fd)
 
 	if (nbr == -2147483648)
 	{
-		ft_putstr_fd("-2147483648", 1);
+		ft_putstr_fd("-2147483648", fd);
 		return ;
 	}
 	if (nbr < 0)
 	{
-		ft_putstr_fd("-", 1);
+		ft_putstr_fd("-", fd);
 		nbr = -nbr;
 	}
 	if (nbr >= 10)
-		ft_putnbr_fd(nbr / 10, 1);
+		ft_putnbr_fd(nbr / 10, fd);
 	n = nbr % 10 + '0';
 	ft_putchar_fd(n, fd);
 }

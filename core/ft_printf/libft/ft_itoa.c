@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 23:24:19 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/18 21:12:23 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:30:21 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		num[0] = '0';
 	if (n < 0)
-	{
 		n_abs = -n;
-	}
 	else
 		n_abs = n;
 	while (n_abs > 0)

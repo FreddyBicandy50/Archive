@@ -6,7 +6,7 @@
 #    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/21 12:28:36 by fbicandy          #+#    #+#              #
-#    Updated: 2024/06/26 17:16:24 by fbicandy         ###   ########.fr        #
+#    Updated: 2024/06/26 22:18:58 by fbicandy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = libft.a
 SOURCES = \
 ft_putchar_fd.c \
 ft_itoa.c 		\
-ft_utoa.c 		\
 ft_putstr_fd.c	\
 ft_putnbr_fd.c 	\
 ft_strlen.c 	\

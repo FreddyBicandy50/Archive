@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 14:01:56 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/06/26 17:16:05 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:30:46 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <stdarg.h>
 #include "libft/libft.h"
 
-int nbr_format(va_list args, const char format)
+int	nbr_format(va_list args, const char format)
 {
-	int count;
-	int num;
-	char *str;
+	int		count;
+	int		num;
+	char	*str;
 
 	if (format == 'd' || format == 'i')
 	{
@@ -31,7 +31,8 @@ int nbr_format(va_list args, const char format)
 	else if (format == 'u')
 	{
 		num = va_arg(args, unsigned int);
-		str = ft_utoa(num);
+		num *= -1;
+		str = ft_itoa(num);
 		ft_putstr_fd(str, 1);
 		count = ft_strlen(str);
 		free(str);
@@ -39,11 +40,11 @@ int nbr_format(va_list args, const char format)
 	return (count);
 }
 
-int ft_printf(const char *PARAM, ...)
+int	ft_printf(const char *PARAM, ...)
 {
-	size_t count;
-	va_list args;
-	size_t i;
+	size_t	count;
+	va_list	args;
+	size_t	i;
 
 	i = 0;
 	count = 0;
@@ -72,9 +73,9 @@ int ft_printf(const char *PARAM, ...)
 // 	int count;
 
 // 	printf("------------------------FT-----------------------------\n");
-// 	count = ft_printf("printf:test %d\n");
+// 	count = ft_printf("printf:test %u\n",-747);
 // 	printf("~%d\n", count);
 // 	printf("------------------------Original-----------------------------\n");
-// 	printf("~%d\n", printf("PRINTF:test %d%d\n", 123, __INT_MAX__ * -1 - 1));
+// 	printf("~%d\n", printf("PRINTF:test %u\n",-123));
 // 	return (0);
 // }
