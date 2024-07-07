@@ -2,7 +2,7 @@ LIBFT = ./libft/libft.a
 
 NAME = libftprintf.a
 
-SRCS =  *.c 
+SRCS = *.c 
 CC = gcc
 FLAGS = -c -Wall -Wextra -Werror
 
