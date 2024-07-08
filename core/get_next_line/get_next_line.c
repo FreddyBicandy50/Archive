@@ -5,68 +5,97 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/06 17:06:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/07 16:04:09 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/07/08 18:54:21 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/07/08 21:46:16 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char *get_next_line(int fd)
+char	*join(char *temp, char *buffer, char *remaining)
 {
-	static char *buffer;
-	static char *temp;
-	char *line;
-	static size_t bytes_read;
+	if (!remaining)
+		temp = ft_strjoin("", buffer);
+	else
+		temp = ft_strjoin(remaining, buffer);
+	free(remaining);
+	return (temp);
+}
 
-	//prepare to invade
-	if (!buffer || !temp)
+char	*isline(char *newline_pos, char *remaining)
+{
+	char	*line;
+
+	if (newline_pos)
 	{
-		temp = malloc(1);
-		buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE + 1);
+		*newline_pos = '\0';
+		line = ft_strdup(remaining);
+		ft_memmove(remaining, newline_pos + 1, ft_strlen(newline_pos + 1) + 1);
+		return (line);
 	}
-	if (fd <= 0 || !buffer)
-		return (NULL);
-	line = malloc(1);
-	if (!line || !temp)
-		return (NULL);
-	
-	//read the first chunk
-	bytes_read = read(fd, buffer, BUFFER_SIZE);
-	buffer[bytes_read] = '\0';
-	temp = ft_strjoin(temp, buffer);
-	
-	//what if this chunck doesn't have a newline!
-	while (!is_line(buffer))
+	return (NULL);
+}
+
+char	*find_line(char **remaining, int fd)
+{
+	char	buffer[BUFFER_SIZE + 1];
+	char	*newline_pos;
+	char	*line;
+	char	*temp;
+	ssize_t	bytes_read;
+
+	bytes_read = 1;
+	while (bytes_read > 0)
 	{
-		//keepreading till you find
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		buffer[bytes_read] = '\0';
-		
-		if (bytes_read <= 0) // Or you dont
-		{
-			free(buffer);
-			return (NULL);
-		}
-		temp = ft_strjoin(temp, buffer);
+		temp = join(temp, buffer, *remaining);
+		*remaining = temp;
+		newline_pos = ft_strchr(*remaining, '\n');
+		if (newline_pos)
+			return (isline(newline_pos, *remaining));
 	}
-	//find a line within all Merged chuncks
-	line = ft_get_line(temp);
-	//trim the line and save the leftovers
-	temp = ft_bufftrim(temp);
+	if (*remaining && **remaining != '\0')
+	{
+		line = ft_strdup(*remaining);
+		free(*remaining);
+		*remaining = NULL;
+		return (line);
+	}
+	return (NULL);
+}
+
+char	*get_next_line(int fd)
+{
+	static char	*remaining;
+	char		*line;
+
+	line = NULL;
+	if (fd < 0 || BUFFER_SIZE <= 0)
+		return (NULL);
+	line = find_line(&remaining, fd);
 	return (line);
 }
 
-int main(void)
-{
-	int fd;
-	int i;
-	char *getline;
+// int main(void)
+// {
+// 	char *line;
+// 	int fd;
 
-	i = 0;
-	fd = open("file.txt", O_RDONLY);
+// 	fd = open("file.txt", O_RDONLY);
+// 	if (fd < 0)
+// 	{
+// 		perror("open");
+// 		return (1);
+// 	}
 
-	printf("%s\n", get_next_line(fd));
+// 	while ((line = get_next_line(fd)))
+// 	{
+// 		printf("%s\n", line);
+// 		free(line);
+// 	}
 
-	return (0);
-}
+// 	close(fd);
+
+// 	return (0);
+// }

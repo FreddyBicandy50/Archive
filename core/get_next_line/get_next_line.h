@@ -6,27 +6,27 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/06 12:35:10 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/07 12:00:28 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/07/08 19:03:02 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
-#define GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-#ifndef BUFFER_SIZE
-#define BUFFER_SIZE 42
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
-#define MAX_BUFFER 256
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <stdio.h>
 
-char *ft_strjoin(char *s1, char *s2);
-char *ft_bufftrim(char *buffer);
-char *ft_get_line(char *buffer);
-int is_line(char *str);
-int ft_strlen(char *str);
+char	*get_next_line(int fd);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strdup(const char *s);
+char	*ft_strchr(const char *s, int c);
+int		ft_strlen(const char *str);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
