@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 13:49:07 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/08 21:46:58 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/07/08 22:28:44 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 	}
 	j = 0;
-	while (j < (size_t) ft_strlen(s2))
+	while (j < (size_t)ft_strlen(s2))
 	{
 		result[i + j] = s2[j];
 		j++;

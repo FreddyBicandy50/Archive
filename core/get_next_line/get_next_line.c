@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 18:54:21 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/08 21:46:16 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/07/08 22:33:47 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,25 +77,25 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// int main(void)
-// {
-// 	char *line;
-// 	int fd;
+int main(void)
+{
+	char *line;
+	int fd;
 
-// 	fd = open("file.txt", O_RDONLY);
-// 	if (fd < 0)
-// 	{
-// 		perror("open");
-// 		return (1);
-// 	}
+	fd = open("file.txt", O_RDONLY);
+	if (fd < 0)
+	{
+		perror("open");
+		return (1);
+	}
 
-// 	while ((line = get_next_line(fd)))
-// 	{
-// 		printf("%s\n", line);
-// 		free(line);
-// 	}
+	while ((line = get_next_line(fd)))
+	{
+		printf("%s\n", line);
+		free(line);
+	}
 
-// 	close(fd);
+	close(fd);
 
-// 	return (0);
-// }
+	return (0);
+}
