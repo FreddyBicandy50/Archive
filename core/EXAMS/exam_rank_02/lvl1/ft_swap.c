@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_word.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/10 18:42:36 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/11 21:15:35 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/07/11 21:11:04 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/07/11 22:41:45 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void first_word(char *str)
+void ft_swap(int *a, int *b)
 {
-	if (!str)
-		return;
-	while ((*str == ' ' || *str == '\t') && *str!='\0')
-		str++;
-	while (*str != ' ' && *str != '\t' && *str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
-	return ;
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }
 
-// int main(int argc, char *argv[])
+// int main(void)
 // {
-// 	if (argc == 2)
-// 		first_word(argv[1]);
-// 	write(1, "\n", 1);
+
+// 	int a = 5;
+// 	int b = 1;
+
+// 	printf("\na=%d | b=%d\n", a, b);
+// 	ft_swap(&a, &b);
+// 	printf("\na=%d | b=%d\n", a, b);
 // 	return (0);
 // }

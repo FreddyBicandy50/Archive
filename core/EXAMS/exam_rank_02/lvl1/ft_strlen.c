@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_word.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy copy.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/10 18:42:36 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/11 21:15:35 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/07/11 21:11:04 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/07/11 22:15:15 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-void first_word(char *str)
+int ft_strlen(char *str)
 {
-	if (!str)
-		return;
-	while ((*str == ' ' || *str == '\t') && *str!='\0')
-		str++;
-	while (*str != ' ' && *str != '\t' && *str != '\0')
-	{
-		write(1, str, 1);
-		str++;
-	}
-	return ;
+	int len;
+
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }
 
-// int main(int argc, char *argv[])
+// int main(void)
 // {
-// 	if (argc == 2)
-// 		first_word(argv[1]);
-// 	write(1, "\n", 1);
+// 	char *source;
+// 	char *dest;
+
+// 	source = "Hello World";
+// 	dest=(char *)malloc(11 * sizeof(char));
+// 	dest= ft_strcpy(dest, source);
+	
+// 	printf("%s",dest);
 // 	return (0);
 // }
