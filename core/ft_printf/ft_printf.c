@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 14:01:56 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/18 23:23:39 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/07/23 22:16:23 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 #include <limits.h>
 #include "libft/libft.h"
 
-int	hexa_format(va_list args, const char format)
+int hexa_format(va_list args, const char format)
 {
-	int				count;
-	unsigned int	num;
+	int count;
+	unsigned int num;
 
 	count = 0;
 	if (format == 'x')
@@ -37,12 +37,10 @@ int	hexa_format(va_list args, const char format)
 	return (count);
 }
 
-int	char_format(va_list args, const char format)
+int char_format(va_list args, const char format)
 {
-	args[name,age]
-
-	int		count;
-	char	*str;
+	int count;
+	char *str;
 
 	count = 0;
 	if (format == 'c')
@@ -58,9 +56,9 @@ int	char_format(va_list args, const char format)
 	return (count);
 }
 
-int	nbr_format(va_list args, const char format)
+int nbr_format(va_list args, const char format)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	if (format == 'd' || format == 'i')
@@ -70,7 +68,7 @@ int	nbr_format(va_list args, const char format)
 	return (count);
 }
 
-int	check_format(va_list args, const char format)
+int check_format(va_list args, const char format)
 {
 	if (format == 'd' || format == 'i' || format == 'u')
 		return (nbr_format(args, format));
@@ -86,11 +84,11 @@ int	check_format(va_list args, const char format)
 	return (0);
 }
 
-int	ft_printf(const char *PARAM, ...)
+int ft_printf(const char *PARAM, ...)
 {
-	size_t	count;
-	va_list	args;
-	size_t	i;
+	size_t count;
+	va_list args;
+	size_t i;
 
 	i = 0;
 	count = 0;
@@ -111,4 +109,13 @@ int	ft_printf(const char *PARAM, ...)
 	}
 	va_end(args);
 	return (count);
+}
+
+int main(void)
+{
+	char *str="Freddy";
+
+	printf("%p\n",str);
+	ft_printf("%p\n",str);
+	return (0);
 }
