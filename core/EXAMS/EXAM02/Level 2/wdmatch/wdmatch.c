@@ -1,37 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   wdmatch.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/21 23:42:02 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/07/21 23:58:21 by fbicandy         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-
-void ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
-
+#include <stdio.h>
 void ft_putstr(char *str)
 {
-    while (*str)
+    while (*str != '\0')
     {
-        ft_putchar(*str);
+        write(1, str, 1);
         str++;
     }
 }
-
-int wdmatch(char *s1, char *s2)
+void wdmatch(char *s1, char *s2)
 {
+    int i;
+
+    i = 0;
     while (*s2)
     {
-        if (*s1 == *s2)
-            s1++;
+        if (s1[i] == *s2)
+            i++;
         s2++;
     }
-    return (*s1 == '\0');
+    if (s1[i] == '\0')
+        ft_putstr(s1);
 }
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
     if (argc == 3)
-    {
-        if (wdmatch(argv[1], argv[2]))
-            ft_putstr(argv[1]);
-    }
-    ft_putchar('\n');
-    return 0;
+        wdmatch(argv[1], argv[2]);
+    write(1, "\n", 1);
+    return (0);
 }

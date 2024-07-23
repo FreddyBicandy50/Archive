@@ -1,6 +1,25 @@
 #include <unistd.h>
 
-void camelcase(char *str)
+// void camelcase(char *str)
+// {
+// 	int i;
+// 	char c;
+
+// 	i = 0;
+// 	while (str[i] != '\0')
+// 	{
+// 		c = str[i];
+// 		if (str[i] >= 'A' && str[i] <= 'Z')
+// 		{
+// 			c = str[i] + 32;
+// 			write(1, "_", 1);
+// 		}
+// 		write(1, &c, 1);
+// 		i++;
+// 	}
+// }
+
+void camel_to_snake(char *str)
 {
 	int i;
 
@@ -9,19 +28,19 @@ void camelcase(char *str)
 	{
 		if (str[i] >= 'A' && str[i] <= 'Z')
 		{
-			str[i] = str[i] + 32;
 			write(1, "_", 1);
+			str[i] += 32;
 		}
 		write(1, &str[i], 1);
 		i++;
 	}
 }
+
 int main(int argc, char *argv[])
 {
-
 	if (argc == 2)
 	{
-		camelcase(argv[1]);
+		camel_to_snake(argv[1]);
 	}
 	write(1, "\n", 1);
 	return (0);

@@ -1,22 +1,44 @@
 #include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strdup(char *src)
+size_t ft_strlen(char *str)
 {
-	int	i = 0;
-	int	length = 0;
-	char	*strcpy;
+	size_t len;
 
-	while (src[length])
-		length++;
-	strcpy = malloc(sizeof(*strcpy) * (length + 1));
-	if (strcpy != NULL)
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
+}
+
+char *ft_strdup(char *str)
+{
+	char *dup;
+	int i;
+
+	dup = (char *)malloc(sizeof(char) * ft_strlen(str) + 1 );
+	if(!dup)
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
 	{
-		while (src[i])
-		{
-			strcpy[i] = src[i];
-			i++;
-		}
-		strcpy[i] = '\0';
+		dup[i] = str[i];
+		i++;
 	}
-	return (strcpy);
+	dup[i] = '\0';
+	return (dup);
+}
+
+int main(void)
+{
+	char *message = "NOFKHOU";
+	char *res;
+
+	res = ft_strdup(message);
+	while (*res != '\0')
+	{
+		write(1,res,1);
+		res++;
+	}
+	return (0);
 }

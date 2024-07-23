@@ -1,27 +1,58 @@
 #include <unistd.h>
 
-int has_char(char *str, char c)
+// int has_char(char *str, char c)
+// {
+//     while (*str)
+//     {
+//         if (*str == c)
+//             return 1;
+//         str++;
+//     }
+//     return 0;
+// }
+
+// void inter(char *str1, char *str2)
+// {
+//     char printed[128] = {0};
+//     int i = 0;
+
+//     while (*str1)
+//     {
+//         if (has_char(str2, *str1) && !has_char(printed, *str1))
+//         {
+//             write(1, str1, 1);
+//             printed[i] = *str1;
+//             i++;
+//         }
+//         str1++;
+//     }
+// }
+
+int found(char *str, char inter)
 {
-    while (*str)
+    while (*str != '\0')
     {
-        if (*str == c)
-            return 1;
+        if (*str == inter)
+            return (1);
         str++;
     }
-    return 0;
+    return (0);
 }
 
 void inter(char *str1, char *str2)
 {
-    char printed[128] = {0};
-    int i = 0;
+    char inter[128] = {0};
+    int i;
 
+    if (!str1 || !str2)
+        return;
+    i = 0;
     while (*str1)
     {
-        if (has_char(str2, *str1) && !has_char(printed, *str1))
+        if (found(str2, *str1) && !found(inter, *str1))
         {
             write(1, str1, 1);
-            printed[i] = *str1;
+            inter[i] = *str1;
             i++;
         }
         str1++;
