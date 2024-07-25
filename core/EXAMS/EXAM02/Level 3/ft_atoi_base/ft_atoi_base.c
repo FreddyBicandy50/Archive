@@ -40,11 +40,13 @@ int ft_atoi_base(const char *str, int str_base)
 	}
 	return (result);
 }
+
+
 #include <stdio.h>
 int main(void)
 {
-	char *message="14";
+	char *message="133";
 
-	printf("%d",ft_atoi_base(message,15));
+	printf("%d",ft_atoi_base(message,10));
 	return 0;
 }

@@ -3,7 +3,8 @@
 void epur_str(char *str)
 {
     int flag;
-    while (*str == ' ' && *str == '\t')
+
+    while (*str == ' ' || *str == '\t')
         str++;
     flag = 0;
     while (*str != '\0')
@@ -13,7 +14,7 @@ void epur_str(char *str)
         else
         {
             if (flag)
-                write(1, " ", 1);
+                write(1, "-", 1);
             write(1, str, 1);
             flag = 0;
         }
@@ -21,8 +22,10 @@ void epur_str(char *str)
     }
 }
 
-int main(void)
+int main(int argc, char *argv[])
 {
-    epur_str(" this        time it      will     be    more complex  .           ");
+    if (argc == 2)
+        epur_str(argv[1]);
+    write(1, "\n", 1);
     return (0);
 }
