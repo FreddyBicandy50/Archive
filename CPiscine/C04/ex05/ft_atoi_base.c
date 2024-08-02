@@ -6,11 +6,12 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:13:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/05/04 17:44:47 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/01 20:15:04 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -89,5 +90,13 @@ int	ft_atoi_base(char *str, char *base)
 		}
 		return (res * sign);
 	}
+	return (0);
+}
+
+int main(void)
+{
+	char *message = "13";
+	char *base = "0123456789ABCDEF";
+	printf("%d\n", ft_atoi_base(message, base));
 	return (0);
 }

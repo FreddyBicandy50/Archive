@@ -45,8 +45,8 @@ int ft_atoi_base(const char *str, int str_base)
 
 int main(void)
 {
-	char *message = "50";
-	int base = 8;
+	char *message = "10";
+	int base = 16;
 	printf("%d\n", ft_atoi_base(message, base));
 	return (0);
 }
