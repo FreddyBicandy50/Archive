@@ -3,10 +3,8 @@ pushd "/home/fbicandy/42Beirut/core/push_swap/" || exit
 
 
 # Compile
+make && make clean
 clear
-FLAGS="-Wall -Werror -Wextra"
-gcc *.c */*.c */*/*.c $FLAGS && cc *.c */*.c */*/*.c $FLAGS -o a.out
-
-valgrind --leak-check=full  ./a.out
+valgrind --leak-check=full  ./push_swap
 
 rm a.out

@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:32:50 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 20:15:24 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/03 20:23:57 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "libraries/libft/libft.h"
+#include "libraries/ft_printf/libft/libft.h"
 
 typedef struct s_stack_node
 {

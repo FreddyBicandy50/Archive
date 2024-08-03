@@ -1,26 +1,28 @@
 NAME = push_swap
-INCLUDES= libraries/libft/libft.h  push_swap.h  
-libft_SOURCES = libraries/libft/*.c
-ft_printf_SOURCES = libraries/*.c
-pushswap_SOURCES = src/*.c main.c
+INCLUDES = ./
+pushswap_SOURCES = src/*.c libraries/*.c main.c
+PRINTF = ./libraries/ft_printf/libftprintf.a
 
-
-OBJECTS = $(libft_SOURCES:.c=.o) $(ft_printf_SOURCES:.c=.o) $(pushswap_SOURCES:.c=.o)
+OBJECTS = $(pushswap_SOURCES:.c=.o)
 
 CC = gcc
 RM =rm -rf
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I ${INCLUDES}
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $?
-
-%.o: %.c ${INCLUDES}
+%.o: %.c 
 	$(CC) -c $(CFLAGS) -c $< -o  $@
 
-clean:
-	rm -f $(OBJECTS) 
+$(NAME): $(OBJECTS) $(PRINTF)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME) $(PRINTF)
+
+$(PRINTF):	
+			@make -C ./libraries/ft_printf
+
+clean:	
+		@make clean -C ./libraries/ft_printf
+		rm -f $(OBJECTS) 
 
 fclean: clean
 	rm -f $(NAME)
