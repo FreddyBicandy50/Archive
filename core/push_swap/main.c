@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 17:31:55 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/03 18:11:44 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_stack_node *stack_store(char **tabs)
 {
-    t_stack_node *new_node = NULL, *stack = NULL, *temp = NULL;
+    t_stack_node *new_node = NULL, *stack = NULL, *head = NULL;
     int i;
 
     i = 0;
@@ -34,22 +34,12 @@ t_stack_node *stack_store(char **tabs)
             stack = new_node;
         else
         {
-            new_node->prev = temp;
-            stack->next = temp;
+            head->next = new_node;
+            new_node->prev = head;
         }
 
-        printf("%p | %d\n", new_node, new_node->data);
-
-        temp = new_node;
+        head = new_node;
         i++;
-    }
-    stack = NULL;
-    printf("\n");
-    stack = temp;
-    while (stack != NULL)
-    {
-        printf("%p | %d\n", stack, stack->data);
-        stack = stack->next;
     }
     return (stack);
 }
@@ -61,5 +51,14 @@ int main(void)
 
     sa = NULL;
     sa = stack_store(tabs);
+
+    // Print the stack
+    t_stack_node *current = sa;
+    while (current != NULL)
+    {
+        printf("%p | %d\n", (void *)current, current->data);
+        current = current->next;
+    }
+
     return (0);
 }
