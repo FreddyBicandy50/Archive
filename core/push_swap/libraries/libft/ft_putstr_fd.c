@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 18:59:12 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/18 20:52:45 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/30 18:18:37 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include <unistd.h>
+#include <stdio.h>
 
-int	main(void)
+int	ft_putstr_fd(char *s, int fd)
 {
-	t_stack_node	*sa;
-	char *tabs[] = {"42", "8", "1", "5", "18", "6", "\0"};
+	int	count;
 
-	sa = NULL;
-	sa = stack_store(tabs);
-	print_stack(sa);
-	free_stack(sa);
-	return (0);
+	count = 0;
+	if (!s)
+		return (0);
+	while (*s != '\0')
+	{
+		count++;
+		write(fd, s, 1);
+		s++;
+	}
+	return (count);
 }

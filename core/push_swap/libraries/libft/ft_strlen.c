@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 18:59:12 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/06/10 15:03:40 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/06/17 12:25:55 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-int	main(void)
+int	ft_strlen(const char *str)
 {
-	t_stack_node	*sa;
-	char *tabs[] = {"42", "8", "1", "5", "18", "6", "\0"};
+	int	len;
 
-	sa = NULL;
-	sa = stack_store(tabs);
-	print_stack(sa);
-	free_stack(sa);
-	return (0);
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	return (len);
 }

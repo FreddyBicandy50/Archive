@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:32:50 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 18:20:14 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/03 20:15:24 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "libraries/libft/libft.h"
 
 typedef struct s_stack_node
 {
@@ -22,6 +23,16 @@ typedef struct s_stack_node
     struct s_stack_node *next;
     struct s_stack_node *prev;
 } t_stack_node;
+
+// libraries/
+int ft_atoi(const char *str);
+int ft_printf(const char *input, ...);
+
+
+// src/
+void free_stack(t_stack_node *stack);
+void print_stack(t_stack_node *stack);
+t_stack_node *stack_store(char **tabs);
 
 
 
