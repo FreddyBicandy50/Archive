@@ -6,15 +6,15 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 18:42:03 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 20:55:07 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/04 22:57:42 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	free_stack(t_stack_node *stack)
+void free_stack(t_stack_node *stack)
 {
-	t_stack_node	*temp;
+	t_stack_node *temp;
 
 	while (stack != NULL)
 	{
@@ -24,11 +24,11 @@ void	free_stack(t_stack_node *stack)
 	}
 }
 
-void	print_stack(t_stack_node *stack)
+void print_stack(t_stack_node *stack)
 {
 	while (stack != NULL)
 	{
-		printf("%d\n",stack->data); // TODO import ft_printf
+		printf("%d\n", stack->data); // TODO import ft_printf
 		stack = stack->next;
 	}
 }
@@ -39,7 +39,7 @@ t_stack_node *stack_store(char **tabs)
 	int i;
 
 	i = 0;
-	while (*tabs[i] != '\0')
+	while (tabs[i])
 	{
 		new_node = (t_stack_node *)malloc(sizeof(t_stack_node) * 1); // TODO use libft new node
 		if (!new_node)

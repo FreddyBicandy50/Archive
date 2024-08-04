@@ -1,6 +1,6 @@
 NAME = push_swap
 INCLUDES = ./
-pushswap_SOURCES = src/*.c libraries/*.c main.c
+pushswap_SOURCES = src/*.c libraries/ft_atoi.c libraries/ft_split.c  main.c
 PRINTF = ./libraries/ft_printf/libftprintf.a
 
 OBJECTS = $(pushswap_SOURCES:.c=.o)
