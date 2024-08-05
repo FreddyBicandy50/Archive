@@ -1,25 +1,21 @@
 NAME = libft.a
-SOURCES = *.c
 
-OBJECTS = $(SOURCES:.c=.o)
-
+SRCS =  *.c 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -I ./
 
-all: $(NAME)
+OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJECTS)
-	$(AR) -r $@ $?
+$(NAME): $(OBJS)
+		ar rc $(NAME) $(OBJS)
+		ranlib $(NAME)
 
-%.o: %.c
-	$(CC) -c $(CFLAGS) $?
+all : $(NAME)
 
-clean:
-	rm -f $(OBJECTS) 
+clean :
+	rm -rf $(OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean : clean
+	rm -rf $(NAME)
 
-re: fclean all
-
-.PHONY: all bonus clean fclean re
+re : fclean all

@@ -4,15 +4,13 @@ NAME = libftprintf.a
 
 SRCS =  *.c 
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
-
-INCLUDES = -I./includes
+FLAGS = -Wall -Wextra -Werror -I ./includes/
 
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS) $(LIBFT)
-		ar rc $(NAME) $(OBJS) $(LIBFT)
-		ranlib $(NAME)
+		ar rc $(NAME) $(LIBFT) $(OBJS)
+		ranlib $(NAME) $(LIBFT)
 
 
 $(LIBFT):
@@ -21,10 +19,11 @@ $(LIBFT):
 all : $(NAME)
 
 clean :
-	$(MAKE) clean -C ./libft
+	@make clean -C ./libft
 	rm -rf $(OBJS)
 
 fclean : clean
+	@make fclean -C ./libft
 	rm -rf $(NAME)
 
 re : fclean all

@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 14:01:56 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 20:17:35 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/05 13:54:51 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <limits.h>
-#include "libft/libft.h"
+#include "./includes/ft_printf.h"
 
 int hexa_format(va_list args, const char format)
 {
@@ -109,4 +109,9 @@ int ft_printf(const char *PARAM, ...)
 	}
 	va_end(args);
 	return (count);
+}
+
+int	main()
+{
+	ft_printf("%s", "hello");
 }

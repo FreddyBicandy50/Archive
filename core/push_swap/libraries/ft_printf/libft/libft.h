@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:37:11 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 20:03:51 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/05 13:38:28 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,5 @@ int		ft_putchar_fd(char c, int fd);
 int		ft_putnbr_fd(int nbr, int fd, size_t count);
 int		ft_u_putnbr_fd(unsigned int nbr, int fd, size_t count);
 char	ft_toupper(unsigned char get_chars);
+
 #endif

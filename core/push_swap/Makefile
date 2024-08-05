@@ -1,5 +1,5 @@
 NAME = push_swap
-INCLUDES = ./
+INCLUDES = ./libraries/ft_printf/includes/
 pushswap_SOURCES = src/*.c libraries/ft_atoi.c libraries/ft_split.c  main.c
 PRINTF = ./libraries/ft_printf/libftprintf.a
 
@@ -25,6 +25,7 @@ clean:
 		rm -f $(OBJECTS) 
 
 fclean: clean
+	@make fclean -C ./libraries/ft_printf
 	rm -f $(NAME)
 
 re: fclean all

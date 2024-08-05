@@ -6,11 +6,24 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 18:42:03 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/04 22:57:42 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/05 11:55:08 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void free_array(char **array)
+{
+	int i;
+
+	i = 0;
+	while (array[i])
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}
 
 void free_stack(t_stack_node *stack)
 {
