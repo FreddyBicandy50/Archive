@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/05 15:07:52 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/05 23:25:36 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	// sb = NULL;
 	if (argc < 2)
 	{
-		printf("ERROR\n");
+		ft_printf("ERROR\n");
 		exit(-1);
 	}
 	else if (argc == 2)
@@ -39,24 +39,24 @@ int main(int argc, char *argv[])
 		//TODO: handle duplicates
 	else
 	{
-		printf("ERROR\n"); // TODO fix ft_printf
+		ft_printf("ERROR\n"); // TODO fix ft_printf
 		exit(-1);
-		// 	int i;
+		int i;
 
-		// 	i = 1;
-		// 	while (argv[i])
-		// 	{
-		// 		printf("->%s\n",argv[i]);
-		// 		i++;
-		// 	}
-		// 	printf("%d\n",i);
-		// 	printf("->gone");
-		// 	return (1);
+		i = 1;
+		while (argv[i])
+		{
+			ft_printf("->%s\n",argv[i]);
+			i++;
+		}
+		ft_printf("%d\n",i);
+		ft_printf("->gone");
+		return (1);
 	}
 	sa = stack_store(argv);
 	if (sa == NULL)
 	{
-		printf("error");
+		ft_printf("error");
 		exit(-1);
 	}
 	free_stack(sa);

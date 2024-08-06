@@ -1,21 +1,23 @@
 NAME = push_swap
-INCLUDES = ./libraries/ft_printf/includes/
-pushswap_SOURCES = src/*.c libraries/ft_atoi.c libraries/ft_split.c  main.c
+INCLUDES = ./
 PRINTF = ./libraries/ft_printf/libftprintf.a
 
-OBJECTS = $(pushswap_SOURCES:.c=.o)
 
 CC = gcc
-RM =rm -rf
-CFLAGS = -Wall -Wextra -Werror -I ${INCLUDES}
+FLAGS = -c -Wall -Wextra -Werror -I${INCLUDES}
+SRCS = main.c\
+	src/utils.c  \
+	libraries/ft_atoi.c libraries/ft_split.c  
+
+OBJECTS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 %.o: %.c 
-	$(CC) -c $(CFLAGS) -c $< -o  $@
+	$(CC) $(FLAGS) -c $< -o  $@
 
-$(NAME): $(OBJECTS) $(PRINTF)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME) $(PRINTF)
+$(NAME): $(OBJECTS) $(PRINTF) 
+	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME) $(PRINTF)
 
 $(PRINTF):	
 			@make -C ./libraries/ft_printf
