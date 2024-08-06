@@ -6,15 +6,11 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 14:01:56 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/07/04 16:45:42 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/06 22:33:45 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdarg.h>
-#include <limits.h>
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 int	hexa_format(va_list args, const char format)
 {

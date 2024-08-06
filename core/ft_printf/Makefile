@@ -1,27 +1,43 @@
-LIBFT = ./libft/libft.a
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/08/06 22:39:49 by fbicandy          #+#    #+#              #
+#    Updated: 2024/08/06 22:39:50 by fbicandy         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 
 NAME = libftprintf.a
+LIBFTNAME = libft.a
+LIBFTDIR = ./libft
 
-SRCS =  *.c 
-CC = gcc
-FLAGS = -c -Wall -Wextra -Werror
 
-INCLUDES = -I./includes
+CC = cc
+CFLAGS = -Wall -Werror -Wextra
+SRCS = 	ft_printf.c
 
 OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS)
-	cp libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(INCLUDES) $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
+all: $(NAME)
 
-all : $(NAME)
+makelibft:
+	@make -C $(LIBFTDIR)
+	@cp $(LIBFTDIR)/$(LIBFTNAME) .
+	@mv $(LIBFTNAME) $(NAME)
 
-clean :
-	$(MAKE) clean -C ./libft
-	rm -rf $(OBJS)
+$(NAME): makelibft $(OBJS)
+	@ar -r $(NAME) $(OBJS)
 
-fclean : clean
-	rm -rf $(NAME)
-
-re : fclean all
+clean:
+	@rm -f $(OBJS)
+	@cd $(LIBFTDIR) && make clean
+	
+fclean: clean
+	@rm -f $(NAME)
+	@cd $(LIBFTDIR) && make fclean
+	
+re: fclean all
