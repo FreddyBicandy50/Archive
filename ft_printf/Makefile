@@ -5,10 +5,11 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/07 13:35:55 by tfriedri          #+#    #+#              #
-#    Updated: 2024/08/06 22:32:26 by fbicandy         ###   ########.fr        #
+#    Created: 2024/08/06 22:39:49 by fbicandy          #+#    #+#              #
+#    Updated: 2024/08/06 22:39:50 by fbicandy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libftprintf.a
 LIBFTNAME = libft.a
