@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/07 23:03:52 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/07 23:06:38 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ int main(int argc, char *argv[])
 	{
 		int i;
 		char *temp;
-
+		//TODO
+			//handle memorie leaks
+			//and the rest
 		temp = "";
 		i = 1;
 		while (argv[i])
