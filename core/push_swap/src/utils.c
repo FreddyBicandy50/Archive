@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 18:42:03 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/05 11:55:08 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/07 22:26:16 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ t_stack_node *stack_store(char **tabs)
 	t_stack_node *new_node = NULL, *stack = NULL, *head = NULL;
 	int i;
 
+	if (ft_isduplicate(tabs, ft_size(tabs)))
+		return (NULL);
 	i = 0;
 	while (tabs[i])
 	{

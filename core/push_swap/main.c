@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/05 23:25:36 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/07 23:03:52 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,37 +26,39 @@ int main(int argc, char *argv[])
 	}
 	else if (argc == 2)
 	{
-		//handle duplicates
 		argv = ft_split(argv[1], ' ');
 		if (!argv)
 		{
-			ft_printf("ERROR\n"); // TODO fix ft_printf
+			ft_printf("ERROR\n");
 			exit(-1);
 		}
 	}
-	//TODO::Handle argc > 2 
-		//TODO: handle non digits
-		//TODO: handle duplicates
+	// TODO::Handle argc > 2
+	// TODO: handle non digits
+	// TODO: handle duplicates
 	else
 	{
-		ft_printf("ERROR\n"); // TODO fix ft_printf
-		exit(-1);
 		int i;
+		char *temp;
 
+		temp = "";
 		i = 1;
 		while (argv[i])
 		{
-			ft_printf("->%s\n",argv[i]);
+			temp = ft_strjoin(temp, argv[i]);
 			i++;
 		}
-		ft_printf("%d\n",i);
-		ft_printf("->gone");
-		return (1);
+		i = 0;
+		while (temp[i])
+		{
+			ft_printf("%c", temp[i]);
+			i++;
+		}
 	}
 	sa = stack_store(argv);
 	if (sa == NULL)
 	{
-		ft_printf("error");
+		ft_printf("ERROR");
 		exit(-1);
 	}
 	free_stack(sa);

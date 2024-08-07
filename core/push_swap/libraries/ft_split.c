@@ -6,12 +6,11 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:42:14 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/05 11:36:21 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/07 22:29:28 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "../push_swap.h"
 
 static size_t ft_wordcount(const char *s, char c)
 {
@@ -33,11 +32,16 @@ static size_t ft_wordcount(const char *s, char c)
 	}
 	return (count);
 }
-// implemented is digits
-int ft_isdigit(unsigned char get_chars)
+
+int ft_failure(char **tab, int i)
 {
-	if (get_chars >= '0' && get_chars <= '9')
+	if (!tab[i])
+	{
+		while (i > 0)
+			free(tab[--i]);
+		free(tab);
 		return (1);
+	}
 	return (0);
 }
 
@@ -60,7 +64,7 @@ static char *ft_strndup(const char *s, size_t n)
 		}
 		else
 		{
-			free(copy); // changes to free the copy
+			free(copy);
 			return (NULL);
 		}
 	}
@@ -86,14 +90,8 @@ char **ft_split(char const *s, char c)
 			while (*s && *s != c)
 				s++;
 			tab[i] = ft_strndup(word_start, s - word_start);
-			if (!tab[i])
-			{
-				//free the whole array if any error encoutred 
-				while (i > 0)
-					free(tab[--i]); // Free previously allocated memory
-				free(tab);
+			if (ft_failure(tab, i))
 				return (NULL);
-			}
 			i++;
 		}
 		else
