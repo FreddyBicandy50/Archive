@@ -6,15 +6,15 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 21:58:43 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/08 17:12:07 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:30:07 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int ft_size(char **tabs)
+int	ft_size(char **tabs)
 {
-	size_t size;
+	size_t	size;
 
 	size = 0;
 	if (!tabs)
@@ -24,23 +24,25 @@ int ft_size(char **tabs)
 	return (size);
 }
 
-int found(int number, int *saved, int target)
+int	found(int number, int *saved, int target)
 {
-	int i;
+	int	i;
 
-	for (i = 0; i < target; i++)
+	i = 0;
+	while (i < target)
 	{
 		if (saved[i] == number)
 			return (1);
+		i++;
 	}
 	return (0);
 }
 
-int invalid_int(char *s)
+int	invalid_int(char *s)
 {
-	int i;
-	int j;
-	char *result;
+	int		i;
+	int		j;
+	char	*result;
 
 	i = 0;
 	while (s[i])
@@ -57,10 +59,11 @@ int invalid_int(char *s)
 	return (0);
 }
 
-int ft_isduplicate(char **argv, int argc)
+int	ft_isduplicate(char **argv, int argc)
 {
-	int i;
-	int *saved;
+	int	i;
+	int	*saved;
+	int	number;
 
 	saved = (int *)malloc(sizeof(int) * argc);
 	if (!saved)
@@ -71,7 +74,7 @@ int ft_isduplicate(char **argv, int argc)
 	i = 0;
 	while (i < argc)
 	{
-		int number = ft_atoi(argv[i]);
+		number = ft_atoi(argv[i]);
 		if (found(number, saved, i))
 		{
 			free(saved);

@@ -6,7 +6,7 @@
 #    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 22:53:03 by fbicandy          #+#    #+#              #
-#    Updated: 2024/08/08 16:36:59 by fbicandy         ###   ########.fr        #
+#    Updated: 2024/08/08 17:13:14 by fbicandy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ LIBFTDIR = ./libraries/ft_printf
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 SRCS = main.c\
-	src/utils.c  src/checker.c \
+	src/stack.c  src/checker.c \
 	libraries/ft_atoi.c libraries/ft_itoa.c libraries/ft_isdigit.c libraries/ft_split.c  libraries/ft_strjoin.c
 
 OBJECTS = $(SRCS:.c=.o)
