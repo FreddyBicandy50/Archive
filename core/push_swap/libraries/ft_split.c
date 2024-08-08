@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 16:42:14 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/07 22:29:28 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/08 13:53:34 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,31 @@ int ft_failure(char **tab, int i)
 	return (0);
 }
 
+int sign_duplication(const char *s, int n)
+{
+	int flag;
+
+	flag = 0;
+	if (n == 1 && (s[n - 1] == '-' || s[n - 1] == '+'))
+		return (1);
+	while (n >= 0)
+	{
+		if ((s[n] == '-' || s[n] == '+') && n != 0)
+			flag = 1;
+		else if (flag)
+			return (1);
+		n--;
+	}
+	return (0);
+}
+
 static char *ft_strndup(const char *s, size_t n)
 {
 	char *copy;
 	size_t i;
 
+	if (sign_duplication(s, n))
+		return (NULL);
 	copy = malloc(n + 1);
 	if (!copy)
 		return (NULL);

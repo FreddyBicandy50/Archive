@@ -6,11 +6,45 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/07 23:06:38 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:04:31 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void ft_error()
+{
+	ft_printf("ERROR\n");
+	exit(-1);
+}
+
+char **arg_case(char **argv)
+{
+	int i;
+	char *temp;
+	char *new_temp;
+
+	temp = (char *)malloc(1);
+	if (!temp)
+		ft_error();
+	temp[0] = '\0';
+	i = 1;
+	while (argv[i])
+	{
+		new_temp = ft_strjoin(temp, argv[i]);
+		free(temp);
+		if (!new_temp)
+		{
+			free_array(argv);
+			ft_error();
+		}
+		temp = new_temp;
+		i++;
+	}
+	argv = ft_split(temp, ' ');
+	free(temp);
+	return (argv);
+}
 
 int main(int argc, char *argv[])
 {
@@ -20,49 +54,16 @@ int main(int argc, char *argv[])
 	sa = NULL;
 	// sb = NULL;
 	if (argc < 2)
-	{
-		ft_printf("ERROR\n");
-		exit(-1);
-	}
+		ft_error();
 	else if (argc == 2)
-	{
 		argv = ft_split(argv[1], ' ');
-		if (!argv)
-		{
-			ft_printf("ERROR\n");
-			exit(-1);
-		}
-	}
-	// TODO::Handle argc > 2
-	// TODO: handle non digits
-	// TODO: handle duplicates
 	else
-	{
-		int i;
-		char *temp;
-		//TODO
-			//handle memorie leaks
-			//and the rest
-		temp = "";
-		i = 1;
-		while (argv[i])
-		{
-			temp = ft_strjoin(temp, argv[i]);
-			i++;
-		}
-		i = 0;
-		while (temp[i])
-		{
-			ft_printf("%c", temp[i]);
-			i++;
-		}
-	}
+		argv = arg_case(argv);
+	if (!argv)
+		ft_error();
 	sa = stack_store(argv);
-	if (sa == NULL)
-	{
-		ft_printf("ERROR");
-		exit(-1);
-	}
+	if (!sa)
+		ft_error();
 	free_stack(sa);
 	free_array(argv);
 	return (0);

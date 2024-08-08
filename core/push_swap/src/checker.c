@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/07 21:58:43 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/07 22:20:37 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/08 17:12:07 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,27 @@ int found(int number, int *saved, int target)
 	return (0);
 }
 
+int invalid_int(char *s)
+{
+	int i;
+	int j;
+	char *result;
+
+	i = 0;
+	while (s[i])
+		i++;
+	result = ft_itoa(ft_atoi(s));
+	if (!result)
+		return (1);
+	j = 0;
+	while (result[j])
+		j++;
+	free(result);
+	if (i != j)
+		return (1);
+	return (0);
+}
+
 int ft_isduplicate(char **argv, int argc)
 {
 	int i;
@@ -47,7 +68,6 @@ int ft_isduplicate(char **argv, int argc)
 		perror("malloc error");
 		exit(-1);
 	}
-
 	i = 0;
 	while (i < argc)
 	{

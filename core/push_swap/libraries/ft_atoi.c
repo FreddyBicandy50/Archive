@@ -6,9 +6,11 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 22:47:14 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/03 19:58:32 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:43:57 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../push_swap.h"
 
 int ft_atoi(const char *str)
 {

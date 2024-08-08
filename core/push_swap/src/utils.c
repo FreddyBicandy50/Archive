@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 18:42:03 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/07 22:26:16 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/08 16:58:24 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void print_stack(t_stack_node *stack)
 {
 	while (stack != NULL)
 	{
-		printf("%d\n", stack->data); // TODO import ft_printf
+		printf("%d\n", stack->data);
 		stack = stack->next;
 	}
 }
@@ -51,12 +51,12 @@ t_stack_node *stack_store(char **tabs)
 	t_stack_node *new_node = NULL, *stack = NULL, *head = NULL;
 	int i;
 
-	if (ft_isduplicate(tabs, ft_size(tabs)))
-		return (NULL);
 	i = 0;
 	while (tabs[i])
 	{
-		new_node = (t_stack_node *)malloc(sizeof(t_stack_node) * 1); // TODO use libft new node
+		if (ft_isduplicate(tabs, ft_size(tabs)) || invalid_int(tabs[i]))
+			return (NULL);
+		new_node = (t_stack_node *)malloc(sizeof(t_stack_node) * 1);
 		if (!new_node)
 			return (NULL);
 		new_node->data = ft_atoi(tabs[i]);
