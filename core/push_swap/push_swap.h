@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:32:50 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/08 17:36:49 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/09 15:23:52 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,16 @@ typedef struct s_stack_node
 }	t_stack_node;
 
 t_stack_node	*stack_store(char **tabs);
+
+// operations
+t_stack_node	*rrs(t_stack_node *stack);
+t_stack_node	*sw(t_stack_node *stack);
+t_stack_node	*rs(t_stack_node *stack);
+t_stack_node	*sw(t_stack_node *stack);
+void			ps(t_stack_node **src, t_stack_node **dest);
+void			rrrs(t_stack_node **sa, t_stack_node **sb);
+void			rr(t_stack_node **sa, t_stack_node **sb);
+void			ss(t_stack_node **sa, t_stack_node **sb);
 
 // libraries/
 char			**ft_split(char const *s, char c);
