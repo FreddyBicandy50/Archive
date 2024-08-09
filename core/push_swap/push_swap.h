@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:32:50 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/09 15:23:52 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/09 16:29:11 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ typedef struct s_stack_node
 
 t_stack_node	*stack_store(char **tabs);
 
+t_stack_node *sort(t_stack_node *sa, t_stack_node *sb);
+
 // operations
-t_stack_node	*rrs(t_stack_node *stack);
+t_stack_node *rrs(t_stack_node *stack);
 t_stack_node	*sw(t_stack_node *stack);
 t_stack_node	*rs(t_stack_node *stack);
 t_stack_node	*sw(t_stack_node *stack);

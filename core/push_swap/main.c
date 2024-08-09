@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/03 16:46:45 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/09 15:41:25 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/09 16:18:39 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,10 @@ int	main(int argc, char *argv[])
 	sa = stack_store(argv);
 	if (!sa)
 		ft_error();
+
+	sort(sa, sb);
+	diff(sa,sb);
+
 	free_stack(sa);
 	free_array(argv);
 	return (0);
