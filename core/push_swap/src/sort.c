@@ -6,7 +6,7 @@
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/09 16:06:46 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/09 16:32:35 by fbicandy         ###   ########.fr       */
+/*   Updated: 2024/08/09 20:44:22 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,13 +50,17 @@ int find_biggest(t_stack_node *stack)
     return (max);
 }
 
+
+
 t_stack_node *sort(t_stack_node *sa, t_stack_node *sb)
 {
     int size = stack_size(sa);
     int biggest = find_biggest(sa);
     (void)*sb;
 
-    if (size <= 3)
+    if(size<=1)
+        return (sa);
+    if (size <= 2)
     {
         if (sa->data == biggest)
             sa = rs(sa);
@@ -65,8 +69,8 @@ t_stack_node *sort(t_stack_node *sa, t_stack_node *sb)
         if (sa->data > sa->next->data)
             sa = sw(sa);
     }
-    else
-        push_swap(sa, sb);
+    // else
+    //     push_swap(sa, sb);
     ft_printf("Stack_size =%d\n", size);
     return (sa);
 }

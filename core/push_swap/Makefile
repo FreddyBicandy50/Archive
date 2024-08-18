@@ -6,7 +6,7 @@
 #    By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/06 22:53:03 by fbicandy          #+#    #+#              #
-#    Updated: 2024/08/09 16:17:03 by fbicandy         ###   ########.fr        #
+#    Updated: 2024/08/09 20:46:50 by fbicandy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ LIBFTDIR = ./libraries/ft_printf
 
 
 CC = gcc
+clear= && clear
 CFLAGS = -Wall -Werror -Wextra
 SRCS = main.c\
 	src/stack.c  src/sort.c src/checker.c src/operations_ps.c src/operations_rrs.c src/operations_rs.c src/operations_sw.c \
@@ -28,7 +29,7 @@ all: $(NAME)
 
 
 $(NAME): $(OBJECTS) $(PRINTF) 
-	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME) $(PRINTF)
+	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME) $(PRINTF) $(clear)
 
 $(PRINTF):	
 			@make -C ./libraries/ft_printf
