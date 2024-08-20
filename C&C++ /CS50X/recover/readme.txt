@@ -1,0 +1,2 @@
+recover is an algorithm that reads a corrupted memory file card like the card. raw is an actual card that has photos inside but got deleted by mistake so I took the advantage and create an algorithm 
+to recover those images and it could be done for any similar case

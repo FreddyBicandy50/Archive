@@ -1,0 +1,15 @@
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.GeneratedMSBuildEditorConfig.editorconfig
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.AssemblyInfoInputs.cache
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.AssemblyInfo.cs
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.csproj.CoreCompileInputs.cache
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.sourcelink.json
+/home/fbicandy/Code_Base/dotnet/gpa/bin/Debug/net8.0/GPA
+/home/fbicandy/Code_Base/dotnet/gpa/bin/Debug/net8.0/GPA.deps.json
+/home/fbicandy/Code_Base/dotnet/gpa/bin/Debug/net8.0/GPA.runtimeconfig.json
+/home/fbicandy/Code_Base/dotnet/gpa/bin/Debug/net8.0/GPA.dll
+/home/fbicandy/Code_Base/dotnet/gpa/bin/Debug/net8.0/GPA.pdb
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.dll
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/refint/GPA.dll
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.pdb
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/GPA.genruntimeconfig.cache
+/home/fbicandy/Code_Base/dotnet/gpa/obj/Debug/net8.0/ref/GPA.dll

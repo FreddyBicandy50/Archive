@@ -1,0 +1,15 @@
+/home/fbicandy/Code_Base/dotnet/calculator_project/bin/Debug/net8.0/calculator_project
+/home/fbicandy/Code_Base/dotnet/calculator_project/bin/Debug/net8.0/calculator_project.deps.json
+/home/fbicandy/Code_Base/dotnet/calculator_project/bin/Debug/net8.0/calculator_project.runtimeconfig.json
+/home/fbicandy/Code_Base/dotnet/calculator_project/bin/Debug/net8.0/calculator_project.dll
+/home/fbicandy/Code_Base/dotnet/calculator_project/bin/Debug/net8.0/calculator_project.pdb
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.GeneratedMSBuildEditorConfig.editorconfig
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.AssemblyInfoInputs.cache
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.AssemblyInfo.cs
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.csproj.CoreCompileInputs.cache
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.sourcelink.json
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.dll
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/refint/calculator_project.dll
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.pdb
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/calculator_project.genruntimeconfig.cache
+/home/fbicandy/Code_Base/dotnet/calculator_project/obj/Debug/net8.0/ref/calculator_project.dll
