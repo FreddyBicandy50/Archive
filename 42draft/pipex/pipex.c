@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fbicandy <fbicandy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/18 11:08:21 by fbicandy          #+#    #+#             */
-/*   Updated: 2024/08/18 12:28:45 by fbicandy         ###   ########.fr       */
+/*   Created: 2024/08/23 12:33:57 by fbicandy          #+#    #+#             */
+/*   Updated: 2024/08/23 18:24:10 by fbicandy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <fcntl.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "src/pipex.h"
 
-int main(void)
+int main(int argc, char *argv[], char *envp[])
 {
-    pid_t pid;
+    t_data data;
+    (void)data;
 
-    pid = fork();
-    if(pid==-1)
-        printf("error creating a child process\n");
-    else if (pid == 0)
-        printf("Child: I'm the child, my internal pid is %d.\n", pid);
-    else if (pid > 0)
-        printf("Parent: I'm the parent, my child's pid is %d.\n", pid);
-
+    if ((argc < 5 && !argv[1]) || (argc < 5 && !ft_strcmp(argv[1], "here_doc") == 0))
+        ft_error("pipex: Usage: ./pipex file1 cmd1 cmd2 ... cmdn file2.\n");
+    else if (argc < 6 && argv[1] && ft_strcmp(argv[1], "here_doc") == 0)
+        ft_error("pipex: Usage: ./pipex here_doc LIMITER cmd1 cmd2 ... cmdn file2.\n");
+    else
+    {
+        data = cmdn_init(argc, argv, envp);
+    }
     return (0);
 }
