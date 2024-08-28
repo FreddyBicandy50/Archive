@@ -1,1 +1,0 @@
-gcc -Wall -Wextra -Werror libft.c ft_putchar.c ft_putstr.c ft_strcmp.c ft_strcmp.c
