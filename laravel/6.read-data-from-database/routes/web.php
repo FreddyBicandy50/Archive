@@ -1,15 +1,15 @@
 <?php
 
+use App\Http\Controllers\GetStudents;
 use Illuminate\Support\Facades\Route;
-use App\Models\GetStudents;
 
-Route::get('/students', function () {
-    // Fetch all students
-    $students =GetStudents::all();
-
-      dd($students);
-});
 
 Route::get('/', function () {
-    return view('welcome');
+    $students = GetStudents::all();
+    dd($students);
+});
+
+Route::get('/{id}', function ($id) {
+    $students = GetStudents ::find($id);
+    return  response()->json($students);
 });
