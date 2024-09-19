@@ -7,6 +7,7 @@ use App\Models\User;
 use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\RegistraionRequest;
 
 class AuthController extends Controller
 {
@@ -34,16 +35,15 @@ class AuthController extends Controller
         }
     }
 
-    public function register(Request $request)
+    public function register(RegistraionRequest $request)
     {
-        $new_user = User::where('email', $request->email)->first();
-        if ($new_user != NULL) {
-            return response()->json([
-                'status' => false,
-                'message' => "User already defined",
-            ]);
-        }
-
+        //$new_user = User::where('email', $request->email)->first();
+        // if ($new_user != NULL) {
+        //     return response()->json([
+        //         'status' => false,
+        //         'message' => "User already defined",
+        //     ]);
+        // }
         $new_user = new User();
         $new_user->name = $request->get('name');
         $new_user->email = $request->get('email');
