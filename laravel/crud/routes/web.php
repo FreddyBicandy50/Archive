@@ -2,4 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-route::get("/", abort(403));
+route::get("/", function () {
+    return abort(403, "Forbidden");
+});
