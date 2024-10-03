@@ -7,11 +7,11 @@ class CardItem extends StatelessWidget {
 
   // Constructor to accept item details
   const CardItem({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.itemName,
     required this.itemPrice,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class CardItem extends StatelessWidget {
         children: [
           const Text(
             "item 1", // Item name passed via constructor
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
           ClipRRect(
               borderRadius: BorderRadius.circular(8.0), // Rounded image corners
@@ -49,7 +49,7 @@ class CardItem extends StatelessWidget {
               )),
           const Text(
             "price:", // Item name passed via constructor
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
         ],
       ),
