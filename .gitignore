@@ -1,0 +1,10 @@
+/flutter/*/android/
+/flutter/*/.dart_tool/
+/flutter/*/.idea/
+/flutter/*/build/
+/flutter/*/ios/
+/flutter/*/linux/
+/flutter/*/macos/
+/flutter/*/test/
+/flutter/*/web/
+/flutter/*/windows/
