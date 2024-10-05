@@ -1,7 +1,10 @@
 # micard
 
 A new Flutter project.
+# Checkout the Flutter layout cheat sheet
 
+<a href="https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e"></a>
+    
 ## Getting Started
 
 This project is a starting point for a Flutter application.
