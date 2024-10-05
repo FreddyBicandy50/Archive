@@ -6,7 +6,7 @@ void main() {
       backgroundColor: const Color.fromARGB(255, 174, 174, 174),
       //App Bar
       appBar: AppBar(
-          backgroundColor: Colors.blueGrey[700],
+          backgroundColor: Colors.teal,
           title: const Center(
             child: Text(
               style: TextStyle(color: Colors.white),
