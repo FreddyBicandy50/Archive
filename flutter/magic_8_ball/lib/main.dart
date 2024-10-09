@@ -24,7 +24,11 @@ class _AnswerMeState extends State<AnswerMe> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  answer = Random().nextInt(3) + 1;
+                  int prev = answer;
+                  while (prev == answer) {
+                    answer = Random().nextInt(3) + 1;
+                  }
+
                 });
               },
               child: Image.asset(
@@ -51,7 +55,11 @@ class MagicBall extends StatelessWidget {
           backgroundColor: Colors.blueAccent,
           title: const Center(
             child: Text(
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                letterSpacing: 1.5,
+              ),
               "Ask Me Anything",
             ),
           ),
