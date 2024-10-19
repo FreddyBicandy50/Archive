@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-void main() {
-  runApp(XyloPhone());
-}
-
-final player = AudioPlayer();
-
-void playsound(int notenumber) {
-    player.play(AssetSource("note$notenumber.wav"));
-
-}
+void main() => runApp(XyloPhone());
 
 class XyloPhone extends StatelessWidget {
   XyloPhone({super.key});
 
   final double max_height = 110;
+  final player = AudioPlayer();
+
+  void playSound(int number) => player.play(AssetSource('note$number.wav'));
+
+  Expanded ftButton(int getNote, getColor) {
+    return Expanded(
+      child: Container(
+        color: getColor,
+        child: TextButton(
+          onPressed: () {
+            playSound(getNote);
+          },
+          child: const Text(""),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,84 +32,15 @@ class XyloPhone extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
             child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              color: Colors.red,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () async {
-                  playsound(1);
-                },
-                child: const Text(""),
-              ),
-            ),
-            Container(
-              color: Colors.orange,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () async {
-                  playsound(2);
-                },
-                child: const Text(""),
-              ),
-            ),
-            Container(
-              color: Colors.yellow,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () {
-                  playsound(3);
-                },
-                child: const Text(""),
-              ),
-            ),
-            Container(
-              color: Colors.green,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () async {
-                  playsound(4);
-                },
-                child: const Text(""),
-              ),
-            ),
-            Container(
-              color: Colors.teal,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () async {
-                  playsound(5);
-                },
-                child: const Text(""),
-              ),
-            ),
-            Container(
-              color: Colors.blue,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () async {
-                  playsound(6);
-                },
-                child: const Text(""),
-              ),
-            ),
-            Container(
-              color: Colors.purple,
-              height: max_height,
-              width: double.infinity,
-              child: TextButton(
-                onPressed: () async {
-                  playsound(7);
-                },
-                child: const Text(""),
-              ),
-            ),
+            ftButton(1, Colors.red),
+            ftButton(2, Colors.orange),
+            ftButton(3, Colors.green),
+            ftButton(4, Colors.blue),
+            ftButton(5, Colors.purple),
+            ftButton(6, Colors.pink),
+            ftButton(7, Colors.yellow),
           ],
         )),
       ),
