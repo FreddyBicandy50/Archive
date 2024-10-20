@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'questionbank.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 void main() => runApp(const Quizzler());
 
@@ -60,7 +61,7 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                       );
                     } else if (setText == "False") {
-                      questions.answers(true);
+                      questions.answers(false);
                       score.add(
                         const Expanded(
                           child: Padding(
@@ -70,8 +71,19 @@ class _QuizPageState extends State<QuizPage> {
                         ),
                       );
                     }
-                    currentText = questions.displayText(index);
                   }
+                  if (index == questions.length()) {
+                    index = 0;
+                    score = [];
+                    int result = questions.getResults();
+                    Alert(
+                      context: context,
+                      title: "Thank you for helping",
+                      desc: "score $result out of ${questions.length()}",
+                    ).show();
+                    questions.reset();
+                  }
+                  currentText = questions.displayText(index);
                 });
               }),
         ),

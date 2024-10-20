@@ -42,22 +42,22 @@ class QuestionBank {
         true),
   ];
 
-  String displayText(int index) {
-    if (index == _questions.length) {
-      index++;
-      int i = 0;
-      while (i < _questions.length) {
-        if (_answers[i] == _questions[i].questionAnswer) {
-          totalScore++;
-        }
-        i++;
-      }
-      return "Thank you for helping \n score $totalScore out of ${_questions.length}";
-    }
-    if (index < _questions.length) return _questions[index].questionText;
-    return '';
+  void reset() {
+    _answers = [];
+    totalScore = 0;
   }
 
   int length() => _questions.length;
   void answers(bool a) => _answers.add(a);
+  String displayText(int index) => _questions[index].questionText;
+  int getResults() {
+    int i = 0;
+    while (i < _questions.length) {
+      if (_answers[i] == _questions[i].questionAnswer) {
+        totalScore++;
+      }
+      i++;
+    }
+    return totalScore;
+  }
 }
