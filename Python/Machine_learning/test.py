@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Sample DataFrame
 data = {
@@ -13,11 +12,9 @@ data = {
 
 # Create DataFrame
 df = pd.DataFrame(data)
-
-# Display data types of each column
 print(df.dtypes)
-
-plt.plot(df['age'],df['income'])
-
-income_median=df.median('Income')
-print(income_median)
+duplicates = df[df.duplicated(subset='Income', keep=False)]
+print(duplicates)
+income_mode = df['Income'].mode()[0]
+df['Income'].fillna(income_mode, inplace=True)
+print(df)

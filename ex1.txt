@@ -1,0 +1,14 @@
+cd Desktop
+ls
+mkdir project
+cd project
+touch data.txt
+cp data.txt ~/Desktop/backup_data.txt
+cd .. ; mv -v backup_data.txt final_data.txt
+rm -rf project
+
+touch sample.c
+nano sample.c
+cc sample.c -o sample_program.out
+./sample_program.out
+cd Desktop ; ls -la
