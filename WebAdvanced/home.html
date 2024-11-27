@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NutriVerse</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <style>
         .primary {
             color: #f7c761;
@@ -21,299 +23,355 @@
             color: #F2E8CF;
         }
     </style>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    AOS.init();
-</script>
-
 </head>
 
-<body>
-    <div class="bg-gradient-to-r from-[#eaedf3] to-[#fafcff] min-h-screen px-28 py-5 relative">
-        <section>
-            <nav class="flex items-center">
-                <h1 data-aos="fade-up" class="primary text-5xl font-semibold leading-normal">
-                    <strong>NutriVerse</strong>
-                </h1>
-                <ul class="flex-1 text-right">
-                    </li>
-                    <li class="list-none inline-block px-2">
-                        <a href="#" class="no-underline text px-2"><b>Blog</b></a>
-                    </li>
-                    <li class="list-none inline-block px-2">
-                        <a href="#" class="no-underline text px-2"><b>About</b></a>
-                    </li>
-                    <li class="list-none inline-block px-2">
-                        <a href="#" class="bg-[#f7c761] text-white rounded-3xl py-1.5 px-2 font-medium
-                    inline-block hover:bg-transparent hover:border-[#f7c761]
-                    hover:text-[#363c48] duration-300 hover:border border border-transparent">
-                            <b>Request Consultation</b></a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+<body class="bg-gradient-to-r from-[#eaedf3] to-[#fafcff]">
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
 
-        <table border="0">
-            <tr>
-                <td class="w-screen">
-                    <div class="text mt-48 max-w-xg">
-                        <h1 class="text text-6xl font-semibold leading-normal"> Your
-                            <span class="text-white" style="background-color: #f7c761;">
-                                <strong data-aos="fade-up">best version</strong></span><br>
-                            just a click away
-                        </h1>
-                        <p class="mt-5 px-2 text-xl">
-                            The <b>ideal dietitian beside you</b>, where and when you want.<br>
-                            <b>Your new life begins now!</b>
-                        </p>
-                </td>
-                <td class="w-screen">
-                    <img width="500" class="mt-32 px-screen" src="images/healthy-breakfast-bowl.jpg">
-                </td>
-            </tr>
-        </table>
-    </div>
-
-
-    <div class="bg-gradient-to-r from-[#eaedf3] to-[#fafcff] min-w-screen h-full">
-        <h2 class="text text-center text-4xl font-semibold leading-normal">
-            A new way to
-            <span class="text-white" style="background-color: #f7c761;">
-                <strong data-aos="fade-up"> experience nutrition</strong>
-            </span>
-        </h2>
-        <p class="mt-5 px-2 text-xl text-center text">
-            Experience totally personalized nutrition, closer than ever. Because it's easier to achieve <b>results when
-                you have the right <br>
-                help by your side.</b>
-        </p>
-
-        <table class="max-w mx-auto mt-12">
-            <tr>
-                <td data-aos="fade-up">
-                    <div class="bg-white rounded-xl shadow-lg p-8 max-w-80 mx-auto inline-block mr-5">
-                        <h2 class="text-2xl text-gray-800 font-bold">
-                            No <span style="background-color:#F2E8CF" class="text-gray-800">extreme changes</span>
-                        </h2>
-                        <p class="mt-4 text text-center">
-                            A <b>strategy adapted to your routines and tastes</b>, without giving up your
-                            social life and eating what you like.
-                        </p>
-                    </div>
-                </td>
-                <td data-aos-delay="500" data-aos="fade-up">
-                    <div class="bg-white rounded-xl shadow-lg p-8 max-w-80 py-11 mx-auto inline-block mr-5">
-                        <h2 class="text-2xl text-gray-800 font-bold ">
-                            No <span style="background-color:#F2E8CF ">tricks</span>
-                        </h2>
-                        <p class="mt-4 text-center text-gray-800">
-                            Always be accompanied by <b> qualified dietitians </b> with real knowledge and
-                            experience.
-                        </p>
-                    </div>
-                </td>
-                <td data-aos-delay="600" data-aos="fade-up">
-                    <div class="bg-white rounded-xl shadow-lg p-8 max-w-80 py-11 mx-auto inline-block mr-5">
-                        <h2 class="text-2xl text-gray-800 font-bold">
-                            With <span style="background-color: #F2E8CF;">results</span>
-                        </h2>
-                        <p class="mt-4 text-center text-gray-800">
-                            Overcome the barriers that prevent you from <strong> transforming your life </strong>
-                            and achieving your best version.
-                        </p>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <div class="min-h-screen mt-32">
-            <h2 class="text text-center text-4xl font-semibold leading-normal">
-                What if from today
-                <span class="text-white" style="background-color: #f7c761;">
-                    <strong>everything changes?</strong>
-                </span>
-            </h2>
-            <p class="mt-5 px-2 text-xl text-center text">
-                Achieving your goals is easier with <b>personalized guidance and continuous monitoring</b>.At
-                NutriVerse,you'll find qualified <br>
-                dietitians who are with you far beyond the appointments.
-            </p>
-            <table class="min-w-md mx-auto">
-                <tr>
-                    <td align="center" class="w-screen p-11 mx-auto">
-                        <div class="text mt-48 max-w-xg">
-                            <h1 class="text text-4xl font-semibold leading-normal">
-                                Find the right dietitian for <br>
-                                you and get access to<br>
-                                <span class="text-white" style="background-color: #c9e08a;">
-                                    <strong data-aos="fade-up">unlimited appointments</strong></span><br>
-                            </h1>
-                            <p class="mt-5 px-2 text-xl" data-aos="fade-up">
-                                We help you choose <b>a specialized dietitian</b> who will <br>
-                                create a plan adapted to you and give you consultations <br>
-                                whenever you need them, wherever you want.
-                            </p>
-                    </td>
-                    <td align="center" class="w-screen">
-                        <img width="600" class="mt-32 px-screen" src="images/dr.Dietitions.png">
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" class="w-screen">
-                        <img width="620" class="mt-32 px-screen" src="images/consult_cta.webp">
-                    </td>
-                    <td align="center" class="w-screen p-11 mx-auto">
-                        <div class="text mt-48 max-w-xg">
-                            <h1 class="text text-4xl font-semibold leading-normal">
-                                Never lose motivation with <br>
-                                a dietitian always
-                                <span class="text-white" style="background-color: #ccb8b8;"><strong
-                                        data-aos="fade-up">available on <br>
-                                        a daily basis</strong></span><br>
-                            </h1>
-                            <p data-aos="fade-up" class="mt-5 px-2 text-xl">
-                                Lack of motivation is the biggest enemy of changing <br>
-                                habits, which is why a dietitian will always be by your side<br>
-                                to <b>help you overcome the challenges of daily life.</b><br>
-                            </p>
-                    </td>
-                </tr>
-                <tr>
-
-                    <td align="center" class="w-screen p-11 mx-auto">
-                        <div class="text mt-48 max-w-xg">
-                            <h1 class="text text-4xl font-semibold leading-normal">
-                                Simplify your diet with the<br>
-                                help of <span data-aos="fade-up" class="text-white" style="background-color: #e39269;">
-                                    <strong>recipes,e-books and
-                                        <br> tips</strong></span><br>
-                            </h1>
-                            <p data-aos="fade-up" class="mt-5 px-2 text-xl">
-                                The dietitian will share <b> personalized resources through<br>
-                                    our mobile app,</b> to ensure that challenges such as lack of <br>
-                                time are never obstacles to success
-                            </p>
-                    </td>
-                    <td align="center" class="w-screen">
-                        <img width="720" class="mt-32 px-screen" src="images/foodVlog.png">
-                    </td>
-                </tr>
-            </table>
-
-            <div class="mt-32 min-h-fit min-w-screen bg-gradient-to-r from-[#ecf3fa] to-[#edf8fc]">
-                <br>
-                <br>
-                <br>
-                <h1 class="text text-4xl font-semibold leading-normal text-center">
-                    Results you see,
-                    <span data-aos="fade-up" class="text-white" style="background-color: #f7c761;">
-                        <strong>health you can feel</strong></span><br>
-                </h1>
-                <p data-aos="fade-up" class="mt-2 text text-md font-semibold leading-normal text-center">
-                    We've helped millions of people improve their lives through simple changes in their eating
-                    habits.
-                    <b>The next great success <br>
-                        story could be yours.</b>
-                </p>
-                <ul align="center" class="mx-auto flex justify-center space-x-0">
-                    <li class="list-none relative">
-                        <img width="500" src="images/client1.png">
-                    </li>
-                    <li class="list-none relative">
-                        <img width="500" src="images/client2.png">
-                    </li>
-                    <li class="list-none relative">
-                        <img width="500" src="images/client3.png">
-                    </li>
-                </ul>
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-[#eaedf3] to-[#fafcff] px-6 py-4 md:px-12 ">
+        <div class="container mx-auto flex items-center justify-between">
+            <h1 data-aos="fade-up" class="sm:block hidden ml-32 primary text-5xl font-semibold leading-normal">
+                <strong>NutriVerse</strong>
+            </h1>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#" class="no-underline text px-2"><b>Blog</b></a>
+                <a href="#" class="no-underline text px-2"><b>About</b></a>
+                <a href="#"
+                    class="bg-[#f7c761] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-transparent hover:text-[#363c48] hover:border-[#f7c761] border duration-300">
+                    Request Consultation
+                </a>
             </div>
-
-
-
-
-            <div align="center" class="mt-32 min-h-screen">
-                <h1 class="text text-4xl font-semibold leading-normal text-center">
-                    Still have questions? We have the answers
-                </h1>
-                <div data-aos="fade-up" class="bg-[#eef3fb] rounded-xl shadow-lg p-5 py-11 w-fit mx-auto inline-block mr-5 mt-16">
-                    <h2 class="ml-5 text-left text-md text-gray-700 font-bold ">
-                        How can I access the nutritional monitoring?
-                    </h2>
-                    <p class="mt-4  ml-5 text-center text-gray-700">
-                        You can access Nutrium Care in three ways: if you have a Gympass subscription, if your company
-                        enjoys the Nutrium Care benefit,<br> or if you visit a dietitian who uses this platform.<br>
-                    </p>
-                    <br>
-                    <p align="left" class="ml-5 text-gray-700">
-                        To access nutritional monitoring through Gympass, you must have an active subscription at the
-                        following levels:<br>
-                    </p>
-                    <br>
-                    <ul align="left">
-                        <li class="ml-12 text-gray-700">
-                            Silver subscription or higher - Brazil, Mexico and the United States;<br>
-                        </li>
-                        <li class="ml-12 text-gray-700">
-                            Gold subscription or higher - Argentina, Chile, Spain, Italy, Ireland and the United
-                            Kingdom;<br>
-                        </li>
-                        <li class="ml-12 text-gray-700">
-                            Premium subscription or higher - Germany.<br>
-                        </li>
-                    </ul>
-                </div>
-                <div data-aos="fade-up" class="bg-[#eef3fb] rounded-xl shadow-lg p-5 py-11 w-fit mx-auto inline-block mr-5 mt-2">
-                    <h2 class="ml-5 text-left text-md text-gray-700 font-bold ">
-                        How does NutriVerse analyze my food?
-                    </h2>
-                    <br>
-                    <p align="left" class="ml-5 text-gray-700">
-                        NutriVerse uses advanced machine learning technology to analyze your food plate images. Once you
-                        upload a photo,our system<br> identifies the ingredients, calculates approximate calorie
-                        content, and provides detailed <br>
-                        nutritional information.
-                    </p>
-                </div>
-                <div data-aos="fade-up" class="bg-[#eef3fb] rounded-xl shadow-lg p-5 py-11 w-fit mx-auto inline-block mr-5 mt-2">
-                    <h2 class="ml-5 text-left text-md text-gray-700 font-bold ">
-                        Can I use NutriVerse without a dietician?
-                    </h2>
-                    <br>
-                    <p align="left" class="ml-5 text-gray-700">
-                        Yes! Individuals can use NutriVerse independently to log meals, receive nutritional insights,
-                        and set personal goals.
-                        However, for<br> professional guidance, connecting with a dietician through our platform is highly
-                        recommended.
-                    </p>
-                </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
 
-    </div>
-    <div class="bg-[#343a46] min-h-fit text-center text-white " >
-        <br>
-        <br>
-        <br>
-        <p><span class="underline">PRIVACY POLICY</span> |<span class="underline">TERMS OF USE</span> </p>
-        <p><span class="underline">INTEREST-BASED ADS</span> | <span class="underline">DO NOT SELL MY INFO</span> </p>
-        <p>©2024 all rights reserved Nutriverse</p>
-    </div>
-    <script src="js/animation.js"></script>
+
+        <!-- Mobile Navbar Version -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="#" class="block no-underline text px-2"><b>Blog</b></a>
+            <hr>
+            <a href="#" class="mt-5 block no-underline text px-2"><b>About</b></a>
+            <hr>
+            <a href="#" class="mt-5 block bg-[#f7c761] text-white px-4 py-2 rounded-full">Request Consultation</a>
+            <hr>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Welcome Screen -->
+        <section
+            class="container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-up">
+                <h1 class="text text-4xl md:text-6xl font-semibold leading-tight">
+                    Your <span class="text-white bg-[#f7c761] px-2">best version</span> just a click away
+                </h1>
+                <p class="mt-6 text-lg">
+                    The <b>ideal dietitian beside you</b>, where and when you want. <br>
+                    <b>Your new life begins now!</b>
+                </p>
+            </div>
+            <!-- Welcome Image -->
+            <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up">
+                <img src="images/healthy-breakfast-bowl.jpg" alt="Healthy Breakfast Bowl"
+                    class="w-full max-w-lg mx-auto">
+            </div>
+        </section>
+
+
+        <!-- Features Section  -->
+        <section class="container mx-auto px-6 md:px-12 py-12 flex flex-col items-center lg:justify-between">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text text-center text-4xl font-semibold leading-normal">
+                    A new way to
+                    <span class="text-white" style="background-color: #f7c761;">
+                        <strong data-aos="fade-up"> experience nutrition</strong>
+                    </span>
+                </h2>
+                <p class="mt-5 px-2 text-xl text-center text">
+                    Experience totally personalized nutrition, closer than ever. Because it's easier to achieve
+                    <b>results when
+                        you have the right <br>
+                        help by your side.</b>
+                </p>
+                <!-- Features 1 No Extreme changes -->
+                <div data-aos="zoom-in"
+                    class="bg-white rounded-xl shadow-lg p-8 max-w-80 py-11 mx-auto inline-block mr-5 mt-7">
+                    <h2 class="text-2xl text-gray-800 font-bold">
+                        No <span style="background-color:#F2E8CF" class="text-gray-800">extreme changes</span>
+                    </h2>
+                    <p class="mt-4 text text-center">
+                        A <b>strategy adapted to your routines and tastes</b>, without giving up your
+                        social life and eating what you like.
+                    </p>
+                </div>
+                <!-- Features 2 No tricks -->
+                <div data-aos="zoom-in" data-aos-delay="100"
+                    class="bg-white rounded-xl shadow-lg p-8 max-w-80 py-11 mx-auto inline-block mr-5 mt-7">
+                    <h2 class="text-2xl text-gray-800 font-bold ">
+                        No <span style="background-color:#F2E8CF ">tricks</span>
+                    </h2>
+                    <p class="mt-4 text-center text-gray-800">
+                        Always be accompanied by <b> qualified dietitians </b> with real knowledge and
+                        experience.
+                    </p>
+                </div>
+                <!-- Features 3 with results -->
+                <div data-aos="zoom-in" data-aos-delay="200"
+                    class="bg-white rounded-xl shadow-lg p-8 max-w-80 py-11 mx-auto inline-block mr-5 mt-7">
+                    <h2 class="text-2xl text-gray-800 font-bold">
+                        With <span style="background-color: #F2E8CF;">results</span>
+                    </h2>
+                    <p class="mt-4 text-center text-gray-800">
+                        Overcome the barriers that prevent you from <strong> transforming your life </strong>
+                        and achieving your best version.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implmentation Section -->
+        <section class="container mx-auto px-6 md:px-12 py-12 flex flex-col items-center lg:justify-between">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text text-center text-4xl font-semibold leading-normal">
+                    What if from today
+                    <span data-aos="fade-up" class="text-white" style="background-color: #f7c761;">
+                        <strong>everything changes?</strong>
+                    </span>
+                </h2>
+                <p class="mt-5 px-2 text-xl text-center text">
+                    Achieving your goals is easier with <b>personalized guidance and continuous monitoring</b>.At
+                    NutriVerse,you'll find qualified <br>
+                    dietitians who are with you far beyond the appointments.
+                </p>
+            </div>
+            <!-- Point1 unlimited appointments -->
+            <section
+                class="container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text text-4xl font-semibold leading-normal">
+                        Find the right dietitian for <br>
+                        you and get access to<br>
+                        <span class="text-white" style="background-color: #c9e08a;">
+                            <strong data-aos="fade-up">unlimited appointments</strong></span><br>
+                    </h1>
+                    <p class="mt-5 px-2 text-xl" data-aos="zoom-in">
+                        We help you choose <b>a specialized dietitian</b> who will <br>
+                        create a plan adapted to you and give you consultations <br>
+                        whenever you need them, wherever you want.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                    <img src="images/dr.Dietitions.png" alt="our Dietitians"
+                        class="hidden sm:block w-full max-w-lg mx-auto">
+                </div>
+            </section>
+            <!-- Point2 available a daily basis -->
+            <section
+                class="mt-12 container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                    <img src="images/consult_cta.webp" alt="our Dietitians"
+                        class="hidden sm:block w-full max-w-lg mx-auto">
+                </div>
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text text-4xl font-semibold leading-normal">
+                        Never lose motivation with <br>
+                        a dietitian always
+                        <span class="text-white" style="background-color: #ccb8b8;"><strong data-aos="zoom-in">available
+                                on <br>
+                                a daily basis</strong></span><br>
+                    </h1>
+                    <p data-aos="zoom-in" class="mt-5 px-2 text-xl">
+                        Lack of motivation is the biggest enemy of changing <br>
+                        habits, which is why a dietitian will always be by your side<br>
+                        to <b>help you overcome the challenges of daily life.</b><br>
+                    </p>
+                </div>
+            </section>
+            <!-- Point3 recipes,e-books and tips -->
+            <section
+                class="mt-12 container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+                <div class="lg:w-1/2 text-center lg:text-left">
+                    <h1 class="text text-4xl font-semibold leading-normal">
+                        Simplify your diet with the<br>
+                        help of <span data-aos="fade-up" class="text-white" style="background-color: #e39269;">
+                            <strong>recipes,e-books and
+                                <br> tips</strong></span><br>
+                    </h1>
+                    <p data-aos="fade-up" class="mt-5 px-2 text-xl">
+                        The dietitian will share <b> personalized resources through<br>
+                            our mobile app,</b> to ensure that challenges such as lack of <br>
+                        time are never obstacles to success
+                    </p>
+                </div>
+                <div class="lg:w-1/2 mt-8 lg:mt-0">
+                    <img width="700" src="images/foodVlog.png" alt="our Dietitians"
+                        class="hidden sm:block w-full max-w-lg mx-auto">
+                </div>
+            </section>
+        </section>
+
+        <!-- Feedback -->
+        <section class="container mx-auto px-6 md:px-12 py-12">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text-center text-4xl font-semibold leading-normal">
+                    Results you see,
+                    <span class="text-white" style="background-color: #f7c761;">
+                        <strong data-aos="fade-up"> health you can feel</strong>
+                    </span>
+                </h2>
+                <p data-aos="fade-up" class="mt-2 text-md font-semibold leading-normal">
+                    We've helped millions of people improve their lives through simple changes in their eating habits.
+                    <b>The next great success <br> story could be yours.</b>
+                </p>
+
+                <!-- Testimonials Grid -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div data-aos="zoom-in" class="p-4 shadow-lg rounded-xl">
+                        <img src="https://cdn.prod.website-files.com/651149b4877f98f4d7cf8a6d/65d73410bfcdc292d8fe72b9_testimonials-susana.webp"
+                            alt="Client Testimonial 1" class=" mx-auto">
+                        <p class="text-center mt-4 text-sm md:text-base">
+                            <span style="background-color: azure;">
+                                "I cycle and didn't know what to eat to feel full. I've learned to eat better and now I
+                                can do
+                                high-intensity workouts without feeling hungry or lacking in strength." <br>
+                                <strong>- Susana</strong>
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div data-aos-delay="100" data-aos="zoom-in" class="p-4 shadow-lg rounded-xl">
+                        <img src="https://cdn.prod.website-files.com/651149b4877f98f4d7cf8a6d/65d7332c35a6538c1719bed9_testimonials-ana.webp"
+                            alt="Client Testimonial 2" class="mx-auto">
+                        <p class="text-center mt-4 text-sm md:text-base">
+                            <span style="background-color: azure;">
+                                "I had mobility issues due to being overweight. With the dietitian's help, I changed my
+                                eating
+                                habits, improved my health dramatically, and feel amazing!" <br>
+                                <strong>- Ana</strong>
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div data-aos-delay="200" data-aos="zoom-in" class="p-4 shadow-lg rounded-xl">
+                        <img src="https://cdn.prod.website-files.com/651149b4877f98f4d7cf8a6d/65d7341037bf9a38ff8ceb82_testimonials-jose.webp"
+                            alt="Client Testimonial 3" class="mx-auto">
+                        <p class="text-center mt-4 text-sm md:text-base">
+                            <span style="background-color: azure;">
+                                "I've had an irritable bowel for 15 years. Thanks to my dietitian, I've learned to
+                                improve my
+                                food
+                                choices and have felt better than ever!" <br>
+                                <strong>- José</strong>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- FAQ -->
+        <section align="center" class="container mx-auto px-6 md:px-12 py-12 items-center lg:justify-between">
+            <!-- Title -->
+            <div class="text-center">
+                <h2 class="text text-center text-4xl font-semibold leading-normal">
+                    Still have questions? We have the answers
+                </h2>
+            </div>
+            <!-- Q1 -->
+            <div data-aos="zoom-in"
+                class="lg:w-1/2 text-center lg:text-left bg-[#eef3fb] rounded-xl shadow-lg p-5 py-11 w-fit mx-auto inline-block mr-5 mt-16">
+                <h2 class="text  font-semibold leading-normal">
+                    How can I access the nutritional monitoring?
+                </h2>
+                <p data-aos="zoom-in" class="mt-5 px-2 text-gray-700">
+                    You can access Nutrium Care in three ways: if you have a Gympass subscription, if your company
+                    enjoys the Nutrium Care
+                    benefit,<br>
+                    or if you visit a dietitian who uses this platform.<br>
+                    <br>
+                    <br>
+                    To access nutritional monitoring through Gympass, you must have an active subscription at the
+                    following levels:<br>
+                    <br>
+                <ul align="left" class="ml-12">
+                    <li class="list-disc">
+                        Silver subscription or higher - Brazil, Mexico and the United States;
+                    </li>
+                    <li class="list-disc">
+                        Gold subscription or higher - Argentina, Chile, Spain, Italy, Ireland and the United Kingdom;
+                    </li>
+                    <li class="list-disc">
+                        Premium subscription or higher - Germany.
+                    </li>
+                </ul>
+
+                </p>
+            </div>
+            <!-- Q2 -->
+
+            <div data-aos="zoom-in"
+                class="lg:w-1/2 text-center lg:text-left bg-[#eef3fb] rounded-xl shadow-lg p-5 py-11 w-fit mx-auto inline-block mr-5 mt-8">
+                <h2 class="text  font-semibold leading-normal">
+                    How does NutriVerse analyze my food?
+                </h2>
+                <p data-aos="zoom-in" class="mt-5 px-2 text-gray-700">
+                    NutriVerse uses advanced machine learning technology to analyze your food plate images. Once you
+                    upload a photo,our
+                    system
+                    identifies the ingredients, calculates approximate calorie content, and provides detailed
+                    nutritional information.
+                </p>
+            </div>
+            <!-- Q3 -->
+            <div data-aos="zoom-in"
+                class="lg:w-1/2 text-center lg:text-left bg-[#eef3fb] rounded-xl shadow-lg p-5 py-11 w-fit mx-auto inline-block mr-5 mt-8">
+                <h2 class="text  font-semibold leading-normal">
+                    Can I use NutriVerse without a dietician?
+                </h2>
+                <p data-aos="zoom-in" class="mt-5 px-2 text-gray-700">
+                    Yes! Individuals can use NutriVerse independently to log meals, receive nutritional insights,
+                    and set personal goals.
+                    However, for
+                    professional guidance, connecting with a dietician through our platform is highly recommended.
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-6 md:px-12 text-center text-gray-300">
+            <p>&copy; 2024 NutriVerse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true, // Enable infinite scrolling
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            slidesPerView: 1,
-            spaceBetween: 20,
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 </body>
