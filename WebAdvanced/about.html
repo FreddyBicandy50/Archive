@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body>
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <section data-aos="fade-up" class="relative bg-center h-screen hidden sm:block md:block"
+        style="background-image: url('images/aboutHeader.jpeg'); background-size: 100%; background-position: center;">
+        <nav class="bg-transparent px-6 py-4 md:px-12">
+            <div class="container mx-auto flex items-center justify-between">
+                <h1 class="sm:block text-[#f7c761] hidden ml-32 primary text-6xl font-semibold leading-normal">
+                    <strong>NutriVerse</strong>
+                </h1>
+            </div>
+        </nav>
+        <div class="absolute inset-y-1/2  left-10 transform -translate-y-1/2 text-white">
+            <h1 class="text-6xl font-bold">
+                <span data-aos-delay="200" data-aos="fade-up" class="bg-[#f7c761] px-2">Real</span> <span
+                    data-aos-delay="100" data-aos="fade-up"><b> nutrition</span><br>
+                within everyone's reach</b>
+            </h1>
+        </div>
+    </section>
+    <section data-aos="fade-up" class=" bg-gradient-to-r from-[#eaedf3] to-[#fafcff]">
+        <br><br><br>
+        <h1 class="lg:hidden text-center text-4xl font-bold text-[#343a45]">
+            <span class="bg-[#f7c761] px-2 text-white">Real</span><b> nutrition<br>
+                within everyone's reach</b>
+        </h1>
+        <div class="text-3xl lg:text-5xl text-[#343a45]  justify-center text-center">
+            <br>
+            <br>
+            <h1>
+                <b>Each person is unique.</b><br>
+            </h1>
+            <p class="text-3xl lg:text-5xl">So are our solutions</p>
+        </div>
+        <section
+            class="container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-up">
+                <h1 class="text-[#343a46] text text-2xl md:text-4xl font-semibold leading-tight">
+                    <span class="text-white bg-[#f7c761] px-2">For Companies</span> that want<br> to change the lives
+                    and
+                    health of their employees
+                </h1>
+                <p class="mt-5">Nutrium Care is a benefit that combines <b>technology, outstanding dietitians and
+                        dynamics </b> to improve
+                    employee <b>health</b>.
+                </p>
+            </div>
+            <!-- Welcome Image -->
+            <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up">
+                <img src="https://uploads-ssl.webflow.com/651149b4877f98f4d7cf8a6d/6579b88e769cf9352c250d8c_en_infographic-1.webp"
+                    alt="Healthy Breakfast Bowl" class="w-full max-w-lg mx-auto">
+            </div>
+        </section>
+        <section
+            class="mt-12 container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+            <!-- Welcome Image -->
+            <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up">
+                <img src="https://uploads-ssl.webflow.com/651149b4877f98f4d7cf8a6d/65e8abc6706f477502c4e333_en_infographic-2.webp"
+                    alt="Healthy Breakfast Bowl" class="w-full max-w-lg mx-auto">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-up">
+                <h1 class="text-[#343a46] text text-2xl md:text-4xl font-semibold leading-tight">
+                    <span class="text-white bg-[#f7c761] px-2"> For People</span> who want to <br> improve their eating
+                    habits for good that want<br>
+                </h1>
+                <p class="mt-5">Improve your health and well-being with nutrition<br>
+                    appointments and a <b> dietitian a click away</b>, to help you on a daily
+                    basis, whenever you need it.
+                </p>
+            </div>
+        </section>
+        <section
+            class="container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-up">
+                <h1 class="text-[#343a46] text text-2xl md:text-4xl font-semibold leading-tight">
+
+
+                    <span class="text-white bg-[#f7c761] px-2">For Dietitians</span> who want to<br>
+                    grow and optimize their time <br> and resources
+                </h1>
+                <p class="mt-5">From booking to meal plans, appointments and follow-up,<br>
+                    the nutrition software is the <b>number one choice of <br>
+                    dietitians around the world. </b>
+                </p>
+            </div>
+            <!-- Welcome Image -->
+            <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up">
+                <img src="images/papazizo.png"
+                    alt="Healthy Breakfast Bowl" class="w-full max-w-lg mx-auto">
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-6 md:px-12 text-center text-gray-300">
+            <p>&copy; 2024 NutriVerse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
