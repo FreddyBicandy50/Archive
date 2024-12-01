@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutriblog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .primary {
+            color: #231f20;
+            font-family: Poppins 100;
+        }
+
+        .text {
+            color: #4a4a4a;
+            font-family: Poppins 100;
+        }
+    </style>
+</head>
+
+<body class="h-screen">
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Heading -->
+    <section>
+        <!-- Navbar -->
+        <nav class="px-6 py-2">
+            <div class="container mx-auto flex items-center justify-start">
+                <div class="md:hidden lg:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <h1 class="ml-32 primary text-4xl font-semibold leading-normal">
+                    <strong>NutriBlog</strong>
+                </h1>
+                <div class="primary hidden md:flex space-x-6 items-center ml-6 mt-2">
+                    <a data-aos="zoom-out" href="home.html" class="px-2 w-fit"><b>Home</b></a>
+                    <a data-aos-delay="100" data-aos="zoom-out" href="nutrition.html"
+                        class=" px-2 w-fit"><b>Nutritions</b></a>
+                    <a data-aos-delay="200" data-aos="zoom-out" href="entrepreneur.html"
+                        class=" px-2  w-fit"><b>Entrepreneur</b></a>
+                </div>
+            </div>
+
+            <!-- Mobile Navbar Version -->
+            <div id="mobile-menu" class=" primary hidden md:hidden mt-4">
+                <a data-aos="zoom-out" href="home.html" class="px-2 text-lg w-fit"><b>Home</b></a>
+                <br>
+                <a data-aos-delay="100" data-aos="zoom-out" href="nutrition.html"
+                    class="px-2 text-lg w-fit"><b>Nutritions</b></a>
+                <br>
+                <a data-aos-delay="200" data-aos="zoom-out" href="entrepreneur.html"
+                    class="px-2 text-lg w-fit"><b>Entrepreneur</b></a>
+                <hr>
+            </div>
+        </nav>
+    </section>
+
+    <div class="relative h-screen bg-gray-100">
+        <!-- Background Image -->
+        <img src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2024/09/3.png?w=1920&ssl=1">
+        <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+            style="background-image: url('your-background-image.jpg'); filter: brightness(80%);"></div>
+
+        <!-- Content Box -->
+        <div
+            class="bg-white absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2bg-white text-[#bea7a3] border border-[#ddd] w-11/12 sm:w-8/12  p-8 shadow-lg ">
+            <!-- Title -->
+            <h1 class="text-center text-4xl font-bold mb-6 leading-tight">
+                Ozempic vs Mounjaro: everything you need to know
+            </h1>
+
+            <!-- Time -->
+            <p class="text-center text-xs mb-5 ml-5 text-[#4a4a4a]">By <span class=" underline">Manuella Abru </span>
+                / <span class="underline"> September 3, 2024</span>
+            </p>
+
+
+            <!-- Description -->
+            <p class="text-[#4a4a4a] text-center mb-4">
+                GLP-1, Ozempic, Mounjaro. These three words were entirely unfamiliar to most of us just a year ago but
+                are now in
+                everyone’s mouths and ears.
+
+                If you feel that there is too much information on this topic and it's hard to find the answers you need,
+                you're in the
+                right place.
+
+                In this article, we’ll take a closer look at Ozempic vs Mounjaro, exploring how they differ, their
+                benefits, side
+                effects, costs, and more
+            </p>
+            <h1 class="text-black text-3xl">
+                <strong> Main points to know </strong>
+            </h1>
+            <ul class="text list-disc mt-2 ml-5">
+                <li>
+                    Ozempic
+                    and Mounjaro are both approved by the FDA to treat type 2 diabetes, but doctors often
+                    prescribe them
+                    for weight
+                    loss, too;
+                </li>
+                <li>Both meds work well for losing weight, but studies show Mounjaro might help you lose a bit more;
+                </li>
+                <li>They have similar side effects, like nausea, vomiting, and constipation, but Mounjaro tends to cause
+                    more
+                    serious
+                    stomach problems;
+                </li>
+                <li>Mounjaro targets two receptors linked to weight loss, while Ozempic focuses on just one;
+                </li>
+                <li>To get the best results from these meds, it’s important to pair them with healthy eating. Platforms
+                    like
+                    Nutrium provide
+                    personalized nutrition plans to help manage diabetes and reach your weight loss goals.
+                </li>
+            </ul>
+            <h1 class="text-black text-3xl mt-12">
+                <strong> What are Ozempic and Mounjaro? </strong>
+            </h1>
+            <p class="mt-5 text">
+                Let’s break it down. Ozempic and Mounjaro are meds that help adults with type 2 diabetes keep their
+                blood sugar in
+                check. They do this by mimicking a hormone called GLP-1, which boosts insulin production, lowers blood
+                sugar, and
+                even
+                tells your brain, "Hey, you’re full!"
+
+                This means they don’t just help with diabetes. They can also help with weight loss by reducing those
+                constant food
+                cravings and making you feel fuller faster. Some people find that these meds help silence the
+                never-ending thoughts
+                about food, leading to quicker and more noticeable results.
+
+                However, Ozempic and Mounjaro are only FDA-approved for people with type 2 diabetes, but not as weight
+                loss drugs.
+                They
+                can be prescribed off-label for weight loss, but insurance may not cover them if you don't have type 2
+                diabetes.
+
+                If your main goal is weight loss, there are other FDA-approved options like Wegovy and Zepbound. These
+                might be
+                easier
+                to get covered by insurance.
+
+                Here’s a breakdown for easier understanding:
+            </p>
+            <img width="600" src="https://wp.nutrium.com/wp-content/uploads/2024/09/teste.svg">
+            <h1 class="mt-6 text-black text-3xl">
+                <strong>
+                    Ozempic vs Mounjaro: what are their differences?
+                </strong>
+            </h1>
+            <p class="mt-5 text">
+                These two medications have a lot of similarities, but there are some key differences between them
+                too.
+                Let’s get into
+                that.
+            </p>
+            <h2 class="mt-2 text text-2xl">
+                <strong>
+                    How Ozempic works
+                </strong>
+            </h2>
+            <p class="mt-2 text">The magic behind Ozempic comes from its active ingredient, semaglutide. This ingredient acts like a
+                hormone in your
+                body
+                called GLP-1, which helps keep your blood sugar levels in check. By acting like GLP-1, semaglutide
+                helps
+                lower blood
+                sugar, reduces appetite, and makes you feel fuller for longer. This means you eat less and take in
+                fewer
+                calories,
+                leading to visible weight loss over time.
+
+                Ozempic is taken once a week as an under the skin injection in the belly, thigh, or upper arm. It
+                starts
+                at a low
+                dose
+                of 0.25 mg and can gradually increase up to 2 mg, depending on what your doctor thinks is best for
+                you.
+
+                As for cost, it depends on your prescription and insurance coverage. Without insurance, Ozempic
+                typically runs
+                around
+                $935 a month. You can check here if your insurance covers it.
+            </p>
+            <h2 class="mt-2 text text-2xl">
+                <strong>
+                    How Mounjaro works
+                </strong>
+            </h2>
+            <p class="mt-2 text">
+                Mounjaro works a bit differently. Its active ingredient, tirzepatide, is a multitasker that mimics
+                two
+                hormones:
+                GLP-1
+                (like Ozempic) and GIP, another hormone that helps manage hunger and blood sugar. By hitting both
+                these
+                receptors,
+                Mounjaro is essentially double-teaming your appetite and blood sugar.
+
+                Because it’s working on two fronts, Mounjaro is generally prescribed in higher doses than Ozempic.
+                You
+                usually start
+                at
+                2.5 mg and can go all the way up to 15 mg. The dose can be gradually increased, depending on how
+                things
+                go and what
+                your
+                doctor decides.
+
+                It costs generally around $1,069 a month, but it varies depending on your dosage. You can check here
+                if
+                your
+                insurance
+                covers Mounjaro.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

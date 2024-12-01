@@ -16,7 +16,7 @@
     <style>
         .bg_image {
             background-image: url('https://storage.googleapis.com/nutriverse/blog-home.png');
-            background-size: 110%;
+            background-size: 120%;
             background-position: center;
         }
 
@@ -26,80 +26,173 @@
         }
 
         .text {
-            color: #231f20;
+            color: #4a4a4a;
             font-family: Poppins 100;
         }
 
-        .accent {
-            color: #F2E8CF;
+        .hover-steer-left {
+            transition: transform 0.5s ease;
+            /* Smooth animation effect */
+        }
+
+        .hover-steer-left:hover {
+            transform: translateX(-20px);
+            /* Moves the image 20px to the left */
         }
     </style>
 </head>
 
-<body class="bg-[#f1d5cf]">
+<body class="h-screen">
     <!-- Initialize AOS -->
     <script>
         AOS.init();
     </script>
 
-    <!-- Navbar -->
-    <nav class="bg-white px-6 py-2">
-        <div class="container mx-auto flex items-center justify-start">
-            <h1 class="sm:block hidden ml-32 primary text-4xl font-semibold leading-normal">
-                <strong>NutriBlog</strong>
-            </h1>
-            <div class="hidden md:flex space-x-6 items-center ml-6 mt-2">
-                <a data-aos="zoom-out" href="about.html" class="text px-2 border-b-2 border-[#231f20] w-fit"><b>Home</b></a>
-                <a data-aos-delay="100" data-aos="zoom-out"  href="nutrition.html" class="text px-2 border-b-2 border-[#231f20] w-fit"><b>Nutritions</b></a>
-                <a data-aos-delay="200"data-aos="zoom-out"  href="blog.html" class="text px-2 border-b-2 border-[#231f20] w-fit"><b>Entrepreneur</b></a>
+    <!-- Heading -->
+    <section>
+        <!-- Navbar -->
+        <nav class="px-6 py-2">
+
+            <div class="container mx-auto flex items-center justify-start">
+                <div class="md:hidden lg:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <h1 class="ml-32 primary text-4xl font-semibold leading-normal">
+                    <strong>NutriBlog</strong>
+                </h1>
+                <div class="absolute mt-96 transform -translate-y-1/2 text hidden sm:block">
+                    <h1 class="ml-64 lg:ml-96 text-white text-6xl font-bold ">
+                        <span><b>Daily Tips For Everyone</b></span>
+                    </h1>
+                </div>
+                <div class="primary hidden md:flex space-x-6 items-center ml-6 mt-2">
+                    <a data-aos="zoom-out" href="home.html" class="px-2 w-fit"><b>Home</b></a>
+                    <a data-aos-delay="100" data-aos="zoom-out" href="nutrition.html"
+                        class=" px-2 w-fit"><b>Nutritions</b></a>
+                    <a data-aos-delay="200" data-aos="zoom-out" href="entrepreneur.html"
+                        class=" px-2  w-fit"><b>Entrepreneur</b></a>
+                </div>
+
             </div>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+
+            <!-- Mobile Navbar Version -->
+            <div id="mobile-menu" class=" primary hidden md:hidden mt-4">
+                <a data-aos="zoom-out" href="home.html" class="px-2 text-lg w-fit"><b>Home</b></a>
+                <br>
+                <a data-aos-delay="100" data-aos="zoom-out" href="nutrition.html"
+                    class="px-2 text-lg w-fit"><b>Nutritions</b></a>
+                <br>
+                <a data-aos-delay="200" data-aos="zoom-out" href="entrepreneur.html"
+                    class="px-2 text-lg w-fit"><b>Entrepreneur</b></a>
+                <hr>
+            </div>
+        </nav>
+
+        <div class="bg_image bg-no-repeat bg-cover bg-center h-96 hidden sm:block md:block">
+    </section>
+
+    <main class="mt-32 ml-12">
+        <h3 class="text-[#bea7a3] text-5xl lg:text-6xl"><b>All posts</b></h3>
+        <!-- first row  -->
+        <div class="flex mt-12 gap-8">
+
+            <div class="border-2 h-fit w-4/12">
+                <!-- Col 1  -->
+                <img class="hover-steer-left"
+                    src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2024/09/BLOG-DISPLAY-IMAGE.png?resize=800%2C612&ssl=1">
+                <a href="blog-content.html">
+                    <h2 class="text-2xl ml-5 mt-3 text-[#4a4a4a] hover:text-[#bea7a3]"><b>Ozempic vs<br> Mounjaro:
+                            everything you need to
+                            know</b></h2>
+                    <p class="text-[#4a4a4a] mt-3 ml-5">GLP-1, Ozempic, Mounjaro. These three words were entirely
+                        unfamiliar to most of</p>
+                    <br>
+                    <p class="text-xs mb-5 ml-5 text-[#4a4a4a] underline">September 3, 2024</p>
+                </a>
+            </div>
+
+            <!-- Col 2  -->
+            <div class="border-2 h-fit w-4/12">
+                <img class="hover-steer-left"
+                    src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2023/05/BLOG-DISPLAY-IMAGE-25.jpg?resize=800%2C612&ssl=1">
+                <h2 class="text-2xl ml-5 mt-3 text-[#4a4a4a] hover:text-[#bea7a3]"><b>Creatine supplementation:
+                        scientific evidence for nutrition professionals</b></h2>
+
+                <p class="mt-3 text-[#4a4a4a] ml-5">Creatine is one of the most studied dietary supplements in the field
+                </p>
+                <br>
+
+                <p class="text-xs mb-5 ml-5 text-[#4a4a4a] underline">September 21, 2024</p>
+            </div>
+
+            <!-- Col 3  -->
+            <div class="border-2 h-fit w-4/12 mr-12">
+                <img class="hover-steer-left"
+                    src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2023/05/BLOG-DISPLAY-IMAGE-24.jpg?resize=800%2C612&ssl=1">
+                <h2 class="text-2xl ml-5 mt-3 text-[#4a4a4a] hover:text-[#bea7a3]"><b>Choosing a bioimpedance scale: a
+                        guide for nutrition professionals</b></h2>
+                <p class="mt-3 text-[#4a4a4a] ml-5">Bioimpedance is a valuable tool in assessing body composition and
+                    monitoring the</p>
+                <br>
+                <p class="text-xs mb-5 ml-5 text-[#4a4a4a] underline">August 24, 2024</p>
             </div>
         </div>
 
-        <!-- Mobile Navbar Version -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4">
-            <a href="about.html" class="block no-underline text px-2"><b>About</b></a>
-            <hr>
-            <a href="blog.html" class="mt-5 block no-underline text px-2"><b>Blog</b></a>
-            <hr>
-            <a href="request_form.html" class="mt-5 block bg-[#f7c761] text-white px-4 py-2 rounded-full"><b>Request
-                    Consultation</b></a>
-            <hr>
+        <!-- second row  -->
+        <div class="flex mt-12 gap-8">
+
+            <!-- col 1  -->
+            <div class="border-2 h-fit w-4/12">
+                <img class="hover-steer-left"
+                    src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2023/04/BLOG-DISPLAY-IMAGE-21.jpg?resize=413%2C316&ssl=1">
+                <h2 class="text-2xl ml-5 mt-3 text-[#4a4a4a] hover:text-[#bea7a3]"><b>Katch McArdle Equation for
+                        nutrition professionals </b></h2>
+                <p class="text-[#4a4a4a] mt-3 ml-5">Knowing your individual BMR is<br> essential for knowing how
+                    many<br>
+                    calories to</p>
+                <br>
+                <p class="text-xs mb-5 ml-5 text-[#4a4a4a] underline">May 10, 2023</p>
+            </div>
+
+            <!-- col 2  -->
+            <div class="border-2 h-fit w-4/12">
+                <img class="hover-steer-left"
+                    src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2023/04/BLOG-DISPLAY-IMAGE-20.jpg?resize=413%2C316&ssl=1">
+                <h2 class="text-2xl ml-5 mt-3 text-[#4a4a4a] hover:text-[#bea7a3]"><b>Creatine supplementation:
+                        scientific evidence for nutrition professionals</b></h2>
+
+                <p class="mt-3 text-[#4a4a4a] ml-5">Assessing energy requirements is essential <br> when
+                    creating a meal plan. <b>Learn more</b></p>
+                <br>
+
+                <p class="text-xs mb-5 ml-5 text-[#4a4a4a] underline">May 3, 2024</p>
+            </div>
+
+            <!-- col 3  -->
+            <div class="border-2 h-fit w-4/12 mr-12">
+                <img class="hover-steer-left"
+                    src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2023/04/BLOG-DISPLAY-IMAGE-22.jpg?resize=413%2C316&ssl=1">
+                <h2 class="text-2xl ml-5 mt-3 text-[#4a4a4a] hover:text-[#bea7a3]"><b>Cunningham Equation for nutrition
+                        professionals</b></h2>
+                <p class="mt-3 text-[#4a4a4a] ml-5">The Cunningham equation is a predictive equation for resting/basal
+                    energy <br> expenditure in</p>
+                <br>
+                <p class="text-xs mb-5 ml-5 text-[#4a4a4a] underline">April 14, 2024</p>
+            </div>
         </div>
-    </nav>
-<section class="bg_image bg-center h-screen hidden sm:block md:block">
-</section>
-    <!-- Main Section -->
-    <main>
-        <!-- Welcome Screen -->
-        <section
-            class="container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
-            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-up">
-                <h1 class="text text-6xl font-semibold leading-tight">
-                    Your <span class="text-white bg-[#f7c761] px-2">best version<br></b></span> just a click away
-                </h1>
-                <p class="mt-6 text-lg">
-                    The <b>ideal dietitian beside you</b>, where and when you want. <br>
-                    <b>Your new life begins now!</b>
-                </p>
-            </div>
-            <!-- Welcome Image -->
-            <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up">
-                <img src="https://storage.googleapis.com/nutriverse/healthy-breakfast-bowl.png"
-                    alt="Healthy Breakfast Bowl" class="w-full max-w-lg mx-auto">
-            </div>
-        </section>
-        
     </main>
 
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Footer -->
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto px-6 md:px-12 text-center text-gray-300">
