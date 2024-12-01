@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutriblog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .bg_image {
+            background-image: url('https://storage.googleapis.com/nutriverse/blog-home.png');
+            background-size: 110%;
+            background-position: center;
+        }
+
+        .primary {
+            color: #231f20;
+            font-family: Poppins 100;
+        }
+
+        .text {
+            color: #231f20;
+            font-family: Poppins 100;
+        }
+
+        .accent {
+            color: #F2E8CF;
+        }
+    </style>
+</head>
+
+<body class="bg-[#f1d5cf]">
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Navbar -->
+    <nav class="bg-white px-6 py-2">
+        <div class="container mx-auto flex items-center justify-start">
+            <h1 class="sm:block hidden ml-32 primary text-4xl font-semibold leading-normal">
+                <strong>NutriBlog</strong>
+            </h1>
+            <div class="hidden md:flex space-x-6 items-center ml-6 mt-2">
+                <a data-aos="zoom-out" href="about.html" class="text px-2 border-b-2 border-[#231f20] w-fit"><b>Home</b></a>
+                <a data-aos-delay="100" data-aos="zoom-out"  href="nutrition.html" class="text px-2 border-b-2 border-[#231f20] w-fit"><b>Nutritions</b></a>
+                <a data-aos-delay="200"data-aos="zoom-out"  href="blog.html" class="text px-2 border-b-2 border-[#231f20] w-fit"><b>Entrepreneur</b></a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navbar Version -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="about.html" class="block no-underline text px-2"><b>About</b></a>
+            <hr>
+            <a href="blog.html" class="mt-5 block no-underline text px-2"><b>Blog</b></a>
+            <hr>
+            <a href="request_form.html" class="mt-5 block bg-[#f7c761] text-white px-4 py-2 rounded-full"><b>Request
+                    Consultation</b></a>
+            <hr>
+        </div>
+    </nav>
+<section class="bg_image bg-center h-screen hidden sm:block md:block">
+</section>
+    <!-- Main Section -->
+    <main>
+        <!-- Welcome Screen -->
+        <section
+            class="container mx-auto px-6 md:px-12 py-12 flex flex-col lg:flex-row items-center lg:justify-between">
+            <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-up">
+                <h1 class="text text-6xl font-semibold leading-tight">
+                    Your <span class="text-white bg-[#f7c761] px-2">best version<br></b></span> just a click away
+                </h1>
+                <p class="mt-6 text-lg">
+                    The <b>ideal dietitian beside you</b>, where and when you want. <br>
+                    <b>Your new life begins now!</b>
+                </p>
+            </div>
+            <!-- Welcome Image -->
+            <div class="lg:w-1/2 mt-8 lg:mt-0" data-aos="fade-up">
+                <img src="https://storage.googleapis.com/nutriverse/healthy-breakfast-bowl.png"
+                    alt="Healthy Breakfast Bowl" class="w-full max-w-lg mx-auto">
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-6 md:px-12 text-center text-gray-300">
+            <p>&copy; 2024 NutriVerse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>
