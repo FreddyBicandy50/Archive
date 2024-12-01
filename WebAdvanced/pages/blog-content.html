@@ -26,7 +26,7 @@
     </style>
 </head>
 
-<body class="h-screen">
+<body class="bg-gray-100 h-screen">
     <!-- Initialize AOS -->
     <script>
         AOS.init();
@@ -35,7 +35,7 @@
     <!-- Heading -->
     <section>
         <!-- Navbar -->
-        <nav class="px-6 py-2">
+        <nav class="bg-white px-6 py-2">
             <div class="container mx-auto flex items-center justify-start">
                 <div class="md:hidden lg:hidden">
                     <button id="menu-toggle" class="focus:outline-none">
@@ -47,7 +47,7 @@
                         </svg>
                     </button>
                 </div>
-                <h1 class="ml-32 primary text-4xl font-semibold leading-normal">
+                <h1 class=" ml-32 primary text-4xl font-semibold leading-normal">
                     <strong>NutriBlog</strong>
                 </h1>
                 <div class="primary hidden md:flex space-x-6 items-center ml-6 mt-2">
@@ -73,15 +73,17 @@
         </nav>
     </section>
 
-    <div class="relative h-screen bg-gray-100">
-        <!-- Background Image -->
-        <img src="https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2024/09/3.png?w=1920&ssl=1">
+    <!-- Background Image -->
+    <div
+        class="bg-[url('https://i0.wp.com/wp.nutrium.com/wp-content/uploads/2024/09/3.png?w=1920&ssl=1')] bg-no-repeat bg-cover w-screen h-1/2 hidden md:block">
+    </div>
+
+    <div data-aos="fade-up" class="relative min-h-screen">
         <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
             style="background-image: url('your-background-image.jpg'); filter: brightness(80%);"></div>
-
         <!-- Content Box -->
         <div
-            class="bg-white absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2bg-white text-[#bea7a3] border border-[#ddd] w-11/12 sm:w-8/12  p-8 shadow-lg ">
+            class="absolute lg:top-1/3 lg:left-1/2 transform lg:-translate-x-1/2 lg:-translate-y-1/3 bg-white text-[#bea7a3] border border-[#ddd] lg:w-11/12 sm:w-8/12 p-8 shadow-lg ">
             <!-- Title -->
             <h1 class="text-center text-4xl font-bold mb-6 leading-tight">
                 Ozempic vs Mounjaro: everything you need to know
@@ -180,7 +182,8 @@
                     How Ozempic works
                 </strong>
             </h2>
-            <p class="mt-2 text">The magic behind Ozempic comes from its active ingredient, semaglutide. This ingredient acts like a
+            <p class="mt-2 text">The magic behind Ozempic comes from its active ingredient, semaglutide. This ingredient
+                acts like a
                 hormone in your
                 body
                 called GLP-1, which helps keep your blood sugar levels in check. By acting like GLP-1, semaglutide
@@ -234,9 +237,21 @@
                 insurance
                 covers Mounjaro.
             </p>
+            <div class="text-center bg-white text py-12">
+                <footer>
+                    <p>&copy; 2024 NutriVerse. All Rights Reserved.</p>
+                </footer>
+            </div>
         </div>
     </div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
 
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 
 </html>
