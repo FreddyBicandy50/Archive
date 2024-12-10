@@ -1,0 +1,328 @@
+
+
+/*  */
+/* Fonts */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+/* font3 for the menu cards title and other*/
+@font-face {
+    font-family: myFont3;
+    src: url("../fonts/PeachPlum.ttf");
+}
+/* font 5 for the welcomePage title */
+@font-face {
+    font-family: myFont5;
+    src: url("../fonts/Bavista_Soulare.ttf");
+}
+/* font6 for the titles of each section and the navbar*/
+@font-face {
+    font-family: myFont6;
+    src: url("../fonts/Cream Peach.ttf");
+}
+
+
+
+
+
+/*  */
+/* ScrollBar */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+
+/*  */
+/* Navbar */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+
+
+@media screen and (min-width: 801px) {
+    .navbar{
+        height: 0px;
+        z-index: 1;
+        background-color: transparent;
+
+    }
+    .nav-item a{
+        border: none;
+        outline: none;
+        border-bottom: none;
+        transition: border-color 0.3s ease;
+        position: relative;
+
+    }
+    .nav-item a::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+
+    }
+    .nav-item:hover a::after {
+        transform: scaleX(1);
+    }
+    .nav-i-margin{
+        margin-top: 100px;
+    }
+}
+
+
+
+.navbar{
+    /* background-color: rgb(45, 44, 44); */
+    /* background-image: linear-gradient(to right,  #008843 , white , #ff0000); */
+    background-image:url(../images/black-bg/black-bg2.jpg) ;
+
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+}
+
+.nav-link{
+    font-weight: bold;
+}
+.navbar-profile-icon{
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+}
+.navbar-items a{
+    font-family: myFont6;
+    font-size: 20px;
+
+}
+
+
+
+
+
+/*  */
+/* Welcome Page */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+/* Cool font from Google Fonts! */
+@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+.welcome-page-container {
+    background: rgb(0,38,84,1);
+    background: linear-gradient(90deg, rgba(0,38,84,1) 0%, rgb(109, 108, 108) 50%, rgba(206,17,38,1) 100%);
+    height: 100vh;
+}
+
+#container {
+    /* Center the text in the viewport. */
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 80pt;
+    top: 0;
+    bottom: 150px;
+
+    /*filter: url(#threshold) blur(0.6px);*/
+}
+
+
+#text1, #text2 {
+    color: #f1f1f1;
+    font-weight: 1000;
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    /*font-family: 'Raleway', sans-serif;*/
+
+    font-family: myFont6;
+    font-size: 100pt;
+
+    text-align: center;
+
+    user-select: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    #text1, #text2{
+        font-size: 30pt;
+    }
+    .welcome-page-container{
+        height: 60vh;
+    }
+    .location{
+        max-width: 70vw;
+    }
+}
+
+
+/*  */
+/* About Us */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+
+.image-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blue-square {
+    background-color: #dcdcdc;
+    color: black;
+    padding: 20px;
+    width: 80%;
+
+    text-align: center;
+}
+.blue-square h2{
+    margin: 15px 0px 20px 0px;
+    font-family: myFont6;
+    font-size: 45px;
+}
+.blue-square p{
+    font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        height: 50vh;
+    }
+}
+
+
+
+/*  */
+/* Location */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+.location{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.location-h1{
+    font-family: myFont3;
+    font-size: 55px;
+}
+.location-subtitles h3{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/* Footer */
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+
+.site-footer {
+    /*background-color: #26272b;*/
+    background-color: #E6E6E6;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.site-footer hr {
+    border-top-color: black;
+    opacity: 0.5;
+}
+.site-footer hr.small {
+    margin: 20px 0;
+}
+.site-footer h6 {
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+.site-footer a {
+    color: #737373;
+}
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+.footer-links li {
+    display: block;
+}
+.footer-links a {
+    color: #737373;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.site-footer .social-icons {
+    text-align: right;
+}
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d;
+}
+.copyright-text {
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+.footer-titles h6{
+    font-family: myFont3;
+    font-size: 20px;
+}
+
+

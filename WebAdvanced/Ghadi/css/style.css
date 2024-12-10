@@ -1,0 +1,730 @@
+
+/*  */
+/* Fonts */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+/* font3 for the menu cards title and other*/
+@font-face {
+    font-family: myFont3;
+    src: url("../FontsNew/feltful_regular.otf");
+}
+/* font 5 for the welcomePage title */
+@font-face {
+    font-family: myFont5;
+    src: url("../FontsNew/Merienda-Regular.ttf");
+}
+/* font6 for the titles of each section and the navbar*/
+@font-face {
+    font-family: myFont6;
+    src: url("../FontsNew/Ptolemy-GreatPrimer18.otf");
+}
+
+
+@font-face {
+    font-family: myFont4;
+    src: url("../FontsNew/RemachineScript_Personal_Use.ttf");
+}
+@font-face {
+    font-family: myFont1;
+    src: url("../FontsNew/ConfettiStream.ttf");
+}
+
+
+
+
+/*  */
+/* ScrollBar */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+
+body{
+    overflow-x: hidden;
+}
+
+/*  */
+/* Navbar */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+
+
+@media screen and (min-width: 801px) {
+    .navbar{
+        height: 0px;
+        z-index: 1;
+        background-color: transparent;
+
+    }
+    .nav-item a{
+        border: none;
+        outline: none;
+        border-bottom: none;
+        transition: border-color 0.3s ease;
+        position: relative;
+
+    }
+    .nav-item a::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+
+    }
+    .nav-item:hover a::after {
+        transform: scaleX(1);
+    }
+    .nav-i-margin{
+        margin-top: 100px;
+    }
+}
+
+
+
+.navbar{
+    /* background-color: rgb(45, 44, 44); */
+    /* background-image: linear-gradient(to right,  #008843 , white , #ff0000); */
+    background-image:url(../images/black-bg/black-bg2.jpg) ;
+
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+}
+
+.nav-link{
+    font-weight: bold;
+}
+.navbar-profile-icon{
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+}
+.navbar-items a{
+    font-family: myFont6;
+    font-size: 20px;
+
+}
+
+
+
+
+/*  */
+/* Welcome Page */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+.welcome-page{
+    
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    background-color: black;
+
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+
+        /*background-image: url(images/11.jpg);*/
+        animation: change 12s infinite ease-in-out;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        opacity: 45%;
+    }
+    
+    
+}
+@keyframes change {
+    0%,100%{
+        background-image: url("https://storage.googleapis.com/ghadi/raclette.jpg");
+    }
+    25%{
+        background-image: url("https://storage.googleapis.com/ghadi/italian%20sub.jpg");
+    }
+    50%{
+        background-image: url("https://storage.googleapis.com/ghadi/Pain-Perdu.jpg");
+    }
+    75%{
+        background-image: url("https://storage.googleapis.com/ghadi/baguette-farcie-au-jambon-et-fromage.jpg");
+    }
+
+
+}
+.h1-top{
+    margin-top: 80px;
+}
+.welcome-title h1{
+    position: relative;
+    color: green;
+    text-align: center;
+    /*font-family: 'Times New Roman', Times, serif;*/
+    font-family: myFont5;
+    font-size: 200px;
+}
+
+.welcome-text p{
+    position: relative;
+    color: white;
+    padding-top: 5vh;
+    text-align: center;
+    /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;*/
+    font-family: myFont6;
+}
+
+/* if the screen has a minimum width
+ of 600px ya3ne 600px w tloo3 */
+/* pc */
+@media screen and (min-width: 801px) {
+    .welcome-title h1{
+      font-size: 5vw;
+      /* padding-top: 10vh; */
+    }
+    .h1-top{
+        padding-top: 8vh;
+    }
+    .welcome-text p{
+        font-size: 1.6vw;
+    }
+}
+
+/* If the screen size is 600px wide or less,
+ set the font-size of <div> to 30px */
+/* phone */
+@media screen and (max-width: 800px) {
+   .welcome-title h1{
+      font-size: 9vw;
+      /* padding-top: 40px; */
+   }
+   .h1-top{
+    padding-top: 10px;
+   }
+   .welcome-text p{
+    font-size: 4vw;
+}
+}
+
+
+
+
+
+/*  */
+/* Menu  Page*/ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+
+/* men hon */
+.meal-image img{
+    /* aspect-ratio: 16 / 9; */
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    .card .img-fit{
+        aspect-ratio: 1.45/1;
+    }
+}
+.menu-card{
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.menu-card-body{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.menu-card-body h5{
+    font-family: myFont3;
+    font-size: 25px;
+}
+.menu-card-text{
+    flex-grow: 1;
+}
+/* la hon  */
+
+.menu-card{
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px 6px white;
+    border-color: transparent;
+
+
+}
+.menu-card img{
+    padding: 5px 5px 0px 5px;
+    
+}
+
+
+.menu-page{
+    position: relative;
+    
+    background-color: black;
+    padding: 20px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+
+
+        background-image: url("https://storage.googleapis.com/ghadi/Menu-Background.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        opacity: 30%;
+    }
+
+}
+.menu-title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+.menu-title h1{
+
+    background-image: linear-gradient(to right,  #002654 ,40%, white, 60% , #ce1126 );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 65px;
+    font-family: myFont6;
+    position: relative;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.link-to-full-menu{
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.link-to-full-menu a{
+    display: flex;
+    justify-content: flex-start;
+    width: 85vw;
+    font-size: 35px;
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-family: myFont3;
+}
+.link-to-full-menu a:hover{
+    color: darkgreen;
+}
+.menu-btn{
+    border-color: green;
+    color: green;
+}
+.menu-btn:hover{
+    color: red;
+    border-color: red;
+}
+
+
+
+
+
+/*  */
+/* Order Page*/ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/*  */
+.order-page-background{
+    width: 100%;
+
+    position: relative;
+    background-color: black;
+    padding: 20px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+
+
+        background-image: url(../images/main-background/22.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        opacity: 20%;
+    }
+    
+
+}
+.order-page {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    min-height: 80%;
+
+    padding-top: 10px;
+    margin-top: 120px;
+    margin-bottom: 100px;
+  }
+  .order-page header {
+    text-align: center;
+    color: #701a1a;
+    font-weight: bold;
+    font-size: 45px;
+  }
+  .order-form {
+    margin-top: 0px;
+  }
+  .order-form .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .input-box label {
+    color: #333;
+  }
+  /* keno hyk bas zedet orderpage 2ablon
+  .form :where(.input-box input, .select-box)
+  .form .input-box {
+  .form .column {
+  */
+  .order-form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  .order-form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+
+  /*.order-form button {*/
+  /*  height: 55px;*/
+  /*  width: 100%;*/
+  /*  font-size: 1rem;*/
+  /*  font-weight: 400;*/
+  /*  margin-top: 30px;*/
+  /*  border: none;*/
+  /*  cursor: pointer;*/
+  /*  transition: all 0.2s ease;*/
+  /*  !* background: rgb(130, 106, 251); *!*/
+  /*  background: linear-gradient(to right,  #008843 , white,  #ff0000);*/
+  /*  color: darkgreen;*/
+  /*  font-weight: bold;*/
+  /*  font-size: 22px;*/
+  /*  border-radius: 10px;*/
+  /*  opacity: 100%;*/
+  /*}*/
+  /*.order-form button:hover {*/
+  /*  opacity: 100%;*/
+  /*  !*color: green;*!*/
+  /*}*/
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .order-page .form .column {
+      flex-wrap: wrap;
+    }
+    .order-page .form :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
+  }
+
+.submit-order-button{
+    width: 100%;
+    padding: 10px 0px;
+    margin: 15px 0px;
+    border-radius: 20px;
+    border:none;
+    background-color: #701a1a;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.submit-order-button:hover{
+    background-color: #4b1919;
+}
+
+.order-form *{
+    border-color: #a21515;
+}
+.order-form *:focus{
+    border-color: black;
+}
+
+
+/*2e5er chi zedton*/
+
+#selectContainer {
+    overflow: hidden;
+    height: auto;
+}
+
+#mySelect {
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#selectContainer.showOptions {
+    height: auto;
+}
+
+
+
+
+
+
+
+
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/* Chef */
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+
+
+.main-chef{
+    position: relative;
+
+    background-color: black;
+    padding: 20px;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+
+
+        background-image: url(../images/main-background/33.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        opacity: 70%;
+    }
+
+}
+
+
+.chef-card-btn{
+    width: 15%;
+    height: 15%;
+}
+.chef-card-img{
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.chef-title h1{
+    position: relative;
+    color: white;
+    font-family: myFont6;
+    font-size: 65px;
+}
+.chef-subtitle p{
+    position: relative;
+    color: white;
+    font-family: myFont3;
+    font-size: 25px;
+}
+.chef-cards{
+    /*box-shadow: 0 10px 20px black;*/
+    box-shadow: 0px 0px 20px black;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+}
+
+
+
+
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/* Footer */
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+
+.site-footer {
+    /*background-color: #26272b;*/
+    background-color: #E6E6E6;
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #737373;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+.site-footer hr {
+    border-top-color: black;
+    opacity: 0.5;
+}
+.site-footer hr.small {
+    margin: 20px 0;
+}
+.site-footer h6 {
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+.site-footer a {
+    color: #737373;
+}
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-links {
+    padding-left: 0;
+    list-style: none;
+}
+.footer-links li {
+    display: block;
+}
+.footer-links a {
+    color: #737373;
+}
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.site-footer .social-icons {
+    text-align: right;
+}
+.site-footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    margin-right: 0;
+    border-radius: 100%;
+    background-color: #33353d;
+}
+.copyright-text {
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .site-footer [class^="col-"] {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .site-footer {
+        padding-bottom: 0;
+    }
+    .site-footer .copyright-text,
+    .site-footer .social-icons {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+/* About Us Page */
+/*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */ /*  */
+
+
+/*
+---------------------------------------------
+welcome page
+---------------------------------------------
+*/
+
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+.typer-container{
+    width: 246px;
+    overflow: hidden;
+}
+.typer-container .typer-text{
+    position: relative;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+}
+.typer-container .typer-text.first-text{
+    color: black;
+}
+.typer-text.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+
+
